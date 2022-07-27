@@ -1,23 +1,18 @@
 package com.wheresming.member;
 
 import java.io.IOException;
-import javax.servlet.ServletConfig;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class Login
- */
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
-    public Login() {
-        super();
-    }
+ 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
@@ -29,12 +24,14 @@ public class Login extends HttpServlet {
 				System.out.println(id+pw);
 				// 2. Member 객체 생성(id,pw)
 				MemberDTO vo = new MemberDTO(id, pw);
-				
+				System.out.println("DTO생성");
 				// 3. MemberDAO 객체 생성
 				LoginDAO dao = new LoginDAO();
+				System.out.println("DAO 생성");
 				
 				// 4. dao.selectMember() 메서드 호출
 				MemberDTO loginMember = dao.selectMember(vo);
+				
 				
 				
 				// 5. 세션저장
