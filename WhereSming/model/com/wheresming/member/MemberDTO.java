@@ -1,5 +1,7 @@
 package com.wheresming.member;
 
+import java.sql.Timestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class MemberDTO {
-	private String mb_seq;
+	private int mb_seq;
 	@NonNull
 	private String mb_id;
 	@NonNull
@@ -21,6 +23,6 @@ public class MemberDTO {
 	private String mb_nick;
 	private String mb_email;
 	private String mb_phone;
-	private String mb_joindate;
+	private Timestamp mb_joindate;
 	private String mb_type;
 }
