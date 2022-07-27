@@ -24,8 +24,10 @@ public class Login extends HttpServlet {
 				System.out.println(id+pw);
 				// 2. Member 객체 생성(id,pw)
 				MemberDTO vo = new MemberDTO(id, pw);
+				System.out.println("DTO생성");
 				// 3. MemberDAO 객체 생성
 				LoginDAO dao = new LoginDAO();
+				System.out.println("DAO 생성");
 				
 				// 4. dao.selectMember() 메서드 호출
 				MemberDTO loginMember = dao.selectMember(vo);
