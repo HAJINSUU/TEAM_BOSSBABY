@@ -14,7 +14,7 @@ public class LoginDAO {
 		MemberDTO loginMember = null;
 		
 		try {
-			loginMember = sqlSession.selectOne("com.wheresming.member.SinginDAO.select",vo);
+			loginMember = sqlSession.selectOne("com.wheresming.member.LoginDAO.select",vo);
 			// select - commit/rollback 생략
 		}catch(Exception e) {
 			e.printStackTrace();
