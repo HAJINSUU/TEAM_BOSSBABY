@@ -1,0 +1,29 @@
+@CommentMapper
+Mapper's Sequence number. 
+Mapper String.
+add info.
+
+@MemberMapper
+1. insert.
+insert into t_member values(#{mb_id},#{mb_pw},
+#{mb_nick},#{mb_email}#{mb_joindate},#{mb_type}).
+회원가입을 위한 메퍼 SQL문입니다.
+
+2. select.
+select name from t_member where mb_id=#{mb_id} and mb_pw=#{mb_pw}.
+로그인을 위한 매퍼 SQL문입니다.
+
+@MovieMapper
+Mapper's Sequence number. 
+Mapper String.
+add info.
+
+@SearchMapper
+Mapper's Sequence number. 
+Mapper String.
+add info.
+
+@WishListMapper
+Mapper's Sequence number. 
+Mapper String.
+add info.
