@@ -19,11 +19,11 @@ public class Login extends HttpServlet {
 		// 1. id,pw 받기
 				request.setCharacterEncoding("UTF-8");
 				
-				String id = request.getParameter("id");
-				String pw = request.getParameter("pw");
-				System.out.println(id+pw);
+				String mb_id = request.getParameter("mb_id");
+				String mb_pw = request.getParameter("mb_pw");
+				System.out.println(mb_id+mb_pw);
 				// 2. Member 객체 생성(id,pw)
-				MemberDTO vo = new MemberDTO(id, pw);
+				MemberDTO vo = new MemberDTO(mb_id, mb_pw);
 				System.out.println("DTO생성");
 				// 3. MemberDAO 객체 생성
 				LoginDAO dao = new LoginDAO();
@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
 					System.out.println("로그인성공");
 					HttpSession session = request.getSession();
 					session.setAttribute("loginMember",loginMember);
-					response.sendRedirect("index.html");
+					response.sendRedirect("index.jsp");
 				} else { // 로그인 실패
 					System.out.println("로그인실패");
 					response.sendRedirect("login.jsp");
