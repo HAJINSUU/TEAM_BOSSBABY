@@ -393,7 +393,7 @@
                         <td>ㅤ평점 : 9.5점 </td>
                     </tr>
                     <tr>
-                        <td>ㅤ<a href="login.html"><i class="fa-solid fa-heart fa-2x"
+                        <td>ㅤ<a href="login.jsp"><i class="fa-solid fa-heart fa-2x"
                                     style="color:rgb(253, 85, 85)"></i></a>ㅤ찜하기</td>
                     </tr>
                     <tr>
@@ -450,7 +450,7 @@
                             <li class="search">
                                 <div class="search-box">
                                     <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요">
-                                    <button class="search-btn" type="submit">
+                                    <button class="search-btn" onclick="location.href='movie.html'" type="submit">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>

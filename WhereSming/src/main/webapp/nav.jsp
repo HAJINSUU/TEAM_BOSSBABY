@@ -38,7 +38,7 @@
  <li class="search" style = "height: 40px">
   <div class="search-box">
     <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요">
-    <button class="search-btn" onclick="location.href='movie.html'" type="submit">
+    <button class="search-btn" onclick="location.href='movie.jsp'" type="submit">
       <i class="fas fa-search"></i>
     </button>
   </div>
