@@ -59,8 +59,6 @@
 						<!-- 단순 if문 조건 1개일때 -->
 						<c:if test="${loginMember.mb_nick eq 'bossbaby'}">
 							<li class="mypage"><a href="index.jsp">전체회원정보</a></li>
-							<li class="mypage"><a href="index.jsp">마이페이지</a></li>
-							<li class="logout"><a href="Logout">로그아웃</a></li>
 						</c:if>
 							<li class="mypage"><a href="picks.jsp">PICK!</a></li>
 							<li class="mypage"><a href="index.jsp">MYPAGE</a></li>
