@@ -1,3 +1,5 @@
+<!-- 20220728 -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -38,10 +40,36 @@ https://templatemo.com/tm-569-edu-meeting
 </head>
 
 <body>
-<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
-	<!-- 상단top nav -->
 	<%@include file="nav.jsp"%>
+
+	<!-- ***** Header Area Start ***** -->
+	<!-- <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              Where?Sming
+            </a> -->
+
+	<!-- ***** Menu Start ***** -->
+	<!-- <ul class="nav">
+              <li><a href="index.html">첫화면</a></li> -->
+	<!-- 위에 메뉴추가하고싶으면 첫화면꺼 복사해서 추가하면됨 -->
+
+	<!-- </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a> -->
+	<!-- ***** Menu End ***** -->
+
+	<!-- </nav>
+        </div>
+      </div>
+    </div>
+  </header> -->
+	<!-- ***** Header Area End ***** -->
 
 	<section class="meetings-page" id="meetings">
 		<div class="container">
