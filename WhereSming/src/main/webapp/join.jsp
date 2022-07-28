@@ -392,7 +392,7 @@ button:before, button:after {
 
 
 	<form action="Signin" method="post">
-				<a href="index.html" class="logo"> Where?Sming </a>
+				<a href="index.jsp" class="logo"> Where?Sming </a>
 				<div class="background"></div>
 		
 				<!-- for form container -->
