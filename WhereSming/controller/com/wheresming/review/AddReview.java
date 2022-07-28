@@ -17,11 +17,25 @@ public class AddReview extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
+
+		int mv_seq = 100;
+		String cmt_content = request.getParameter("comment");
+		// time : SYSDATE
+		String mb_id = "test";
+		int cmt_likes = 1;
+		int cmt_score = 1;
+
+		AddReviewDAO dao = new AddReviewDAO();
+		ReviewDTO vo = new ReviewDTO(mv_seq, cmt_content, mb_id, cmt_likes, cmt_score);
+
+		int cnt = dao.insertReview(vo);
 		
-		String comment = request.getParameter("comment");
-		
-		System.out.println(comment);
-		
+		if (cnt > 0) {
+			System.out.println("리뷰 작성 성공");
+		} else {
+			System.out.println("리뷰 작성 실패");
+		}
+
 	}
 
 }
