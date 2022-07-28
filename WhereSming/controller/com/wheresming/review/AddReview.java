@@ -36,7 +36,8 @@ public class AddReview extends HttpServlet {
 		
 		String comment = request.getParameter("comment");
 		
-		System.out.println(comment);
+		ReviewDTO vo = new ReviewDTO();
+		AddReviewDAO dao = new AddReviewDAO();
 		
 	}
 
