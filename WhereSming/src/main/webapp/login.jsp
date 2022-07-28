@@ -236,12 +236,12 @@ a:hover {
 
 			<div class="form-item">
 				<span class="material-icons-outlined"> account_circle </span> <input
-					type="text" name="id" id="user" placeholder="id를 입력해주세요">
+					type="text" name="mb_id" id="user" placeholder="id를 입력해주세요">
 			</div>
 
 			<div class="form-item">
 				<span class="material-icons-outlined"> lock </span> <input
-					type="password" name="pw" id="pass" placeholder="password">
+					type="password" name="mb_pw" id="pass" placeholder="password">
 			</div>
 
 			<button type="submit" value="Login">LOGIN</button>
