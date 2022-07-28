@@ -536,7 +536,7 @@
                     <!-- Parent comment-->
 
                     <div class="flex-shrink-0"><img class="rounded-circle"
-                            src="./popcon.png" alt="..." /></div>
+                            src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
 
                     <div class="ms-3">
                         <div class="fw-bold">인기댓글</div>
@@ -544,7 +544,7 @@
                         <!-- Child comment 1-->
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="./popcon.png" alt="..." /></div>
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">하진숴이이</div>
                                 가오나시 어서오고
@@ -553,7 +553,7 @@
 
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="./popcon.png" alt="..." /></div>
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">riverpurple</div>
                                 너무 재밌어서 1따봉 드립니다*^^*
@@ -562,7 +562,7 @@
                         <!-- Child comment 2-->
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="./popcon.png" alt="..." /></div>
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">윤석석모래모래흙흙</div>
                                 이런 영화 보고 우는사람 이해 안돼요. 그래서 전 아직 절 이해하지못했습니다.
@@ -571,7 +571,7 @@
                         <!-- Child comment 1-->
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="./popcon.png" alt="..." /></div>
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">징니</div>
                                 신나리셔스~딜리셔스
@@ -580,7 +580,7 @@
                         <!-- Child comment 1-->
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="./popcon.png" alt="..." /></div>
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
                                 <div class="fw-bold">이밍지</div>
                                 너무 재밌고 감동적인 영화입니다람쥐
