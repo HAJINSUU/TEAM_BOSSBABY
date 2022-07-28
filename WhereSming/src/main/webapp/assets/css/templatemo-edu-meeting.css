@@ -67,7 +67,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   color: #85858594;
   float: right;
   /* 검색창 가로사이즈 */
-  width: 450px;
+  width: 330px;
 
   /* 투명한블럭임 */
   height: 0px;
@@ -389,7 +389,7 @@ header
 
 .header-area .main-nav .nav li {
   padding-left: 15px;
-  padding-right: 15px;
+
 }
 
 .header-area .main-nav .nav li:last-child {
