@@ -202,7 +202,7 @@ a:hover {
 <body>
 	 
   <!-- ***** Logo Start ***** -->
-  <a href="index.html" class="logo">
+  <a href="index.jsp" class="logo">
     Where?Sming
   </a>
 	<!-- for background -->
@@ -244,7 +244,7 @@ a:hover {
 			
 			<p></p>
 			<p>
-				WhereSming 회원이 아닌가요? <a href="join.html"> 회원가입하러가기</a><br><br>
+				WhereSming 회원이 아닌가요? <a href="join.jsp"> 회원가입하러가기</a><br><br>
 				<a href="join.html">비밀번호를 잊어버리셨나요?</a>
 			</p>
 		
