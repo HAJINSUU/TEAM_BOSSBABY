@@ -59,7 +59,7 @@ form {
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	width: 85%;
+	width: 100%;
 }
 
 .form-item {

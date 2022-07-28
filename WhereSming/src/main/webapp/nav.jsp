@@ -27,7 +27,7 @@
           <nav class="main-nav">
                       
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="index.jsp" class="logo">
               Where?Sming
             </a>
             <!-- ***** Logo End ***** -->
