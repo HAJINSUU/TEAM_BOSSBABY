@@ -952,76 +952,136 @@ upcoming meetings
 
 
 
-.meeting-item {
-  margin-bottom: 30px;
+section.upcoming-meetings {
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+}
+
+section.upcoming-meetings .section-heading {
+	text-align: center;
+}
+
+section.upcoming-meetings .categories {
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 40px;
+	margin-right: 45px;
+}
+
+section.upcoming-meetings .categories h4 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #1f272b;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+section.upcoming-meetings .categories ul li {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+section.upcoming-meetings .categories ul li a {
+	font-size: 15px;
+	color: #1f272b;
+	font-weight: 500;
+	transition: all .3s;
+}
+
+section.upcoming-meetings .categories ul li a:hover {
+	color: #a12c2f;
+}
+
+section.upcoming-meetings .categories .main-button-red {
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	margin-top: 15px;
+}
+
+section.upcoming-meetings .categories .main-button-red a {
+	width: 100%;
+	text-align: center;
 }
 
 .meeting-item .thumb {
-  position: relative;
+	position: relative;
 }
 
 .meeting-item .thumb img {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+	border-radius: 8px;
 }
 
+/* 좋아요 위치수정 */
 .meeting-item .thumb .price {
-  position: absolute;
-  left: 20px;
-  top: 20px;
+	position: absolute;
+	left: 10px;
+	top: 180px;
 }
 
+/* 좋아요 버튼 */
 .meeting-item .thumb .price span {
-  font-size: 16px;
-  color: #1f272b;
-  font-weight: 600;
-  background-color: rgba(250,250,250,0.9);
-  padding: 7px 12px;
-  border-radius: 10px;
+	background-color: #464444;
+	border-radius: 100px;
+	padding: 5px 7px 7px 7px;
 }
 
 .meeting-item .down-content {
-  background-color: #fff;
-  padding: 30px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.meeting-item .down-content .date {
-  float: left;
-  text-align: center;
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.meeting-item .down-content .date h6 {
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #a12c2f;
-}
-
-.meeting-item .down-content .date span {
-  display: block;
-  color: #1f272b;
-  font-size: 22px;
-  margin-top: 7px;
-}
-
-.meeting-item .down-content h4 {
-  font-size: 18px;
-  color: #1f272b;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 
 .meeting-item .down-content p {
-  margin-left: 50px;
-  color: #1f272b;
-  font-size: 14px;
+	color: #ffffff;
+	font-size: 13px;
 }
 
+.down-content {
+	color: #ffffff;
+	font-size: 13px;
+}
+
+#b {
+	font-weight: 450;
+	font-size: 14px;
+	color: #FFBB00;
+}
+
+#fb {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 1.5px;
+}
+
+#like {
+	color: rgb(132, 134, 141);
+}
+
+.image-box {
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+}
+
+.image-thumbnail {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+/* 찜 따봉 엄지모양 */
+img#resizing {
+	width: 20px;
+	object-fit: cover;
+}
 
 
 /*
