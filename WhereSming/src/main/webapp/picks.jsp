@@ -28,9 +28,6 @@
 <link rel="stylesheet" href="assets/css/owl.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
-<style>
-</style>
-
 </head>
 
 <body>
