@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
+
 <style>
 #content {
 	position: absolute;
@@ -388,6 +388,7 @@ button:before, button:after {
   transition:800ms ease all;
 } */
 </style>
+</head>
 <body>
 
 
