@@ -1,5 +1,10 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="java.util.List"%>
+<%@page import="com.wheresming.member.MemberDTO" %>
+<%@page import="com.wheresming.member.LoginDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,9 +49,31 @@
   </div>
 </li> 
 <!-- 검색창끝 -->
-              <li class="picks"><a href="picks.jsp">pick!</a></li>
-              <li class="login"><a href="login.jsp">로그인</a></li>
+			
+				<c:choose>
+					<c:when test="${empty loginMember }">
+						<li class="picks"><a href="picks.jsp">pick!</a></li>
+						<li class="login"><a href="login.jsp">로그인</a></li>
+					</c:when>
+					<c:otherwise>
+						<!-- 단순 if문 조건 1개일때 -->
+						<c:if test="${loginMember.mb_nick eq 'bossbaby'}">
+							<li class="mypage"><a href="index.jsp">전체회원정보</a></li>
+							<li class="mypage"><a href="index.jsp">마이페이지</a></li>
+							<li class="logout"><a href="Logout">로그아웃</a></li>
+						</c:if>
+							<li class="mypage"><a href="picks.jsp">PICK!</a></li>
+							<li class="mypage"><a href="index.jsp">MYPAGE</a></li>
+							<li class="logout"><a href="Logout">LOGOUT</a></li>
+					</c:otherwise>
+				</c:choose>
+				
 
+						
+				
+    
+              
+				
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
