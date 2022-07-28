@@ -6,25 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-<<<<<<< HEAD
-/**
- * Servlet implementation class AddReviews
- */
-=======
->>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
 public class AddReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-<<<<<<< HEAD
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
-}
-=======
 	public AddReview() {
 		super();
 	}
@@ -33,13 +17,25 @@ public class AddReview extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-		
-		String comment = request.getParameter("comment");
-		
-		ReviewDTO vo = new ReviewDTO();
+
+		int mv_seq = 100;
+		String cmt_content = request.getParameter("comment");
+		// time : SYSDATE
+		String mb_id = "test";
+		int cmt_likes = 1;
+		int cmt_score = 1;
+
 		AddReviewDAO dao = new AddReviewDAO();
+		ReviewDTO vo = new ReviewDTO(mv_seq, cmt_content, mb_id, cmt_likes, cmt_score);
+
+		int cnt = dao.insertReview(vo);
 		
+		if (cnt > 0) {
+			System.out.println("리뷰 작성 성공");
+		} else {
+			System.out.println("리뷰 작성 실패");
+		}
+
 	}
 
 }
->>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
