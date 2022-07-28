@@ -143,7 +143,7 @@
 					<div id="grid" class="flex">
 
 						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
+						<div class="portfolio-item col-md-0 sizing">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
@@ -154,65 +154,7 @@
 							</div>
 						</div>
 						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
 						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
 		</section>
 		<!-- End Works Section -->
 
