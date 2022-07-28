@@ -18,10 +18,10 @@ public class AddReview extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 
-		int mv_seq = 100;
+		int mv_seq = 104;
 		String cmt_content = request.getParameter("comment");
 		// time : SYSDATE
-		String mb_id = "test";
+		String mb_id = "test2";
 		int cmt_likes = 1;
 		int cmt_score = 1;
 

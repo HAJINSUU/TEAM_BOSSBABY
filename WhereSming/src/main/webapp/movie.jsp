@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
     
 <!DOCTYPE html>
 <html lang="en">
@@ -439,7 +440,7 @@
                     <nav class="main-nav">
 
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="index.jsp" class="logo">
                             Where?Sming
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -457,8 +458,8 @@
                             </li>
                             <!-- 검색창끝 -->
 
-                            <li class="picks"><a href="picks.html">pick!</a></li>
-                            <li class="login"><a href="login.html">로그인</a></li>
+                            <li class="picks"><a href="picks.jsp">pick!</a></li>
+                            <li class="login"><a href="login.jsp">로그인</a></li>
 
                         </ul>
                         <a class='menu-trigger'>
@@ -525,10 +526,10 @@
                 <span class="reviewmain">리뷰작성</span>
                 <!-- Comment form-->
 
-                <form class="mb-4" sytle="width: 1200px;">
+                <form class="mb-4" sytle="width: 1200px;" action="../../AddReview" method="get">
                     <!-- 리뷰 제출용 비행기  -->
-                    <div id="paper" class="fa-solid fa-paper-plane fa-2x" style="color:rgb(255, 255, 255)">제출</div>
-                    <!-- 리뷰 제출용 비행기끝 --><textarea class="form-control" rows="3" placeholder="리뷰를 남겨주세요!"></textarea>
+                    <div id="paper" class="fa-solid fa-paper-plane fa-2x" style="color:rgb(255, 255, 255)"><button type="submit"> 제출</button></div>
+                    <!-- 리뷰 제출용 비행기끝 --><textarea class="form-control" rows="3" placeholder="리뷰를 남겨주세요!" name="comment"></textarea>
                 </form>
 
                 <div class="d-flex mb-4" sytle="width: 1200px">
