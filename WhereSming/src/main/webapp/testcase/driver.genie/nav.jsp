@@ -27,7 +27,7 @@
           <nav class="main-nav">
                       
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="index.jsp" class="logo">
               Where?Sming
             </a>
             <!-- ***** Logo End ***** -->
@@ -35,17 +35,17 @@
             <ul class="nav">
 
  <!-- 검색창시작 -->
- <li class="search">
+ <li class="search" style = "height: 40px">
   <div class="search-box">
     <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요">
-    <button class="search-btn" type="submit">
+    <button class="search-btn" onclick="location.href='movie.jsp'" type="submit">
       <i class="fas fa-search"></i>
     </button>
   </div>
 </li> 
 <!-- 검색창끝 -->
-              <li class="picks"><a href="picks.html">pick!</a></li>
-              <li class="login"><a href="login.html">로그인</a></li>
+              <li class="picks"><a href="picks.jsp">pick!</a></li>
+              <li class="login"><a href="login.jsp">로그인</a></li>
 
             </ul>
             <a class='menu-trigger'>

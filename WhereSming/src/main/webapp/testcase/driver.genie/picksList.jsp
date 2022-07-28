@@ -11,13 +11,12 @@
 <meta name="author" content="Template Mo">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Pick</title>
+<title>PicksList</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,103 +27,197 @@
 <link rel="stylesheet" href="assets/css/owl.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
-<!--
+<link href="assets/css/picklist/font-awesome.min.css" rel="stylesheet"
+	media="screen">
+<link href="assets/css/picklist/animate.css" rel="stylesheet">
+<link href="assets/css/picklist/magnific-popup.css" rel="stylesheet">
+<link href="assets/css/picklist/style.css" rel="stylesheet"
+	media="screen">
+<link href="assets/css/picklist/responsive.css" rel="stylesheet">
 
-TemplateMo 569 Edu Meeting
+<style>
+.container {
+	padding-bottom: 30px;
+}
 
-https://templatemo.com/tm-569-edu-meeting
+.flex {
+	width: 1320px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: stretch;
+}
 
--->
+.sizing {
+	border-radius: 8px;
+	padding: 5px;
+}
+
+.portfolio-bg {
+	border-radius: 10px;
+}
+
+.portfolio {
+	border-radius: 8px;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-trandsition: all 0.3s ease-in-out;
+}
+
+.portfolio:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-trandsition: scale(1.1);
+}
+
+.b {
+	font-weight: 500;
+	font-size: 15px;
+	color: #FFBB00;
+}
+
+#nic {
+	font-size: 14px;
+}
+</style>
 </head>
 
 <body>
-<!-- 실시간 채팅  -->
+	<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
-	<!-- 상단top nav -->
+	<!-- 상단top nav 
 	<%@include file="nav.jsp"%>
 
+	<!--배경-->
 	<section class="meetings-page" id="meetings">
+
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="row">
+			<div class="col-lg-8 col-xl-7">
 
-						<!-- start 인기최신장르 버튼 -->
-						<div class="col-lg-12">
-							<div class="filters">
-								<ul>
-									<li data-filter="*" class="active">인기</li>
-									<li data-filter="*">최신</li>
-									<li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li>
+				<div style="display: flex; padding-bottom: 30px;">
 
-								</ul>
-
+					<div class="col-lg-4 templatemo-item-col meeting-item all soon">
+						<div class="image-box thumb">
+							<div class="price">
+								<span> <img id="resizing"
+									src="./assets/images/thumb_up.png" alt="thumb_up">
+								</span>
 							</div>
+							<!-- 영화이미지 넣기 가져오기 -->
+							<img class="image-thumbnail"
+								src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+								alt="">
 						</div>
-						<!-- end 인기최신장르 버튼 -->
+					</div>
 
-						<!-- start 폴더생성 -->
-						<div class="col-lg-12">
-							<div class="row grid">
+					<div class="text-center text-xl-start" id="nic"
+						style="margin-top: 2px; color: #fff">
+						<h2 class="display-5 fw-bolder text-white mb-2"
+							style="width: 1200px;">공포테마 : 폴더이름 가져오기</h2>
+						<span class="b">Picker </span> 닉네임
+						<p id="like">👍 000 | 영화 · 00개</p>
 
-								<!-- start 폴더 1개 생성 -->
-								<!-- all 뒤에 soon = 인기 img = 최신 att = 장르 버튼으로 활성화 -->
-								<div class="col-lg-4 templatemo-item-col meeting-item all soon">
-									<div class="image-box thumb">
-										<div class="price">
-											<span> <img id="resizing"
-												src="./assets/images/thumb_up.png" alt="thumb_up">
-											</span>
-										</div>
-										<!-- 영화이미지 넣기 가져오기 -->
-										<a href="meeting-details.html"><img
-											class="image-thumbnail"
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt=""></a>
-									</div>
-									<div class="down-content">
-										<span id="b">Picker </span> 닉네임 <a href="meeting-details.html">
-											<p id="fb">폴더이름 가져오기</p>
-											<p id="like">👍 000 | 영화 · 00개</p>
-										</a>
-									</div>
-								</div>
-
-
-
-							</div>
+						<!-- 담아두기버튼 -->
+						<div style="margin-top: 50px">
+							<a class="btn btn-outline-light btn-lg px-4" href="#"><i
+								class="fa-regular fa-heart"></i> Pick 저장</a>
+							<!-- 찜하면 버튼 수정
+							 <a class="btn btn-outline-light btn-lg px-4" href="#!"><i class="fa-solid fa-heart"> </i> Pick 완료</a>
+						-->
 						</div>
-
-						<!-- page버튼 -->
-						<!-- <div class="col-lg-12">
-              <div class="pagination">
-                <ul>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                </ul>
-              </div>
-            </div> -->
-
 					</div>
 				</div>
+				<hr width="1320px" style="color: #fff">
 			</div>
 		</div>
+		<!-- 영화리스트 -->
+		<section>
+			<div class="container">
+				<div class="row">
+					<div id="grid" class="flex">
 
+						<!-- 영화1개씩 -->
+						<div class="portfolio-item col-md-3 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<div class="tt-overlay"></div>
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+								</div>
+							</div>
+						</div>
+						
+						<!-- 영화1개씩 -->
+						<div class="portfolio-item col-md-3 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<div class="tt-overlay"></div>
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+								</div>
+							</div>
+						</div>
+						
+						<!-- 영화1개씩 -->
+						<div class="portfolio-item col-md-3 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<div class="tt-overlay"></div>
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+								</div>
+							</div>
+						</div>
+						
+						<!-- 영화1개씩 -->
+						<div class="portfolio-item col-md-3 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<div class="tt-overlay"></div>
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+								</div>
+							</div>
+						</div>
+						
+						<!-- 영화1개씩 -->
+						<div class="portfolio-item col-md-3 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<div class="tt-overlay"></div>
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+								</div>
+							</div>
+						</div>
+						
+						<!-- 영화1개씩 -->
+						<div class="portfolio-item col-md-3 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<div class="tt-overlay"></div>
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+								</div>
+							</div>
+						</div>
+		</section>
+		<!-- End Works Section -->
 
-		<!-- footer부분 -->
-		<!-- <div class="footer">
-      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-        <br>
-        Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-        <br>
-        Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-      </p>
-    </div> -->
 
 	</section>
-
 
 	<!-- Scripts -->
 	<!-- Bootstrap core JavaScript -->
@@ -187,6 +280,79 @@ https://templatemo.com/tm-569-edu-meeting
     $(window).scroll(function () {
       checkSection();
     });
+    
+    
+    
+    <!-- Javascript files -->
+	<script src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/bootstrap.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.stellar.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.sticky.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/smoothscroll.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/wow.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.countTo.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.inview.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.easypiechart.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.shuffle.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.magnific-popup.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/froogaloop2.min.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.fitvids.js.다운로드"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/js"></script>
+	<script
+		src="./IAMX – Responsive Personal Portfolio vCard Template_files/scripts.js.다운로드"></script>
+	<!-- Code injected by live-server -->
+	<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+    
+    
+    
   </script>
 </body>
 
