@@ -6,12 +6,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 /**
  * Servlet implementation class AddReviews
  */
+=======
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
 public class AddReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+<<<<<<< HEAD
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -20,3 +24,21 @@ public class AddReview extends HttpServlet {
 	}
 
 }
+=======
+	public AddReview() {
+		super();
+	}
+
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		request.setCharacterEncoding("UTF-8");
+		
+		String comment = request.getParameter("comment");
+		
+		System.out.println(comment);
+		
+	}
+
+}
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git

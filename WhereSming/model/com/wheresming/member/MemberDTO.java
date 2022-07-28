@@ -25,4 +25,15 @@ public class MemberDTO {
 	private String mb_phone;
 	private Timestamp mb_joindate;
 	private String mb_type;
+	
+	public MemberDTO(@NonNull String mb_id, @NonNull String mb_pw, String mb_nick, String mb_email, String mb_phone) {
+		super();
+		this.mb_id = mb_id;
+		this.mb_pw = mb_pw;
+		this.mb_nick = mb_nick;
+		this.mb_email = mb_email;
+		this.mb_phone = mb_phone;
+	}
+	
+	
 }
