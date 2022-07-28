@@ -185,6 +185,10 @@ a:hover {
   text-decoration: none;
   margin-top: 50px;
 }
+
+.logo:hover {
+	color: rgb(255, 187, 0, 0.6);
+}
 </style>
 
 <head>
