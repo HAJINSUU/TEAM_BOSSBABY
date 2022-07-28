@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.wheresming.member.Login;
+
 public class AddReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +26,7 @@ public class AddReview extends HttpServlet {
 		String mb_id = "test2";
 		int cmt_likes = 1;
 		int cmt_score = 1;
-
+		
 		AddReviewDAO dao = new AddReviewDAO();
 		ReviewDTO vo = new ReviewDTO(mv_seq, cmt_content, mb_id, cmt_likes, cmt_score);
 
