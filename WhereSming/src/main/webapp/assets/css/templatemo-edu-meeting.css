@@ -362,6 +362,10 @@ header
   transition: all 0.3s ease 0s;
 }
 
+.header-area .main-nav .logo:hover{
+  color: rgb(255, 187, 0, 0.6);
+}
+
 .background-header .main-nav .logo {
   line-height: 75px;
 }
