@@ -1,47 +1,12 @@
-/*
-
-TemplateMo 569 Edu Meeting
-
-https://templatemo.com/tm-569-edu-meeting
-
-*/
-
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
-
---------------------------------------------- */
-/* 
----------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
 @import
 	url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900")
 	;
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img,
-	ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
-	center, dl, dt, dd, ol, ul, li, figure, header, nav, section, article,
-	aside, footer, figcaption {
+	blockquote, div pre, a, abbr, acronym, address, big, cite, code, del,
+	dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub,
+	sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, figure, header,
+	nav, section, article, aside, footer, figcaption {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -214,7 +179,7 @@ html, body {
 .main-button-red a {
 	font-size: 13px;
 	color: #fff;
-	background-color: #a12c2f;
+	background-color: #f5a425;
 	padding: 12px 30px;
 	display: inline-block;
 	border-radius: 22px;
@@ -261,7 +226,7 @@ header
 --------------------------------------------- 
 */
 .sub-header {
-	background-color: #1f272b;
+	background-color: #ffffff;
 	position: relative;
 	z-index: 1111;
 }
@@ -297,14 +262,15 @@ header
 	color: #f5a425;
 }
 
+/* 메인메뉴 위에 바 색깔 */
 .background-header {
-	background-color: #fff !important;
+	background-color: rgb(70, 68, 68) !important;
 	height: 80px !important;
 	position: fixed !important;
 	top: 0 !important;
 	left: 0;
 	right: 0;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
+	box-shadow: 0px 0px 10px rgba(39, 39, 39, 0.15) !important;
 }
 
 .background-header .main-nav .nav li a {
@@ -323,26 +289,23 @@ header
 	color: #fb5849 !important;
 }
 
-/* 범인은 이거였음 로고쪽에 그림자 */
-/* 로고,메뉴 위치조정 여기서 */
+/* 메인메뉴쪽 명암주는곳 */
 .header-area {
-	/* background-color: rgba(252, 252, 252, 0.15); */
+	background-color: rgba(0, 0, 0, 0.15);
 	position: absolute;
-	top: 25px;
 	left: 0;
 	right: 0;
-	z-index: 50;
+	z-index: 100;
 	-webkit-transition: all .5s ease 0s;
 	-moz-transition: all .5s ease 0s;
 	-o-transition: all .5s ease 0s;
 	transition: all .5s ease 0s;
 }
 
-/* 메인화면 흰색테두리없애기 */
-/* .header-area .main-nav {
-  min-height: 80px;
-  background: transparent;
-} */
+.header-area .main-nav {
+	min-height: 80px;
+	background: transparent;
+}
 
 /* Where?Sming로고색깔 */
 .header-area .main-nav .logo {
@@ -357,10 +320,6 @@ header
 	-moz-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
-}
-
-.header-area .main-nav .logo:hover {
-	color: rgb(255, 187, 0, 0.6);
 }
 
 .background-header .main-nav .logo {
@@ -393,10 +352,11 @@ header
 	padding-right: 0px;
 }
 
+/* 오른쪽 메뉴구성 글씨색깔 */
 .header-area .main-nav .nav li a {
 	display: block;
-	font-weight: 700;
-	font-size: 23px;
+	font-weight: 500;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: rgb(255, 192, 19);
 	-webkit-transition: all 0.3s ease 0s;
@@ -436,13 +396,13 @@ header
 }
 
 .background-header .main-nav .nav li.has-sub:after {
-	color: #1e1e1e;
+	color: #ffffff;
 }
 
 .header-area .main-nav .nav li.has-sub ul.sub-menu {
 	position: absolute;
 	width: 200px;
-	box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+	box-shadow: 0 2px 28px 0 rgba(255, 255, 255, 0.06);
 	overflow: hidden;
 	top: 40px;
 	opacity: 0;
@@ -462,7 +422,7 @@ header
 	opacity: 1;
 	display: block;
 	background: #f7f7f7;
-	color: #2a2a2a !important;
+	color: #000000 !important;
 	padding-left: 20px;
 	height: 40px;
 	line-height: 40px;
@@ -527,7 +487,7 @@ header
 
 .background-header .main-nav .menu-trigger span, .background-header .main-nav .menu-trigger span:before,
 	.background-header .main-nav .menu-trigger span:after {
-	background-color: #1e1e1e;
+	background-color: #ffffff;
 }
 
 .header-area .main-nav .menu-trigger span:before, .header-area .main-nav .menu-trigger span:after
@@ -607,11 +567,11 @@ header
 }
 
 .header-area.header-sticky {
-	min-height: 5px;
+	min-height: 80px;
 }
 
 .header-area .nav {
-	margin-top: 10px;
+	margin-top: 30px;
 }
 
 .header-area.header-sticky .nav li a.active {
@@ -744,11 +704,10 @@ banner
 	max-height: 100%;
 	overflow: hidden;
 	margin-bottom: -7px;
-	height: outo;
 }
 
 #bg-video {
-	min-width: 120%;
+	min-width: 100%;
 	min-height: 100vh;
 	max-width: 100%;
 	max-height: 100vh;
@@ -826,12 +785,12 @@ services
 ---------------------------------------------
 */
 .services {
-	margin-top: -320px;
+	background-color: rgba(22, 22, 22, 0.863);
+	margin-top: -135px;
 	position: absolute;
 	width: 100%;
 }
 
-/* 메인메뉴 추천영화 빨간 네모3개부분 여기서 모서리깎기가능 */
 .services .item {
 	background-image: url(../images/service-item-bg.jpg);
 	background-repeat: no-repeat;
@@ -840,11 +799,11 @@ services
 	border-radius: 20px;
 	text-align: center;
 	color: #fff;
-	padding: 70px;
+	padding: 40px;
 }
 
 .services .item .icon {
-	max-width: 10px;
+	max-width: 60px;
 	margin: 0 auto;
 }
 
@@ -938,8 +897,60 @@ services
 upcoming meetings
 ---------------------------------------------
 */
-.meeting-item {
+section.upcoming-meetings {
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+}
+
+section.upcoming-meetings .section-heading {
+	text-align: center;
+}
+
+section.upcoming-meetings .categories {
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 40px;
+	margin-right: 45px;
+}
+
+section.upcoming-meetings .categories h4 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #1f272b;
 	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+section.upcoming-meetings .categories ul li {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+section.upcoming-meetings .categories ul li a {
+	font-size: 15px;
+	color: #1f272b;
+	font-weight: 500;
+	transition: all .3s;
+}
+
+section.upcoming-meetings .categories ul li a:hover {
+	color: #a12c2f;
+}
+
+section.upcoming-meetings .categories .main-button-red {
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	margin-top: 15px;
+}
+
+section.upcoming-meetings .categories .main-button-red a {
+	width: 100%;
+	text-align: center;
 }
 
 .meeting-item .thumb {
@@ -947,65 +958,74 @@ upcoming meetings
 }
 
 .meeting-item .thumb img {
-	border-top-right-radius: 20px;
-	border-top-left-radius: 20px;
+	border-radius: 8px;
 }
 
+/* 좋아요 위치수정 */
 .meeting-item .thumb .price {
 	position: absolute;
-	left: 20px;
-	top: 20px;
+	left: 10px;
+	top: 180px;
 }
 
+/* 좋아요 버튼 */
 .meeting-item .thumb .price span {
-	font-size: 16px;
-	color: #1f272b;
-	font-weight: 600;
-	background-color: rgba(250, 250, 250, 0.9);
-	padding: 7px 12px;
-	border-radius: 10px;
+	background-color: #464444;
+	border-radius: 100px;
+	padding: 5px 7px 7px 7px;
 }
 
 .meeting-item .down-content {
-	background-color: #fff;
-	padding: 30px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
-
-.meeting-item .down-content .date {
-	float: left;
-	text-align: center;
-	display: inline-block;
-	margin-right: 20px;
-}
-
-.meeting-item .down-content .date h6 {
-	font-size: 13px;
-	text-transform: uppercase;
-	font-weight: 600;
-	color: #a12c2f;
-}
-
-.meeting-item .down-content .date span {
-	display: block;
-	color: #1f272b;
-	font-size: 22px;
-	margin-top: 7px;
-}
-
-.meeting-item .down-content h4 {
-	font-size: 18px;
-	color: #1f272b;
-	font-weight: 600;
-	display: inline-block;
-	margin-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 
 .meeting-item .down-content p {
-	margin-left: 50px;
-	color: #1f272b;
+	color: #ffffff;
+	font-size: 13px;
+}
+
+.down-content {
+	color: #ffffff;
+	font-size: 13px;
+}
+
+#b {
+	font-weight: 450;
 	font-size: 14px;
+	color: #FFBB00;
+}
+
+#fb {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 1.5px;
+}
+
+#like {
+	color: rgb(132, 134, 141);
+}
+
+.image-box {
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+}
+
+.image-thumbnail {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+/* 찜 따봉 엄지모양 */
+img#resizing {
+	width: 20px;
+	object-fit: cover;
 }
 
 /*
@@ -1013,6 +1033,434 @@ upcoming meetings
 apply now
 ---------------------------------------------
 */
+section.apply-now {
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 140px 0px;
+}
+
+section.apply-now .item {
+	background-color: rgba(250, 250, 250, 0.15);
+	padding: 40px;
+	margin-bottom: 30px;
+}
+
+section.apply-now .item h3 {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+section.apply-now .item p {
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.accordions {
+	border-radius: 20px;
+	padding: 40px;
+	background-color: #fff;
+	margin-left: 45px;
+}
+
+.accordions .accordion {
+	border-bottom: 1px solid #eee;
+}
+
+.accordions .last-accordion {
+	border-bottom: none;
+}
+
+.accordion-head {
+	padding: 20px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #1f272b;
+	cursor: pointer;
+	transition: color 200ms ease-in-out;
+	border-bottom: 1px solid #fff;
+}
+
+@media screen and (min-width: 768px) {
+	.accordion-head {
+		padding: 1rem;
+		font-size: 1.2rem;
+	}
+}
+
+.accordion-head .icon {
+	float: right;
+	transition: transform 200ms ease-in-out;
+}
+
+.accordion-head.is-open {
+	color: #f5a425;
+	border-bottom: none;
+}
+
+.accordion-head.is-open .icon {
+	transform: rotate(45deg);
+}
+
+.accordion-body {
+	overflow: hidden;
+	height: 0;
+	transition: height 300ms ease-in-out;
+	border-bottom: 1px solid #fff;
+}
+
+.accordion-body>.content {
+	padding: 20px;
+	padding-top: 0;
+}
+
+/* 
+---------------------------------------------
+courses
+--------------------------------------------- 
+*/
+section.our-courses {
+	background-image: url(../images/meetings-bg.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 140px;
+	padding-bottom: 130px;
+}
+
+.our-courses .item .down-content {
+	background-color: #fff;
+}
+
+.our-courses .item .down-content h4 {
+	padding: 25px;
+	font-size: 18px;
+	color: #1f272b;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+
+.our-courses .item .down-content .info {
+	padding: 25px;
+}
+
+.our-courses .item .down-content .info ul li {
+	display: inline-block;
+	margin-right: 1px;
+}
+
+.our-courses .item .down-content .info ul li i {
+	color: #f5a425;
+	font-size: 14px;
+}
+
+.our-courses .item .down-content .info span {
+	color: #a12c2f;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: right;
+	display: inline-block;
+	width: 100%;
+}
+
+.our-courses .owl-nav {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-45px);
+}
+
+.our-courses .owl-dots {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin-top: 40px;
+}
+
+.our-courses .owl-dots .owl-dot {
+	transition: all .5s;
+	width: 7px;
+	height: 7px;
+	background-color: #fff;
+	margin: 0px 5px;
+	border-radius: 50%;
+	outline: none;
+}
+
+.our-courses .owl-dots .active {
+	width: 24px;
+	height: 8px;
+	border-radius: 4px;
+}
+
+.our-courses .owl-nav .owl-prev {
+	margin-right: 10px;
+	outline: none;
+	position: absolute;
+	left: -80px;
+}
+
+.our-courses .owl-nav .owl-prev span, .our-courses .owl-nav .owl-next span
+	{
+	opacity: 0;
+}
+
+.our-courses .owl-nav .owl-prev:before {
+	display: inline-block;
+	font-family: 'FontAwesome';
+	color: #1e1e1e;
+	font-size: 25px;
+	font-weight: 700;
+	content: '\f104';
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	line-height: 50px;
+}
+
+.our-courses .owl-nav .owl-prev {
+	opacity: 1;
+	transition: all .5s;
+}
+
+.our-courses .owl-nav .owl-prev:hover {
+	opacity: 0.9;
+}
+
+.our-courses .owl-nav .owl-next {
+	opacity: 1;
+	transition: all .5s;
+}
+
+.our-courses .owl-nav .owl-next:hover {
+	opacity: 0.9;
+}
+
+.our-courses .owl-nav .owl-next {
+	margin-left: 10px;
+	outline: none;
+	position: absolute;
+	right: -85px;
+}
+
+.our-courses .owl-nav .owl-next:before {
+	display: inline-block;
+	font-family: 'FontAwesome';
+	color: #1e1e1e;
+	font-size: 25px;
+	font-weight: 700;
+	content: '\f105';
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	line-height: 50px;
+}
+
+/*
+---------------------------------------------
+our facts
+---------------------------------------------
+*/
+section.our-facts {
+	background-image: url(../images/facts-bg.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 140px 0px 125px 0px;
+}
+
+section.our-facts h2 {
+	font-size: 38px;
+	color: #fff;
+	line-height: 50px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-bottom: 50px;
+}
+
+.count-area-content {
+	text-align: center;
+	background-color: rgba(250, 250, 250, 0.15);
+	border-radius: 20px;
+	padding: 25px 30px 35px 30px;
+	margin: 15px 0px;
+}
+
+.percentage .count-digit:after {
+	content: '%';
+	margin-left: 3px;
+}
+
+.count-digit {
+	margin: 5px 0px;
+	color: #f5a425;
+	font-weight: 700;
+	font-size: 36px;
+}
+
+.count-title {
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	letter-spacing: 0.5px;
+}
+
+.new-students {
+	margin-top: 45px;
+}
+
+section.our-facts .video {
+	text-align: center;
+	margin-left: 70px;
+	background-image: url(../images/video-item-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	border-radius: 20px;
+}
+
+section.our-facts .video img {
+	padding: 170px 0px;
+	max-width: 56px;
+}
+
+/* 
+---------------------------------------------
+contact us
+--------------------------------------------- 
+*/
+section.contact-us {
+	background-image: url(../images/meetings-bg.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 140px 0px 0px 0px;
+}
+
+section.contact-us #contact {
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 40px;
+}
+
+section.contact-us #contact h2 {
+	text-transform: uppercase;
+	color: #1f272b;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+section.contact-us #contact input {
+	width: 100%;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #f7f7f7;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	font-size: 13px;
+	font-weight: 500;
+	color: #7a7a7a;
+	padding: 0px 15px;
+	margin-bottom: 30px;
+}
+
+section.contact-us #contact textarea {
+	width: 100%;
+	min-height: 140px;
+	max-height: 180px;
+	border-radius: 20px;
+	background-color: #f7f7f7;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	font-size: 13px;
+	font-weight: 500;
+	color: #7a7a7a;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+section.contact-us #contact button {
+	font-size: 13px;
+	color: #fff;
+	background-color: #a12c2f;
+	padding: 12px 30px;
+	display: inline-block;
+	border-radius: 22px;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: all .3s;
+	border: none;
+	outline: none;
+}
+
+section.contact-us #contact button:hover {
+	opacity: 0.9;
+}
+
+section.contact-us .right-info {
+	background-color: #a12c2f;
+	border-radius: 20px;
+	padding: 40px;
+}
+
+section.contact-us .right-info ul li {
+	display: inline-block;
+	border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+section.contact-us .right-info ul li:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+section.contact-us .right-info ul li h6 {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+section.contact-us .right-info ul li span {
+	display: block;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 140px;
+	border-top: 1px solid rgba(250, 250, 250, 0.15);
+	padding: 50px 0px;
+}
+
+.footer p {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #fff;
+}
+
+.footer p a {
+	color: #f5a425;
+}
 
 /*
 ---------------------------------------------
@@ -1054,7 +1502,7 @@ upcoming meetings page
 ---------------------------------------------
 */
 section.meetings-page {
-	background-image: url(../images/meetings-page-bg.jpg);
+	background-color: black;
 	background-position: center center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -1070,11 +1518,11 @@ section.meetings-page .filters {
 
 section.meetings-page .filters li {
 	font-size: 13px;
-	color: #a12c2f;
-	background-color: #fff;
-	padding: 11px 30px;
+	color: #ffffff;
+	background-color: rgba(122, 123, 116, 0.72);
+	padding: 8px 55px;
 	display: inline-block;
-	border-radius: 22px;
+	border-radius: 5px;
 	font-weight: 600;
 	text-transform: uppercase;
 	transition: all .3s;
@@ -1084,7 +1532,7 @@ section.meetings-page .filters li {
 
 section.meetings-page .filters ul li.active, section.meetings-page .filters ul li:hover
 	{
-	background-color: #a12c2f;
+	background-color: #FFBB00;
 	color: #fff;
 }
 
@@ -1125,7 +1573,7 @@ section.meetings-page .main-button-red a {
 
 section.meetings-page .pagination ul li.active a, section.meetings-page .pagination ul li a:hover
 	{
-	background-color: #a12c2f;
+	background-color: #FFBB00;
 	color: #fff;
 }
 
@@ -1134,7 +1582,7 @@ section.meetings-page .pagination ul li.active a, section.meetings-page .paginat
 }
 
 .meeting-single-item .thumb img {
-	border-top-right-radius: 20px;
+	border-top-right-radius: 00px;
 	border-top-left-radius: 20px;
 }
 
@@ -1242,22 +1690,22 @@ section.meetings-page .pagination ul li.active a, section.meetings-page .paginat
 	color: #f5a425;
 }
 
-/* Meeting item column */
+/* Meeting item column
 .templatemo-item-col {
 	width: 31%;
 }
 
-@media ( max-width : 992px) {
+@media (max-width: 992px) {
 	.templatemo-item-col {
 		width: 45%;
 	}
 }
 
-@media ( max-width : 767px) {
+@media (max-width: 767px) {
 	.templatemo-item-col {
 		width: 100%;
 	}
-}
+} */
 
 /* 
 ---------------------------------------------
