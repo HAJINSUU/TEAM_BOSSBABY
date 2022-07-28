@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
@@ -28,6 +30,8 @@
 
 <body>
 
+<%-- <%@include file = "nav.jsp" %> --%>
+
   <!-- 채팅 -->
   <script>
     (function (d, w, c) {
@@ -43,45 +47,7 @@
   </script>
   <!-- 채팅끝 -->
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-                      
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              Where?Sming
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-
- <!-- 검색창시작 -->
- <li class="search">
-  <div class="search-box">
-    <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요">
-    <button class="search-btn" type="submit">
-      <i class="fas fa-search"></i>
-    </button>
-  </div>
-</li> 
-<!-- 검색창끝 -->
-              <li class="picks"><a href="picks.jsp">pick!</a></li>
-              <li class="login"><a href="login.html">로그인</a></li>
-
-            </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+ 
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
