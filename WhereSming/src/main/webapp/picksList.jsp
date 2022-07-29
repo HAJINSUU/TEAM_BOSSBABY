@@ -105,8 +105,8 @@
 					<div class="col-lg-4 templatemo-item-col meeting-item all soon">
 						<div class="image-box thumb">
 							<div class="price">
-								<span> <img id="resizing"
-									src="./assets/images/thumb_up.png" alt="thumb_up">
+								<span> <a href = ""><img id="resizing"
+									src="./assets/images/thumb_up.png" alt="thumb_up"></a>
 								</span>
 							</div>
 							<!-- 영화이미지 넣기 가져오기 -->
@@ -143,67 +143,7 @@
 					<div id="grid" class="flex">
 
 						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<div class="tt-overlay"></div>
-									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-								</div>
-							</div>
-						</div>
-						
-						<!-- 영화1개씩 -->
-						<div class="portfolio-item col-md-3 sizing">
+						<div class="portfolio-item col-md-2 sizing">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
