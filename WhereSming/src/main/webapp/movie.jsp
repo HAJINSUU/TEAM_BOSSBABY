@@ -1,9 +1,5 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="java.util.List"%>
-<%@page import="com.wheresming.search.SearchingDAO" %>
+    pageEncoding="UTF-8"%>
 
     
 <!DOCTYPE html>
@@ -43,9 +39,9 @@
         }
 
         .container2 {
-            /* 위치이동 */
+            /* 영화설명페이지 위치이동 */
             margin-top: 230px;
-            margin-left: 150px;
+            margin-left: 280px;
 
             background: transparent;
             position: absolute;
@@ -78,7 +74,7 @@
         .container3 {
             color: #FFBB00;
             font-size: 30px;
-            margin-left: 1520px;
+            margin-left: 1420px;
             object-fit: cover;
         }
 
@@ -95,7 +91,8 @@
             position: relative;
             overflow: hidden;
             background-size: cover;
-            border: 2px solid #464444;
+			border-radius: 8px;
+            margin-top: 8px;
         }
 
         .details {
@@ -242,12 +239,12 @@
             border-radius: 0.25rem;
         }
 
-        /* 메인영화 보여주는쪽 위치조절가능 */
+        /* 댓글위치조절가능*/
         .card-body {
             color: #fff;
             width: 1200px;
             margin: -800px;
-            margin-left: 130px;
+            margin-left: 260px;
             background: transparent;
             /* 댓글 글자 크기 조절 */
             font-size: 15px;
@@ -401,9 +398,7 @@
 
                 <table border="0">
                     <tr>
-                        <td rowspan="5">
-                        
-                        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNjExMjNfMjUx%2FMDAxNDc5ODg4NTI4MzY0.r_Q6SXVno1uoaocsdmlDurffqqYI6bB2hPjCwuz-eEgg.wr4z76Zfa3jyLMWVd0awf016Llw4n2NFqC_MFJAiWQcg.JPEG.chahyun97%2Fmovie_image-40.jpg&type=sc960_832" id="imgPoster" /></td>
+                        <td rowspan="5"><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNjExMjNfMjUx%2FMDAxNDc5ODg4NTI4MzY0.r_Q6SXVno1uoaocsdmlDurffqqYI6bB2hPjCwuz-eEgg.wr4z76Zfa3jyLMWVd0awf016Llw4n2NFqC_MFJAiWQcg.JPEG.chahyun97%2Fmovie_image-40.jpg&type=sc960_832" id="imgPoster" /></td>
                         <td>ㅤ영화제목 : 센과 치히로의 행방불명 </td>
                     </tr>
                     <tr>
@@ -418,24 +413,10 @@
                     </tr>
                     <tr>
                          <td>ㅤ제공OTT    <!-- 넷플왓챠티빙 -->
-                         	<div class=wrapper style="width: 350px;">
-                         		<c:choose>
-									<c:when test="${empty searchMovie }">
-										<li class="picks"><a href="index.jsp">검색된 결과가 없습니다.</a></li>
-									</c:when>
-									<c:otherwise>
-										<!-- 단순 if문 조건 1개일때 -->
-										<c:if test="${not empty searchMovie.mv_nf }">
-		                                 <div class="box1" style="background-image : url('data:image/jpeg;base64,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')"></div>
-										</c:if>
-										<c:if test="${searchMovie.mv_wc != null }">
-		                                 <div class="box2" style="background-image : url('https://play-lh.googleusercontent.com/vAkKvTtE8kdb0MWWxOVaqYVf0_suB-WMnfCR1MslBsGjhI49dAfF1IxcnhtpL3PnjVY')"></div>
-										</c:if>
-										<c:if test="${searchMovie.mv_tv != null }">
-		                                 <div class="box3" style="background-image : url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfMjIw%2FMDAxNjUwMjYxMDI0ODc0.2YppfkpxWVeiufpj309p7P8OTDH6utZEIrYS-AAUPaYg.ahQsY_JjgA4rS_Nt8lT15sEd1PKLj4QxrQGVLgGfLbMg.JPEG.qkrejrwk0810%2Ftving_log.jpg&type=sc960_832')"></div>
-										</c:if>
-									</c:otherwise>
-								</c:choose>
+                                <div class=wrapper style="width: 350px;">
+                                 <div class="box1" style="background-image : url('data:image/jpeg;base64,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')"></div>
+                                 <div class="box2" style="background-image : url('https://play-lh.googleusercontent.com/vAkKvTtE8kdb0MWWxOVaqYVf0_suB-WMnfCR1MslBsGjhI49dAfF1IxcnhtpL3PnjVY')"></div>
+                                 <div class="box3" style="background-image : url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfMjIw%2FMDAxNjUwMjYxMDI0ODc0.2YppfkpxWVeiufpj309p7P8OTDH6utZEIrYS-AAUPaYg.ahQsY_JjgA4rS_Nt8lT15sEd1PKLj4QxrQGVLgGfLbMg.JPEG.qkrejrwk0810%2Ftving_log.jpg&type=sc960_832')"></div>
                              </div>
                              <!-- 넷플왓챠티빙끝--> </td>
                     </tr>
@@ -532,7 +513,6 @@
             </div>
             <div class="bg-items">
                 <div class="items"
-                
                     style="background-image : url('https://cdn-magazine.notefolio.net/files/76/17676-6044-46_cont');">
                     <div class="three"></div>
                     <div class="details">
@@ -566,7 +546,7 @@
                 <span class="reviewmain">리뷰작성</span>
                 <!-- Comment form-->
 
-                <form class="mb-4" sytle="width: 1200px;" action="AddReview" method="get">
+                <form class="mb-4" sytle="width: 1200px;" action="../../AddReview" method="get">
                     <!-- 리뷰 제출용 비행기  -->
                     <div id="paper" class="fa-solid fa-paper-plane fa-2x" style="color:rgb(255, 255, 255)"><button type="submit"> 제출</button></div>
                     <!-- 리뷰 제출용 비행기끝 --><textarea class="form-control" rows="3" placeholder="리뷰를 남겨주세요!" name="comment"></textarea>
