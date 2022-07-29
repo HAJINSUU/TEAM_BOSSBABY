@@ -20,7 +20,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <mappers>
     	<mapper resource="com/wheresming/database/MemberMapper.xml"/>
     	<mapper resource="com/wheresming/database/ReviewMapper.xml"/>
+<<<<<<< HEAD
     	<mapper resource="com/wheresming/database/top50Mapper.xml"/>
+=======
+    	<mapper resource="com/wheresming/database/SearchMapper.xml"/>
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
     </mappers>
 </configuration>
 
