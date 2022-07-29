@@ -54,7 +54,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 .search-box {
   /* 생략 */
-  background-color: black;
+  background-color: #fff;
   height: 40px;
   /* 이거건들면 플레이스홀더위치조절가능 */
   padding: 8px;
@@ -138,7 +138,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: black;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -841,6 +841,7 @@ services
 .services {
   margin-top: -320px;
   position: absolute;
+  top : 880px;
   width: 100%;
 }
 
