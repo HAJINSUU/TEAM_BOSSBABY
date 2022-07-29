@@ -39,9 +39,9 @@
         }
 
         .container2 {
-            /* 위치이동 */
+            /* 영화설명페이지 위치이동 */
             margin-top: 230px;
-            margin-left: 150px;
+            margin-left: 280px;
 
             background: transparent;
             position: absolute;
@@ -74,7 +74,7 @@
         .container3 {
             color: #FFBB00;
             font-size: 30px;
-            margin-left: 1520px;
+            margin-left: 1420px;
             object-fit: cover;
         }
 
@@ -91,7 +91,8 @@
             position: relative;
             overflow: hidden;
             background-size: cover;
-            border: 2px solid #464444;
+			border-radius: 8px;
+            margin-top: 8px;
         }
 
         .details {
@@ -238,12 +239,12 @@
             border-radius: 0.25rem;
         }
 
-        /* 메인영화 보여주는쪽 위치조절가능 */
+        /* 댓글위치조절가능*/
         .card-body {
             color: #fff;
             width: 1200px;
             margin: -800px;
-            margin-left: 130px;
+            margin-left: 260px;
             background: transparent;
             /* 댓글 글자 크기 조절 */
             font-size: 15px;
