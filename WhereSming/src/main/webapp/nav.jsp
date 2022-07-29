@@ -63,7 +63,7 @@
 							<li class="mypage"><a href="index.jsp">전체회원정보</a></li>
 						</c:if>
 							<li class="mypage"><a href="picks.jsp">PICK!</a></li>
-							<li class="mypage"><a href="index.jsp">MYPAGE</a></li>
+							<li class="mypage"><a href="mypage.jsp">MYPAGE</a></li>
 							<li class="logout"><a href="Logout">LOGOUT</a></li>
 					</c:otherwise>
 				</c:choose>
