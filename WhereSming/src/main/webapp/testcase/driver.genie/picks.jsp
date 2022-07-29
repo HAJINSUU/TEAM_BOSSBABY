@@ -28,16 +28,10 @@
 <link rel="stylesheet" href="assets/css/owl.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
-<style>
-.price {
-	position: relative;
-}
-</style>
-
 </head>
 
 <body>
-	<!-- 실시간 채팅  -->
+<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav -->
 	<%@include file="nav.jsp"%>
@@ -55,6 +49,7 @@
 									<li data-filter="*" class="active">인기</li>
 									<li data-filter="*">최신</li>
 									<li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li>
+
 								</ul>
 
 							</div>
@@ -70,12 +65,13 @@
 								<div class="col-lg-4 templatemo-item-col meeting-item all soon">
 									<div class="image-box thumb">
 										<div class="price">
-											<span> <a href="#"><img id="resizing"
+											<span> <img id="resizing"
 												src="./assets/images/thumb_up.png" alt="thumb_up">
-											</span></a>
+											</span>
 										</div>
 										<!-- 영화이미지 넣기 가져오기 -->
-										<a href="picksList.jsp"><img class="image-thumbnail"
+										<a href="picksList.jsp"><img
+											class="image-thumbnail"
 											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
 											alt=""></a>
 									</div>
@@ -86,6 +82,7 @@
 										</a>
 									</div>
 								</div>
+
 
 
 							</div>
@@ -136,8 +133,8 @@
 	<script src="assets/js/slick-slider.js"></script>
 	<script src="assets/js/custom.js"></script>
 
-	<script>	
-	
+	<script>
+
     //according to loftblog tut
     $('.nav li:first').addClass('active');
 

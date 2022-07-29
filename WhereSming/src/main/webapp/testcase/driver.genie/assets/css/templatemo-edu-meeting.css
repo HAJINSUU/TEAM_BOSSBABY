@@ -54,7 +54,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 .search-box {
   /* 생략 */
-  background-color: #ffffff;
+  background-color: #fff;
   height: 40px;
   /* 이거건들면 플레이스홀더위치조절가능 */
   padding: 8px;
@@ -67,7 +67,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   color: #85858594;
   float: right;
   /* 검색창 가로사이즈 */
-  width: 450px;
+  width: 330px;
 
   /* 투명한블럭임 */
   height: 0px;
@@ -138,7 +138,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color:balck;
+  background-color: black;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -362,6 +362,10 @@ header
   transition: all 0.3s ease 0s;
 }
 
+.header-area .main-nav .logo:hover{
+  color: rgb(255, 187, 0, 0.6);
+}
+
 .background-header .main-nav .logo {
   line-height: 75px;
 }
@@ -385,7 +389,7 @@ header
 
 .header-area .main-nav .nav li {
   padding-left: 15px;
-  padding-right: 15px;
+
 }
 
 .header-area .main-nav .nav li:last-child {
@@ -837,6 +841,7 @@ services
 .services {
   margin-top: -320px;
   position: absolute;
+  top : 880px;
   width: 100%;
 }
 
@@ -1046,7 +1051,7 @@ section.upcoming-meetings .categories .main-button-red a {
 }
 
 #b {
-	font-weight: 500;
+	font-weight: 450;
 	font-size: 14px;
 	color: #FFBB00;
 }

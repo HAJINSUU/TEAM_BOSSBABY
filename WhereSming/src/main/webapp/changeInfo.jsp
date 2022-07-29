@@ -76,13 +76,12 @@ input {
 .cen {
 	display: flex;
 	justify-content: center;
-	margin-top : 24px;
+	margin-top: 24px;
 	margin-bottom: 100px;
 }
 
 .mg {
 	margin: 30px 0px;
-	
 }
 
 .siz {
@@ -122,20 +121,21 @@ input {
 				<div class="cen">
 					<form action="UpdateCon" method="post">
 						<label for="name">아이디</label>
-						<li class="inputli"><input name="id" type="text" class="box"
-							value="${loginMember.mb_id}" placeholder=""></li> <label
-							for="name">닉네임</label>
+						<li class="inputli"><div onclick = "ckfunc()" name="id" class="box" title="아이디는 변경이 불가합니다" >${loginMember.mb_id}</div>
+							</li>
+
+						<label for="name">닉네임</label>
 						<li class="inputli"><input name="nickname" type="text"
-							class="box" placeholder="변경할 닉네임을 입력하세요"></li> <label
-							for="name">비밀번호</label>
+							class="box" value="${loginMember.mb_nick}" placeholder=""></li>
+						<label for="name">비밀번호</label>
 						<li class="inputli"><input name="pw" type="password"
-							class="box" placeholder="변경할 비밀번호를 입력하세요"></li> <label
-							for="name">이메일</label>
+							class="box" value="${loginMember.mb_pw}"
+							placeholder="변경할 비밀번호를 입력하세요"></li> <label for="name">이메일</label>
 						<li class="inputli"><input name="email" type="text"
-							class="box" placeholder="변경할 이메일을 입력하세요"></li> <label
-							for="name">휴대전화번호</label>
+							class="box" value="${loginMember.mb_email}" placeholder=""></li>
+						<label for="name">휴대전화번호</label>
 						<li class="inputli"><input name="tel" type="text" class="box"
-							placeholder="변경할 휴대전화 번호를 입력하세요"></li>
+							value="${loginMember.mb_phone}" placeholder=""></li>
 
 						<li class="inputli mg"><input type="submit" class="box siz"
 							value="회원정보수정완료"></li>
@@ -167,6 +167,10 @@ input {
 	<script src="assets/js/custom.js"></script>
 
 	<script>	
+	
+	function ckfunc() {
+		alert("아이디는 변경이 불가합니다!")
+	}
 	
     //according to loftblog tut
     $('.nav li:first').addClass('active');
