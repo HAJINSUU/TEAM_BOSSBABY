@@ -133,7 +133,7 @@ input {
 							for="name">이메일</label>
 						<li class="inputli"><input name="email" type="text"
 							class="box" placeholder="변경할 이메일을 입력하세요"></li> <label
-							for="name">휴대전화</label>
+							for="name">휴대전화번호</label>
 						<li class="inputli"><input name="tel" type="text" class="box"
 							placeholder="변경할 휴대전화 번호를 입력하세요"></li>
 
