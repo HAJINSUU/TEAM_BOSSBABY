@@ -566,7 +566,7 @@
                 <span class="reviewmain">리뷰작성</span>
                 <!-- Comment form-->
 
-                <form class="mb-4" sytle="width: 1200px;" action="../../AddReview" method="get">
+                <form class="mb-4" sytle="width: 1200px;" action="AddReview" method="get">
                     <!-- 리뷰 제출용 비행기  -->
                     <div id="paper" class="fa-solid fa-paper-plane fa-2x" style="color:rgb(255, 255, 255)"><button type="submit"> 제출</button></div>
                     <!-- 리뷰 제출용 비행기끝 --><textarea class="form-control" rows="3" placeholder="리뷰를 남겨주세요!" name="comment"></textarea>
