@@ -5,12 +5,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import com.wheresming.member.Login;
+import com.wheresming.member.MemberDTO;
 
 public class AddReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public static String mb_nick;
 
 	
 	public AddReview() {
@@ -21,15 +21,19 @@ public class AddReview extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
+		
+		HttpSession session = request.getSession();
+		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
 
 		int mv_seq = 104;
 		String cmt_content = request.getParameter("comment");
 		// time : SYSDATE
-		String mb_id = "test";
-		int cmt_likes = 1;
-		int cmt_score = 1;
-		this.mb_nick = null;
-		System.out.println("mb_nick test : "+ mb_nick);
+		String mb_nick = loginMember.getMb_nick();
+		String mb_id = loginMember.getMb_id();
+		int cmt_likes = 0;
+		int cmt_score = 0;
+		
+		System.out.println("게시물 작성자 닉네임 : " + mb_nick);
 		
 		AddReviewDAO dao = new AddReviewDAO();
 		ReviewDTO vo = new ReviewDTO(mv_seq, cmt_content, mb_nick, mb_id, cmt_likes, cmt_score);

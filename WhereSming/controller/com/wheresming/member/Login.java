@@ -33,9 +33,7 @@ public class Login extends HttpServlet {
 				
 				// 4. dao.selectMember() 메서드 호출
 				MemberDTO loginMember = dao.selectMember(vo);
-				
-				AddReview.mb_nick = vo.getMb_nick();
-				
+								
 				// 5. 세션저장
 				
 				if(loginMember!=null) {  // 로그인 성공
