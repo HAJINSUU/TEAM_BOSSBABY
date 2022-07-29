@@ -13,12 +13,12 @@ public class ReviewViewerDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();
 
-	public List<ReviewDTO> selectAllMember(String id) {
+	public List<ReviewDTO> selectAllMember(int mv_seq) {
 
 		List<ReviewDTO> list = null;
 
 		try {
-			list = sqlSession.selectList("com.wheresming.review.ReviewDAO.selectList");
+			list = sqlSession.selectList("com.wheresming.review.ReviewDAO.selectList", mv_seq);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
