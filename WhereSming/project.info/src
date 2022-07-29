@@ -11,6 +11,7 @@ Singin : 회원가입을 담당하는 컨트롤러
 - com.wheresming.movie : Movie와 관련된 컨트롤러
 MovieList : 무비리스트를 띄워주는 컨트롤러
 OttSite : OTT 사이트를 연결해주거나 연동시켜주는 컨트롤러
+Top50bottom : 메인페이지 하단 영화추천 컨트롤러
 
 - com.wheresming.pick : Pick과 관련된 컨트롤러
 AddPick : 페이지에서 pick을 추가하는 컨트롤러
@@ -45,6 +46,7 @@ PickListMapper : PickList SQL Mapper를 작성하는 xml
 ReviewMapper : Review SQL Mapper를 작성하는 xml
 SearchMapper : Search SQL Mapper를 작성하는 xml
 SQL.script : DB 내 테이블 접근에 관련한 SQL 실행문들을 정의하는 문서
+top50Mapper : 메인페이지 하단 영화추천 SQL xml
 
 - com.wheresming.member : Member와 관련된 Model
 InfoEditDAO : 회원정보 수정의 로직을 담당하는 클래스
@@ -59,6 +61,7 @@ SinginDAO : 회원가입의 로직을 담당하는 클래스
 MovieDTO : 무비 테이블의 객체를 생성하는 생성 클래스
 MovieListDAO : 무비 리스트 로직을 담당하는 클래스
 OttSiteDAO : OTT 사이트 연결의 로직을 담당하는 클래스
+Top50bottomDAO :메인페이지 하단 영화추천 로직을 담당하는 클래스
 
 - com.wheresming.pick : Pick과 관련된 Model
 AddPickDAO : 픽 추가와 관련된 로직을 담당하는 클래스

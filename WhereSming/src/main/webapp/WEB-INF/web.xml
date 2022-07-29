@@ -184,6 +184,12 @@
   	<description></description>
   	<servlet-class>com.wheresming.review.AddReviews</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Top50bottom</servlet-name>
+  	<display-name>Top50bottom</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.movie.Top50bottom</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -303,5 +309,9 @@
   <servlet-mapping>
   	<servlet-name>AddReviews</servlet-name>
   	<url-pattern>/AddReviews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Top50bottom</servlet-name>
+  	<url-pattern>/Top50bottom</url-pattern>
   </servlet-mapping>
 </web-app>
