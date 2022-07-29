@@ -406,7 +406,50 @@
                         <td>ㅤ영화제목 : ${searchMovie.mv_title } </td>
                     </tr>
                     <tr>
-                        <td>ㅤ장르 : ${searchMovie.mv_genre }</td>
+                   	 <c:choose>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'kid'}">
+	                      		<td>ㅤ장르 : 어린이&가족 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'ani'}">
+	                      		<td>ㅤ장르 : 애니메이션 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'ac'}">
+	                      		<td>ㅤ장르 : 액션 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'co'}">
+	                      		<td>ㅤ장르 : 코미디 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'ro'}">
+	                      		<td>ㅤ장르 : 로맨스 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'th'}">
+	                      		<td>ㅤ장르 : 스릴러 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'ho'}">
+	                      		<td>ㅤ장르 : 호러 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'sf'}">
+	                      		<td>ㅤ장르 : SF </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'fa'}">
+	                      		<td>ㅤ장르 : 판타지 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'cri'}">
+	                      		<td>ㅤ장르 : 범죄 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'dra'}">
+	                      		<td>ㅤ장르 : 드라마 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'doc'}">
+	                      		<td>ㅤ장르 : 다큐멘터리 </td>
+	                       	</c:when>
+	                      	<c:when test= "${searchMovie.mv_genre eq 'mus'}">
+	                      		<td>ㅤ장르 : 음악&뮤지컬 </td>
+	                       	</c:when>
+	                       	<c:otherwise>
+	                      		<td>ㅤ장르 : 기타 </td>
+	                       	</c:otherwise>
+                        </c:choose>
                     </tr>
                     <tr>
                         <td>ㅤ평점 : 9.5점 </td>
