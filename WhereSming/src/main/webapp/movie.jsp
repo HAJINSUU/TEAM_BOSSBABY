@@ -4,6 +4,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.List"%>
 <%@page import="com.wheresming.search.SearchingDAO" %>
+<%@page import="com.wheresming.member.MemberDTO" %>
+<%@page import="com.wheresming.member.LoginDAO" %>
 
     
 <!DOCTYPE html>
@@ -456,8 +458,16 @@
                         <td>ㅤ평점 : 9.5점 </td>
                     </tr>
                     <tr>
-                        <td>ㅤ<a href="login.jsp"><i class="fa-solid fa-heart fa-2x"
-                                    style="color:rgb(253, 85, 85)"></i></a>ㅤ찜하기</td>
+                          <c:choose>
+                        	<c:when test="${empty loginMember }">
+                       			 <td>ㅤ<a href="login.jsp"><i class="fa-solid fa-heart fa-2x"
+                                 style="color:rgb(253, 85, 85)"></i></a>ㅤ찜하기</td>
+                            </c:when>
+                            <c:otherwise>
+                       			 <td>ㅤ<a href="mypage.jsp"><i class="fa-solid fa-heart fa-2x"
+                                 style="color:rgb(253, 85, 85)"></i></a>ㅤ찜하기</td>
+                            </c:otherwise>          
+                        </c:choose>
                     </tr>
                     <tr>
                          <td>ㅤ제공OTT    <!-- 넷플왓챠티빙 -->
@@ -550,9 +560,21 @@
 							</li> 
                             <!-- 검색창끝 -->
 
-                            <li class="picks"><a href="picks.jsp">pick!</a></li>
-                            <li class="login"><a href="login.jsp">로그인</a></li>
-
+							<c:choose>
+								<c:when test="${empty loginMember }">
+									<li class="picks"><a href="picks.jsp">pick!</a></li>
+									<li class="login"><a href="login.jsp">로그인</a></li>
+								</c:when>
+								<c:otherwise>
+									<!-- 단순 if문 조건 1개일때 -->
+									<c:if test="${loginMember.mb_type eq 'A'}">
+										<li class="mypage"><a href="index.jsp">전체회원정보</a></li>
+									</c:if>
+										<li class="mypage"><a href="picks.jsp">PICK!</a></li>
+										<li class="mypage"><a href="mypage.jsp">MYPAGE</a></li>
+										<li class="logout"><a href="Logout">LOGOUT</a></li>
+								</c:otherwise>
+							</c:choose>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
