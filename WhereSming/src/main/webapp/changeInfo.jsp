@@ -123,7 +123,7 @@ input {
 					<form action="UpdateCon" method="post">
 						<label for="name">아이디</label>
 						<li class="inputli"><input name="id" type="text" class="box"
-							value="${loginMember.tel}" placeholder=""></li> <label
+							value="${loginMember.mb_id}" placeholder=""></li> <label
 							for="name">닉네임</label>
 						<li class="inputli"><input name="nickname" type="text"
 							class="box" placeholder="변경할 닉네임을 입력하세요"></li> <label
