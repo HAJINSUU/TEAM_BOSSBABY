@@ -247,13 +247,13 @@
 			</div>
 		</div>
 
-		<div class="footer">
+<!-- 		<div class="footer">
 			<br>
 			<p>
 				Copyright © 2022 BossBaby, Ltd. All Rights Reserved. <br>
 				Design, Distibuted By: <a>BossBaby</a>
 			</p>
-		</div>
+		</div> -->
 	</section>
 
 

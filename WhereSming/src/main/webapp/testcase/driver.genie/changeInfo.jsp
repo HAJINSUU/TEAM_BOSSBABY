@@ -123,8 +123,8 @@ input {
 					<form action="UpdateCon" method="post">
 						<label for="name">아이디</label>
 						<li class="inputli"><input name="id" type="text" class="box"
-							value="${loginMember.tel}" placeholder=""></li> <label
-							for="name">닉네임</label>
+							value="${loginMember.mb_id}" placeholder=""></li> <label
+							for="name">현재 닉네임 : ${loginMember.mb_id}</label>
 						<li class="inputli"><input name="nickname" type="text"
 							class="box" placeholder="변경할 닉네임을 입력하세요"></li> <label
 							for="name">비밀번호</label>
@@ -133,7 +133,7 @@ input {
 							for="name">이메일</label>
 						<li class="inputli"><input name="email" type="text"
 							class="box" placeholder="변경할 이메일을 입력하세요"></li> <label
-							for="name">휴대전화</label>
+							for="name">휴대전화번호</label>
 						<li class="inputli"><input name="tel" type="text" class="box"
 							placeholder="변경할 휴대전화 번호를 입력하세요"></li>
 
