@@ -17,7 +17,7 @@
 	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Pick</title>
+<title>mypage</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,9 +28,16 @@
 <link rel="stylesheet" href="assets/css/owl.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
+<!-- 마이페이지css -->
+
 <style>
 .price {
 	position: relative;
+}
+
+.colorch {
+	width: 18px;
+	color: #fff;
 }
 </style>
 
@@ -48,18 +55,17 @@
 				<div class="col-lg-12">
 					<div class="row">
 
-						<!-- start 인기최신장르 버튼 -->
+						<!-- 마이페이지 버튼 -->
 						<div class="col-lg-12">
 							<div class="filters">
 								<ul>
-									<li data-filter="*" class="active">인기</li>
-									<li data-filter="*">최신</li>
-									<li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li>
+									<li data-filter="*" class="active">MY PICK!</li>
+									<li data-filter="*">회원정보수정</li>
 								</ul>
 
 							</div>
 						</div>
-						<!-- end 인기최신장르 버튼 -->
+
 
 						<!-- start 폴더생성 -->
 						<div class="col-lg-12">
@@ -75,14 +81,14 @@
 											</span>
 										</div>
 										<!-- 영화이미지 넣기 가져오기 -->
-										<a href="mypicksList.jsp"><img class="image-thumbnail"
+										<a href="picksList.jsp"><img class="image-thumbnail"
 											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
 											alt=""></a>
 									</div>
 									<div class="down-content">
-										<a href="mypicksList.jsp">
+										<span id="b">Picker </span> 닉네임 <a href="picksList.jsp">
 											<p id="fb">폴더이름 가져오기</p>
-											<p id="like">영화 · 00개</p>
+											<p id="like">👍 000 | 영화 · 00개</p>
 										</a>
 									</div>
 								</div>

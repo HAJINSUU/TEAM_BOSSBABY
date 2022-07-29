@@ -125,11 +125,9 @@
 
 						<!-- 담아두기버튼 -->
 						<div style="margin-top: 50px">
-							<a class="btn btn-outline-light btn-lg px-4" href="#"><i
-								class="fa-regular fa-heart"></i> Pick 저장</a>
-							<!-- 찜하면 버튼 수정
-							 <a class="btn btn-outline-light btn-lg px-4" href="#!"><i class="fa-solid fa-heart"> </i> Pick 완료</a>
-						-->
+							<a class="btn btn-outline-light btn-lg px-4" href="#">공유하기</a> 
+							<a class="btn btn-outline-light btn-lg px-4" href="#">PICK 수정하기</a>
+
 						</div>
 					</div>
 				</div>
