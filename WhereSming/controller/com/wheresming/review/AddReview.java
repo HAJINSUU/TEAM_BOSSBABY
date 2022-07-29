@@ -10,8 +10,8 @@ import com.wheresming.member.Login;
 
 public class AddReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	public static String mb_nick;
+
 	
 	public AddReview() {
 		super();
@@ -25,12 +25,11 @@ public class AddReview extends HttpServlet {
 		int mv_seq = 104;
 		String cmt_content = request.getParameter("comment");
 		// time : SYSDATE
-		mb_nick = "test";
 		String mb_id = "test";
 		int cmt_likes = 1;
 		int cmt_score = 1;
-		
-		System.out.println(mb_nick);
+		this.mb_nick = null;
+		System.out.println("mb_nick test : "+ mb_nick);
 		
 		AddReviewDAO dao = new AddReviewDAO();
 		ReviewDTO vo = new ReviewDTO(mv_seq, cmt_content, mb_nick, mb_id, cmt_likes, cmt_score);

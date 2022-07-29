@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.wheresming.review.AddReview;
+
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -32,7 +34,7 @@ public class Login extends HttpServlet {
 				// 4. dao.selectMember() 메서드 호출
 				MemberDTO loginMember = dao.selectMember(vo);
 				
-				
+				AddReview.mb_nick = vo.getMb_nick();
 				
 				// 5. 세션저장
 				
