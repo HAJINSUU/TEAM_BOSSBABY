@@ -42,12 +42,10 @@
  <!-- 검색창시작 -->
  <li class="search" style = "height: 40px">
   <div class="search-box">
-  <form action="Searching" method="get">
-    <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요" name="mv_title">
-    <button class="search-btn" onclick="location.href='movie.jsp'" type="submit" value="Searching">
+    <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요">
+    <button class="search-btn" onclick="location.href='movie.jsp'" type="submit">
       <i class="fas fa-search"></i>
     </button>
-   </form>
   </div>
 </li> 
 <!-- 검색창끝 -->
@@ -59,7 +57,7 @@
 					</c:when>
 					<c:otherwise>
 						<!-- 단순 if문 조건 1개일때 -->
-						<c:if test="${loginMember.mb_type eq 'A'}">
+						<c:if test="${loginMember.mb_nick eq 'bossbaby'}">
 							<li class="mypage"><a href="index.jsp">전체회원정보</a></li>
 						</c:if>
 							<li class="mypage"><a href="picks.jsp">PICK!</a></li>

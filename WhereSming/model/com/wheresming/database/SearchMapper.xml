@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.wheresming.search.SearchingDAO">
+	<select id="select" parameterType="com.wheresming.search.SearchDTO" resultType="com.wheresming.search.SearchDTO">	
+		SELECT * FROM T_MOVIE WHERE MV_TITLE=#{mv_title}
+	</select>
+</mapper>
