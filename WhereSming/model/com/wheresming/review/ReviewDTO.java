@@ -51,6 +51,16 @@ public class ReviewDTO {
 		this.cmt_likes = cmt_likes;
 		this.cmt_score = cmt_score;
 	}
+
+	public ReviewDTO(String cmt_content, String mb_nick, int cmt_likes, int cmt_score) {
+		super();
+		this.cmt_content = cmt_content;
+		this.mb_nick = mb_nick;
+		this.cmt_likes = cmt_likes;
+		this.cmt_score = cmt_score;
+	}
+	
+	
 	
 	
 	

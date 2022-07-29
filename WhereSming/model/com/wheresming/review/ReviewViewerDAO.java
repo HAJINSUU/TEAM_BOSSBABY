@@ -13,9 +13,9 @@ public class ReviewViewerDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();
 
-	public List<ReviewDTO> selectAllMember(int mv_seq) {
+	public List<ReviewViewerDTO> selectAllReview(int mv_seq) {
 
-		List<ReviewDTO> list = null;
+		List<ReviewViewerDTO> list = null;
 
 		try {
 			list = sqlSession.selectList("com.wheresming.review.ReviewDAO.selectList", mv_seq);
