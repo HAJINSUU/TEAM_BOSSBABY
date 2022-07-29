@@ -5,10 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         
 <mapper namespace="com.wheresming.review.ReviewDAO">
 	<insert id="insert" parameterType="com.wheresming.review.ReviewDTO">	
-	INSERT INTO t_comment (mv_seq, cmt_content, cmt_date, mb_id, cmt_likes, cmt_score) 
-	VALUES (#{mv_seq}, #{cmt_content}, SYSDATE, #{mb_id}, #{cmt_likes}, #{cmt_score})
+	INSERT INTO t_comment (mv_seq, cmt_content, cmt_date, mb_nick, mb_id, cmt_likes, cmt_score) 
+	VALUES (#{mv_seq}, #{cmt_content}, SYSDATE, #{mb_nick}, #{mb_id}, #{cmt_likes}, #{cmt_score})
 	</insert>
-	<select id="select">
-	
-	</select>
 </mapper>
