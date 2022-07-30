@@ -5,34 +5,64 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
+  	<servlet-name>JoinCon</servlet-name>
+  	<display-name>JoinCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.contrlloer.JoinCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginCon</servlet-name>
+  	<display-name>LoginCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.contrlloer.LoginCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>logoutCon</servlet-name>
+  	<display-name>logoutCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.contrlloer.logoutCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateCon</servlet-name>
+  	<display-name>UpdateCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.contrlloer.UpdateCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DelectCon</servlet-name>
+  	<display-name>DelectCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.contrlloer.DelectCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MessageSend</servlet-name>
+  	<display-name>MessageSend</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.contrlloer.MessageSend</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InfoEdit</servlet-name>
+  	<display-name>InfoEdit</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.member.InfoEdit</servlet-class>
+  </servlet>
+  <servlet>
   	<servlet-name>Login</servlet-name>
   	<display-name>Login</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.account.Login</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Singin</servlet-name>
-  	<display-name>Singin</display-name>
-  	<description></description>
-  	<servlet-class>com.wheresming.account.Singin</servlet-class>
+  	<servlet-class>com.wheresming.member.Login</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Logout</servlet-name>
   	<display-name>Logout</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.account.Logout</servlet-class>
+  	<servlet-class>com.wheresming.member.Logout</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>MyPage</servlet-name>
   	<display-name>MyPage</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.account.MyPage</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>EditAccount</servlet-name>
-  	<display-name>EditAccount</display-name>
-  	<description></description>
-  	<servlet-class>com.wheresming.account.EditAccount</servlet-class>
+  	<servlet-class>com.wheresming.member.MyPage</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>RemoveMember</servlet-name>
@@ -41,10 +71,34 @@
   	<servlet-class>com.wheresming.member.RemoveMember</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>PickList</servlet-name>
-  	<display-name>PickList</display-name>
+  	<servlet-name>Signin</servlet-name>
+  	<display-name>Signin</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.pick.PickList</servlet-class>
+  	<servlet-class>com.wheresming.member.Signin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MovieList</servlet-name>
+  	<display-name>MovieList</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.movie.MovieList</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>OttSite</servlet-name>
+  	<display-name>OttSite</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.movie.OttSite</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddPick</servlet-name>
+  	<display-name>AddPick</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.pick.AddPick</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BestPickList</servlet-name>
+  	<display-name>BestPickList</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.pick.BestPickList</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>CreatePickList</servlet-name>
@@ -59,34 +113,28 @@
   	<servlet-class>com.wheresming.pick.DeletePick</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>DropList</servlet-name>
-  	<display-name>DropList</display-name>
+  	<servlet-name>DropPickList</servlet-name>
+  	<display-name>DropPickList</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.pick.DropList</servlet-class>
+  	<servlet-class>com.wheresming.pick.DropPickList</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>UploadList</servlet-name>
-  	<display-name>UploadList</display-name>
+  	<servlet-name>EditPickList</servlet-name>
+  	<display-name>EditPickList</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.pick.UploadList</servlet-class>
+  	<servlet-class>com.wheresming.pick.EditPickList</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>EditList</servlet-name>
-  	<display-name>EditList</display-name>
+  	<servlet-name>MyPickListViewer</servlet-name>
+  	<display-name>MyPickListViewer</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.pick.EditList</servlet-class>
+  	<servlet-class>com.wheresming.pick.MyPickListViewer</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>AddPick</servlet-name>
-  	<display-name>AddPick</display-name>
+  	<servlet-name>UploadPickList</servlet-name>
+  	<display-name>UploadPickList</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.pick.AddPick</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>BestList</servlet-name>
-  	<display-name>BestList</display-name>
-  	<description></description>
-  	<servlet-class>com.wheresming.pick.BestList</servlet-class>
+  	<servlet-class>com.wheresming.pick.UploadPickList</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>AddReview</servlet-name>
@@ -95,10 +143,16 @@
   	<servlet-class>com.wheresming.review.AddReview</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Reviewer</servlet-name>
-  	<display-name>Reviewer</display-name>
+  	<servlet-name>Daum</servlet-name>
+  	<display-name>Daum</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.review.Reviewer</servlet-class>
+  	<servlet-class>com.wheresming.review.Daum</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteReview</servlet-name>
+  	<display-name>DeleteReview</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.review.DeleteReview</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>EditReview</servlet-name>
@@ -107,34 +161,16 @@
   	<servlet-class>com.wheresming.review.EditReview</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Delete</servlet-name>
-  	<display-name>Delete</display-name>
-  	<description></description>
-  	<servlet-class>com.wheresming.review.Delete</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>OttSite</servlet-name>
-  	<display-name>OttSite</display-name>
-  	<description></description>
-  	<servlet-class>com.wheresming.movie.OttSite</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>Naver</servlet-name>
   	<display-name>Naver</display-name>
   	<description></description>
   	<servlet-class>com.wheresming.review.Naver</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Daum</servlet-name>
-  	<display-name>Daum</display-name>
+  	<servlet-name>ReviewViewer</servlet-name>
+  	<display-name>ReviewViewer</display-name>
   	<description></description>
-  	<servlet-class>com.wheresming.review.Daum</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>List</servlet-name>
-  	<display-name>List</display-name>
-  	<description></description>
-  	<servlet-class>com.wheresming.movie.List</servlet-class>
+  	<servlet-class>com.wheresming.review.ReviewViewer</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Searching</servlet-name>
@@ -142,13 +178,55 @@
   	<description></description>
   	<servlet-class>com.wheresming.search.Searching</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AddReviews</servlet-name>
+  	<display-name>AddReviews</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.review.AddReviews</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Top50bottom</servlet-name>
+  	<display-name>Top50bottom</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.movie.Top50bottom</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Update</servlet-name>
+  	<display-name>Update</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.member.Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>JoinCon</servlet-name>
+  	<url-pattern>/JoinCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginCon</servlet-name>
+  	<url-pattern>/LoginCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>logoutCon</servlet-name>
+  	<url-pattern>/logoutCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateCon</servlet-name>
+  	<url-pattern>/UpdateCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DelectCon</servlet-name>
+  	<url-pattern>/DelectCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MessageSend</servlet-name>
+  	<url-pattern>/MessageSend</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InfoEdit</servlet-name>
+  	<url-pattern>/InfoEdit</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Singin</servlet-name>
-  	<url-pattern>/Singin</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Logout</servlet-name>
@@ -159,16 +237,28 @@
   	<url-pattern>/MyPage</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>EditAccount</servlet-name>
-  	<url-pattern>/EditAccount</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>RemoveMember</servlet-name>
   	<url-pattern>/RemoveMember</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>PickList</servlet-name>
-  	<url-pattern>/PickList</url-pattern>
+  	<servlet-name>Signin</servlet-name>
+  	<url-pattern>/Signin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MovieList</servlet-name>
+  	<url-pattern>/MovieList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>OttSite</servlet-name>
+  	<url-pattern>/OttSite</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddPick</servlet-name>
+  	<url-pattern>/AddPick</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BestPickList</servlet-name>
+  	<url-pattern>/BestPickList</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>CreatePickList</servlet-name>
@@ -179,59 +269,59 @@
   	<url-pattern>/DeletePick</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>DropList</servlet-name>
-  	<url-pattern>/DropList</url-pattern>
+  	<servlet-name>DropPickList</servlet-name>
+  	<url-pattern>/DropPickList</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>UploadList</servlet-name>
-  	<url-pattern>/UploadList</url-pattern>
+  	<servlet-name>EditPickList</servlet-name>
+  	<url-pattern>/EditPickList</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>EditList</servlet-name>
-  	<url-pattern>/EditList</url-pattern>
+  	<servlet-name>MyPickListViewer</servlet-name>
+  	<url-pattern>/MyPickListViewer</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>AddPick</servlet-name>
-  	<url-pattern>/AddPick</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BestList</servlet-name>
-  	<url-pattern>/BestList</url-pattern>
+  	<servlet-name>UploadPickList</servlet-name>
+  	<url-pattern>/UploadPickList</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>AddReview</servlet-name>
   	<url-pattern>/AddReview</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Reviewer</servlet-name>
-  	<url-pattern>/Reviewer</url-pattern>
+  	<servlet-name>Daum</servlet-name>
+  	<url-pattern>/Daum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteReview</servlet-name>
+  	<url-pattern>/DeleteReview</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>EditReview</servlet-name>
   	<url-pattern>/EditReview</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Delete</servlet-name>
-  	<url-pattern>/Delete</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>OttSite</servlet-name>
-  	<url-pattern>/OttSite</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>Naver</servlet-name>
   	<url-pattern>/Naver</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Daum</servlet-name>
-  	<url-pattern>/Daum</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>List</servlet-name>
-  	<url-pattern>/List</url-pattern>
+  	<servlet-name>ReviewViewer</servlet-name>
+  	<url-pattern>/ReviewViewer</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Searching</servlet-name>
   	<url-pattern>/Searching</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddReviews</servlet-name>
+  	<url-pattern>/AddReviews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Top50bottom</servlet-name>
+  	<url-pattern>/Top50bottom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Update</servlet-name>
+  	<url-pattern>/Update</url-pattern>
   </servlet-mapping>
 </web-app>

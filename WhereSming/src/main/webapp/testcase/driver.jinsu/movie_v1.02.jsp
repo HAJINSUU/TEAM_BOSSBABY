@@ -640,7 +640,7 @@
                 <span class="reviewmain">리뷰작성</span>
                 <!-- Comment form-->
 
-                <form class="mb-4" sytle="width: 1200px;" action="AddReview" method="get">
+                <form class="mb-4" sytle="width: 1200px;" action="../../AddReview" method="get">
                     <!-- 리뷰 제출용 비행기  -->
                     <div id="paper" class="fa-solid fa-paper-plane fa-2x" style="color:rgb(255, 255, 255)"><button type="submit"> 제출</button></div>
                     <!-- 리뷰 제출용 비행기끝 --><textarea class="form-control" rows="3" placeholder="리뷰를 남겨주세요!" name="comment"></textarea>
@@ -665,6 +665,42 @@
                                 가오나시 어서오고
                             </div>
                         </div>
+                        
+						<%
+						HttpSession sessionjs = request.getSession(); 
+						int sjs = (int)sessionjs.getAttribute("mv_cnt");
+						
+						%>
+						<%=
+						sjs
+						%>
+					                        
+                        <div class="d-flex mt-4">
+                            <div class="flex-shrink-0"><img class="rounded-circle"
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
+                            <div class="ms-3">
+                                <div class="fw-bold">riverpurple</div>
+                                test 구문
+                            </div>
+                        </div>
+                        
+                 <jsp:useBean id="ReviewViewerDAO" 
+                 class="com.wheresming.review.ReviewViewerDAO"/>
+				<c:set var="ReviewViewerDTOList" value="${ReviewViewerDAO.selectAllReview(searchMovie.mv_seq)}"/>
+				
+				<c:if test="${!empty searchMovie}">
+					<table>
+						 <c:forEach items="${ReviewViewerDTOList}" var="m" varStatus="status">
+						 	<tr>
+						<td><c:out value="${m.cmt_score}"/></td>
+						<td><c:out value="${m.cmt_content}"/></td>
+						<td><c:out value="${m.mb_nick}"/></td>
+						<td><c:out value="${m.cmt_likes}"/></td>
+							</tr>
+						 </c:forEach>
+					</table>
+				</c:if>
+
 
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"

@@ -13,4 +13,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	FROM T_COMMENT
 	WHERE MV_SEQ = #{mv_seq}
 	</select>
+	<select id="selectCount" parameterType="int">
+	SELECT COUNT(*)
+	FROM T_COMMENT
+	WHERE MV_SEQ = #{mv_seq}
+	</select>
 </mapper>

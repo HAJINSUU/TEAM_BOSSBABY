@@ -7,6 +7,7 @@ Logout : 로그아웃 기능을 담당하는 컨트롤러
 MyPage : 마이페이지로 가게 할 수 있는 기능을 담당하는 컨트롤러
 RemoveMember : 회원탈퇴를 담당하는 컨트롤러
 Singin : 회원가입을 담당하는 컨트롤러
+Update : 회원 정보 수정을 담당하는 컨트롤러
 
 - com.wheresming.movie : Movie와 관련된 컨트롤러
 MovieList : 무비리스트를 띄워주는 컨트롤러

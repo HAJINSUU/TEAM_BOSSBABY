@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import com.wheresming.member.MemberDTO;
+import com.wheresming.search.SearchDTO;
 import com.wheresming.search.Searching;
 
 public class ReviewViewer extends HttpServlet {
@@ -27,18 +29,21 @@ public class ReviewViewer extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 
-		int mv_seq = Integer.parseInt(request.getParameter("seq"));
-		
-		System.out.println(mv_seq);
+		HttpSession session = request.getSession();
+		SearchDTO searchMovie = (SearchDTO)session.getAttribute("searchMovie");
 		
 		ReviewViewerDAO dao = new ReviewViewerDAO();
+		
+		int mv_seq = searchMovie.getMv_seq();
+		int mv_cnt = dao.countReturn(mv_seq);
+		
 				
-		List<ReviewViewerDTO> vo = new ArrayList<ReviewViewerDTO>();
 		
-		vo = dao.selectAllReview(mv_seq);
-		
-		System.out.println(vo.get(0).getCmt_content());
+		System.out.println(mv_cnt);
 
+		
+		response.sendRedirect("test.jsp");
+		
 	}
 
 }

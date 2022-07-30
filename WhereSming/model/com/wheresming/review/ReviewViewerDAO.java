@@ -28,5 +28,21 @@ public class ReviewViewerDAO {
 		return list;
 
 	}
+	
+	public int countReturn(int mv_seq) {
+		
+		int result = 0;
+		
+		try {
+			result = sqlSession.selectOne("com.wheresming.review.ReviewDAO", mv_seq);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return result;
+		
+	}
 
 }

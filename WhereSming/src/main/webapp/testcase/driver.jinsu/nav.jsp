@@ -42,7 +42,7 @@
  <!-- 검색창시작 -->
  <li class="search" style = "height: 40px">
   <div class="search-box">
-  <form action="../../Searching" method="get">
+  <form action="Searching" method="get">
     <input class="search-txt" type="text" placeholder="검색어를 입력해 주세요" name="mv_title">
     <button class="search-btn" onclick="location.href='movie.jsp'" type="submit" value="Searching">
       <i class="fas fa-search"></i>
