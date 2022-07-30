@@ -801,10 +801,7 @@ body {
                 }
             } 
         </script>
-
 		<!--찜목록 클릭색변경기능-->
-
-
 		<script type="text/javascript">
     var button3 = document.getElementsByClassName('button3');
 
@@ -816,7 +813,6 @@ body {
         this.style.color = "red";
       })
     }
-
     </script>
 
 
