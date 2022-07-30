@@ -640,7 +640,7 @@
                 <span class="reviewmain">리뷰작성</span>
                 <!-- Comment form-->
 
-                <form class="mb-4" sytle="width: 1200px;" action="../../AddReview" method="get">
+                <form class="mb-4" sytle="width: 1200px;" action="AddReview" method="get">
                     <!-- 리뷰 제출용 비행기  -->
                     <div id="paper" class="fa-solid fa-paper-plane fa-2x" style="color:rgb(255, 255, 255)"><button type="submit"> 제출</button></div>
                     <!-- 리뷰 제출용 비행기끝 --><textarea class="form-control" rows="3" placeholder="리뷰를 남겨주세요!" name="comment"></textarea>
@@ -654,7 +654,7 @@
                             src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
 
                     <div class="ms-3">
-                        <div class="fw-bold"></div>
+                        <div class="fw-bold">인기댓글</div>
                         이 댓글에 좋아요를 눌러준다면 오늘하루종일 행복해질거에요
                         <!-- Child comment 1-->
                         <div class="d-flex mt-4">
@@ -665,26 +665,42 @@
                                 가오나시 어서오고
                             </div>
                         </div>
-                        
 
-                        
-               <!--댓글시작  -->                        
-                 <jsp:useBean id="ReviewViewerDAO" 
-                 class="com.wheresming.review.ReviewViewerDAO"/>
-				<c:set var="ReviewViewerDTOList" value="${ReviewViewerDAO.selectAllReview(searchMovie.mv_seq)}"/>
-				
-	
-					<c:forEach items="${ReviewViewerDTOList}" var="m" varStatus="status">
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
                                     src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
-                                <div clasas="fw-bold"><c:out value="${m.mb_nick}"/>   /    <c:out value="${m.cmt_score}"/></div>
-                                <c:out value="${m.cmt_content}"/> / <c:out value="${m.cmt_likes}"/>
+                                <div class="fw-bold">riverpurple</div>
+                                너무 재밌어서 1따봉 드립니다*^^*
                             </div>
                         </div>
-						</c:forEach>			           
-                   <!--댓글끝  -->
+                        <!-- Child comment 2-->
+                        <div class="d-flex mt-4">
+                            <div class="flex-shrink-0"><img class="rounded-circle"
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
+                            <div class="ms-3">
+                                <div class="fw-bold">윤석석모래모래흙흙</div>
+                                이런 영화 보고 우는사람 이해 안돼요. 그래서 전 아직 절 이해하지못했습니다.
+                            </div>
+                        </div>
+                        <!-- Child comment 1-->
+                        <div class="d-flex mt-4">
+                            <div class="flex-shrink-0"><img class="rounded-circle"
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
+                            <div class="ms-3">
+                                <div class="fw-bold">징니</div>
+                                신나리셔스~딜리셔스
+                            </div>
+                        </div>
+                        <!-- Child comment 1-->
+                        <div class="d-flex mt-4">
+                            <div class="flex-shrink-0"><img class="rounded-circle"
+                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
+                            <div class="ms-3">
+                                <div class="fw-bold">이밍지</div>
+                                너무 재밌고 감동적인 영화입니다람쥐
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
