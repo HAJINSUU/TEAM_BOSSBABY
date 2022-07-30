@@ -496,34 +496,34 @@ body {
 											<i class="fa-solid fa-file-circle-plus"></i>PICK목록담기
 										</h4>
 										<div>
-											<button class="button3" type="button">
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
-											ㅤ폴더3
+											ㅤ찜공포
 										</div>
 										<div>
-											<button class="button3" type="button">
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
-											ㅤ폴더3
+											ㅤ찜코미디
 										</div>
 										<div>
-											<button class="button3" type="button">
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
-											ㅤ폴더3
+											ㅤ찜로맨스
 										</div>
 										<div>
-											<button class="button3" type="button">
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
-											ㅤ폴더3
+											ㅤ찜액션
 										</div>
 										<div>
-											<button class="button3" type="button">
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
-											ㅤ폴더3
+											ㅤ찜스릴러
 										</div>
 
 
@@ -814,6 +814,7 @@ body {
       })
     }
     </script>
+
 
 
 		<!-- ***** Header Area End ***** -->
