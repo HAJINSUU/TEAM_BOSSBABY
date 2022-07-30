@@ -517,8 +517,8 @@
                                 <div><button class="button3"><i class="fa-regular fa-heart"></i></button>ㅤ폴더3</div>
       
 
-                                <div><input value="폴더이름입력"></div>
-                                <button class="pickbutton"><i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성</button>
+                                <div><input value="폴더이름입력" name="folder"></div>
+                                <button type="submit" class="pickbutton"><i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성</button>
                             </div>
                                       
                                  
