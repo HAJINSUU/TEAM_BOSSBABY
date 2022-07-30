@@ -666,6 +666,15 @@
                             </div>
                         </div>
                         
+						<%
+						HttpSession sessionjs = request.getSession(); 
+						int sjs = (int)sessionjs.getAttribute("mv_cnt");
+						
+						%>
+						<%=
+						sjs
+						%>
+					                        
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
                                     src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
