@@ -105,7 +105,7 @@
 				
 					<div class="text-center text-xl-start" id="nic"
 						style="margin-top: 2px; color: #fff">
-						<p id="like" style ="font-size: 16px">통합검색 결과 : ${searchMovie} 개</p>
+						<p id="like" style ="font-size: 16px">통합검색 결과 : ${selectCnt.cnt} 개</p>
 
 						</div>
 					</div>
