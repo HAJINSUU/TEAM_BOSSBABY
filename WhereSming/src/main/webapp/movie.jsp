@@ -28,13 +28,13 @@
 
     <style>
         .background {
-            background-image: url("https://mblogthumb-phinf.pstatic.net/MjAxODA4MTBfMjU0/MDAxNTMzODg1MDUyNjg2.GDqs-WE9HZj55YtJFntTNKM91T6M0leQginoTC2lorEg.XsI7MICfFjeWl9QK5qLVJhquJqMDkZIc0KrUX3OCACkg.PNG.sinnam88/%EC%84%BC%EA%B3%BC%EC%B9%98%ED%9E%88%EB%A1%9C_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_1920x1080_%EA%B3%A0%ED%99%94%EC%A7%88_%EA%B3%B5%EC%9C%A0_%284%29.png?type=w800");
+            background-color:#181818;
             /* cover로 하면 배경화면 사이즈가 자동으로조절됨 */
             background-size: cover;
             background-repeat: no-repeat;
             background-blend-mode: darken;
             position: absolute;
-            height: 1800px;
+            height: 3000px;
             top: 0;
             bottom: 0;
             left: 0;
