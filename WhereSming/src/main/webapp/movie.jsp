@@ -384,6 +384,47 @@
             margin-left: 8px;
             margin-top: 3px;
         }          /* 박스3개끝  */
+        
+                /* 찜눌렀을때 div디자인 */
+        #myDIV {
+            background-color: rgba(255, 255, 255, 0.8);
+            height: 250px;
+            width: 300px;
+            float: right;
+            overflow: auto;
+            color: black;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+
+        }
+
+        .pickbutton {
+            background-color: rgb(70, 68, 68);
+            position: relative;
+            overflow: auto;
+            color: rgb(255, 255, 255);
+            border: none;
+            /* margin-left and margin-right + width = 50%*/
+            */ width: 300px;
+            margin: 10px 20px;
+            padding: 10px 50px;
+            border-radius: 10px;
+            font-size: 16px;
+
+        }
+        .pickbutton2{
+            font-weight: 800;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .button3{
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+        
+        }
+        /* 찜div디자인끝 */
     </style>
 </head>
 
@@ -464,8 +505,25 @@
                                  style="color:rgb(253, 85, 85)"></i></a>ㅤ찜하기</td>
                             </c:when>
                             <c:otherwise>
-                       			 <td>ㅤ<a href="mypage.jsp"><i class="fa-solid fa-heart fa-2x"
-                                 style="color:rgb(253, 85, 85)"></i></a>ㅤ찜하기</td>
+                     <td>ㅤ<a href="javascript:doDisplay();"><i class="fa-solid fa-heart fa-2x"
+                                    style="color:rgb(253, 85, 85)" float: right></i></a>ㅤ찜하기ㅤ
+                                  <!--  찜목록눌렀을때 나오는 div-->
+                            <div id="myDIV" style="display:none;">
+                                
+                                <h4 style="font-weight: 800;"><i class="fa-solid fa-file-circle-plus"></i>PICK목록담기</h4>
+                                <div><button class="button3"><i class="fa-regular fa-heart"></i></button>ㅤ폴더3</div>
+                                <div><button class="button3"><i class="fa-regular fa-heart"></i></button>ㅤ폴더3</div>
+                                <div><button class="button3"><i class="fa-regular fa-heart"></i></button>ㅤ폴더3</div>
+                                <div><button class="button3"><i class="fa-regular fa-heart"></i></button>ㅤ폴더3</div>
+                                <div><button class="button3"><i class="fa-regular fa-heart"></i></button>ㅤ폴더3</div>
+      
+
+                                <div><input value="폴더이름입력"></div>
+                                <button class="pickbutton"><i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성</button>
+                            </div>
+                                      
+                                 
+                                 </td>
                             </c:otherwise>          
                         </c:choose>
                     </tr>
@@ -654,7 +712,7 @@
                             src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
 
                     <div class="ms-3">
-                        <div class="fw-bold">인기댓글</div>
+                        <div class="fw-bold"></div>
                         이 댓글에 좋아요를 눌러준다면 오늘하루종일 행복해질거에요
                         <!-- Child comment 1-->
                         <div class="d-flex mt-4">
@@ -665,46 +723,51 @@
                                 가오나시 어서오고
                             </div>
                         </div>
+                        
 
+                        
+               <!--댓글시작  -->                        
+                 <jsp:useBean id="ReviewViewerDAO" 
+                 class="com.wheresming.review.ReviewViewerDAO"/>
+				<c:set var="ReviewViewerDTOList" value="${ReviewViewerDAO.selectAllReview(searchMovie.mv_seq)}"/>
+				
+	
+					<c:forEach items="${ReviewViewerDTOList}" var="m" varStatus="status">
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
                                     src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
                             <div class="ms-3">
-                                <div class="fw-bold">riverpurple</div>
-                                너무 재밌어서 1따봉 드립니다*^^*
+                                <div clasas="fw-bold"><c:out value="${m.mb_nick}"/>   /    <c:out value="${m.cmt_score}"/></div>
+                                <c:out value="${m.cmt_content}"/> / <c:out value="${m.cmt_likes}"/>
                             </div>
                         </div>
-                        <!-- Child comment 2-->
-                        <div class="d-flex mt-4">
-                            <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
-                            <div class="ms-3">
-                                <div class="fw-bold">윤석석모래모래흙흙</div>
-                                이런 영화 보고 우는사람 이해 안돼요. 그래서 전 아직 절 이해하지못했습니다.
-                            </div>
-                        </div>
-                        <!-- Child comment 1-->
-                        <div class="d-flex mt-4">
-                            <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
-                            <div class="ms-3">
-                                <div class="fw-bold">징니</div>
-                                신나리셔스~딜리셔스
-                            </div>
-                        </div>
-                        <!-- Child comment 1-->
-                        <div class="d-flex mt-4">
-                            <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="https://ifh.cc/g/YBbktb.jpg" alt="..." /></div>
-                            <div class="ms-3">
-                                <div class="fw-bold">이밍지</div>
-                                너무 재밌고 감동적인 영화입니다람쥐
-                            </div>
-                        </div>
+						</c:forEach>			           
+                   <!--댓글끝  -->
                     </div>
                 </div>
             </div>
         </section>
+
+       <script>
+            function doDisplay() {
+                var con = document.getElementById("myDIV");
+                if (con.style.display == 'none') {
+                    con.style.display = 'block';
+                } else {
+                    con.style.display = 'none';
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            var bDisplay = true; function doDisplay() {
+                var con = document.getElementById("myDIV");
+                if (con.style.display == 'none') {
+                    con.style.display = 'block';
+                } else {
+                    con.style.display = 'none';
+                }
+            } 
+        </script>
 
         <!-- ***** Header Area End ***** -->
 
