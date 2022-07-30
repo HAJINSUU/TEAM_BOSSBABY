@@ -424,7 +424,6 @@
             border: none;
         
         }
-        /* 찜div디자인끝 */
     </style>
 </head>
 
@@ -713,7 +712,7 @@
 
                     <div class="ms-3">
                         <div class="fw-bold"></div>
-                        이 댓글에 좋아요를 눌러준다면 오늘하루종일 행복해질거에요
+                        ▷인기댓글 
                         <!-- Child comment 1-->
                         <div class="d-flex mt-4">
                             <div class="flex-shrink-0"><img class="rounded-circle"
