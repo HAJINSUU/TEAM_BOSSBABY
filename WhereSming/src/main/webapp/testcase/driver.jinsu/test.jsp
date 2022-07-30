@@ -1,7 +1,4 @@
-<%@page import="com.wheresming.review.ReviewViewerDTO"%>
-<%@page import="com.wheresming.review.ReviewDTO"%>
-<%@page import="java.util.List"%>
-<%@page import="com.wheresming.review.ReviewViewerDAO"%>
+<%@page import="com.wheresming.review.AddReview"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,20 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<%
-
-
-	ReviewViewerDAO dao = new ReviewViewerDAO();
+<p>hello world</p>
+<form action="../../AddReview" method="get">
+	<%
+	HttpSession sessionjs = request.getSession(); 
+	int sjs = (int)sessionjs.getAttribute("mv_cnt");
 	
-	List<ReviewViewerDTO> list = null;
-	
-	list = dao.selectAllReview(11973);
-	
-
-%>
-
-<%= list.get(0).getCmt_content() %>
-
+	%>
+	<%=
+	sjs
+	%>
+	<button type="submit">전송</button>
+</form>
 </body>
 </html>

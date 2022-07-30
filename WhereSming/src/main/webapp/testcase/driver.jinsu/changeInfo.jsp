@@ -17,7 +17,7 @@
 	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Pick</title>
+<title>mypage</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,10 +28,75 @@
 <link rel="stylesheet" href="assets/css/owl.css">
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
+<style>
+.price {
+	position: relative;
+}
+
+body {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	text-decoration: none;
+}
+
+label {
+	font-weight: 700;
+	font-size: 14px;
+	margin: 19px 0 8px;
+}
+
+.box {
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 10px 14px 10px 14px;
+	box-sizing: border-box;
+	background: transparent;
+	background-color: rgba(134, 134, 134, 0.459);
+	position: relative;
+	border-radius: 18px;
+}
+
+input {
+	font-weight: 300;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	background: transparent;
+	outline: none;
+	border: 0;
+}
+
+.inputli {
+	width: 300px;
+	height: 40px;
+}
+
+.cen {
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+	margin-bottom: 100px;
+}
+
+.mg {
+	margin: 30px 0px;
+}
+
+.siz {
+	background-color: #FFBB00;
+	height: 60px;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 18px;
+}
+</style>
+
 </head>
 
 <body>
-<!-- 실시간 채팅  -->
+	<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav -->
 	<%@include file="nav.jsp"%>
@@ -39,84 +104,52 @@
 	<section class="meetings-page" id="meetings">
 		<div class="container">
 			<div class="row">
+
+				<!-- 마이페이지 버튼 -->
 				<div class="col-lg-12">
-					<div class="row">
-
-						<!-- start 인기최신장르 버튼 -->
-						<div class="col-lg-12">
-							<div class="filters">
-								<ul>
-									<li data-filter="*" class="active">인기</li>
-									<li data-filter="*">최신</li>
-									<li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li>
-
-								</ul>
-
-							</div>
-						</div>
-						<!-- end 인기최신장르 버튼 -->
-
-						<!-- start 폴더생성 -->
-						<div class="col-lg-12">
-							<div class="row grid">
-
-								<!-- start 폴더 1개 생성 -->
-								<!-- all 뒤에 soon = 인기 img = 최신 att = 장르 버튼으로 활성화 -->
-								<div class="col-lg-4 templatemo-item-col meeting-item all soon">
-									<div class="image-box thumb">
-										<div class="price">
-											<span> <img id="resizing"
-												src="./assets/images/thumb_up.png" alt="thumb_up">
-											</span>
-										</div>
-										<!-- 영화이미지 넣기 가져오기 -->
-										<a href="picksList.jsp"><img
-											class="image-thumbnail"
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt=""></a>
-									</div>
-									<div class="down-content">
-										<span id="b">Picker </span> 닉네임 <a href="meeting-details.html">
-											<p id="fb">폴더이름 가져오기</p>
-											<p id="like">👍 000 | 영화 · 00개</p>
-										</a>
-									</div>
-								</div>
-
-
-
-							</div>
-						</div>
-
-						<!-- page버튼 -->
-						<!-- <div class="col-lg-12">
-              <div class="pagination">
-                <ul>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                </ul>
-              </div>
-            </div> -->
-
+					<div class="filters">
+						<ul>
+							<a href="mypage.jsp" style="color: #fff"><li>MY PICK!</li></a>
+							<a href="changeInfo.jsp" style="color: #fff">
+								<li class="active">회원정보수정</li>
+							</a>
+						</ul>
 					</div>
 				</div>
+
+				<!-- 회원정보수정 -->
+				<div class="cen">
+					<form action="Update" method="post">
+						<label for="name">아이디</label>
+						<li class="inputli"><div onclick = "ckfunc()" name="mb_id" class="box" title="아이디는 변경이 불가합니다" >${loginMember.mb_id}</div>
+							</li>
+
+						<label for="name">닉네임</label>
+						<li class="inputli"><input name="mb_nick" type="text"
+							class="box" value="${loginMember.mb_nick}" placeholder=""></li>
+						<label for="name">비밀번호</label>
+						<li class="inputli"><input name="mb_pw" type="password"
+							class="box" value="${loginMember.mb_pw}"
+							placeholder="변경할 비밀번호를 입력하세요"></li> <label for="name">이메일</label>
+						<li class="inputli"><input name="mb_email" type="text"
+							class="box" value="${loginMember.mb_email}" placeholder=""></li>
+						<label for="name">휴대전화번호</label>
+						<li class="inputli"><input name="mb_phone" type="text" class="box"
+							value="${loginMember.mb_phone}" placeholder=""></li>
+
+						<li class="inputli mg"><input type="submit" class="box siz"
+							value="회원정보수정완료"></li>
+					</form>
+				</div>
+
 			</div>
 		</div>
-
-
-		<!-- footer부분 -->
-		<!-- <div class="footer">
-      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-        <br>
-        Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-        <br>
-        Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-      </p>
-    </div> -->
-
 	</section>
+
+
+
+	<!-- 조인 -->
+	<script src="main.js"></script>
 
 
 	<!-- Scripts -->
@@ -133,8 +166,12 @@
 	<script src="assets/js/slick-slider.js"></script>
 	<script src="assets/js/custom.js"></script>
 
-	<script>
-
+	<script>	
+	
+	function ckfunc() {
+		alert("아이디는 변경이 불가합니다!")
+	}
+	
     //according to loftblog tut
     $('.nav li:first').addClass('active');
 

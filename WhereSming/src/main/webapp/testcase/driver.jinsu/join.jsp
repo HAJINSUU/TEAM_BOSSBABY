@@ -82,12 +82,9 @@ form {
 input {
 	background: transparent;
 	width: 80%;
-	height: 30px;
 	outline: none;
 	border: 0;
 	margin: auto;
-	color: white;
-	font-size: 17px;
 }
 
 span {
@@ -206,7 +203,7 @@ h3 {
 
 input {
 	font-family: Dotum, '돋움', Helvetica, sans-serif;
-	font-weight: bold;
+	font-weight: 600;
 	color: white;
 	font-size: 15px;
 }
@@ -454,17 +451,17 @@ button:before, button:after {
 						<label for="email">이메일<span class="optional"></span></label>
 					</h3>
 					<span class="box int_email"> <input type="text" id="email"
-						class="int" maxlength="100" name="email" placeholder="">
+						class="int" maxlength="100" name="email" placeholder="양식 : where@sming.com">
 					</span> <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>
 				</div>
 		
 				<!-- MOBILE -->
 				<div>
 					<h3 class="join_title" style="margin-left: 5px;">
-						<label for="phoneNo">휴대전화</label>
+						<label for="phoneNo">휴대전화번호</label>
 					</h3>
 					<span class="box int_mobile"> <input type="tel" id="mobile"
-						class="int" maxlength="16" name="tel" placeholder="">
+						class="int" maxlength="16" name="tel" placeholder="-는 제외하고 작성해주세요">
 					</span> <span class="error_next_box"></span>
 				</div>
 		
