@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<update id="update" parameterType="com.wheresming.member.MemberDTO">
-		UPDATE T_MEMBER SET MB
+		UPDATE T_MEMBER SET MB_PW=#{mb_pw}, MB_NICK=#{mb_nick}, MB_EMAIL=#{mb_email}, MB_PHONE=#{mb_phone} where MB_ID=#{mb_id} 
 	</update>
 
 </mapper>

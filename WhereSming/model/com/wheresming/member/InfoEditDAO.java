@@ -13,7 +13,7 @@ public class InfoEditDAO {
 	public int updateMember(MemberDTO vo) {
 		int cnt = 0;
 		try {
-			cnt=sqlSession.update("",vo);
+			cnt=sqlSession.update("com.wheresming.member.LoginDAO.update",vo);
 			
 			if(cnt>0) {
 				sqlSession.commit();

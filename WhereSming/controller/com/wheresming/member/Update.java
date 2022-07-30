@@ -17,6 +17,8 @@ public class Update extends HttpServlet {
 		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
 		String mb_id = loginMember.getMb_id();
 		
+		System.out.println(mb_id);
+
 		
 		
 		String mb_pw = request.getParameter("mb_pw");
@@ -24,6 +26,8 @@ public class Update extends HttpServlet {
 		String mb_email = request.getParameter("mb_email");
 		String mb_phone = request.getParameter("mb_phone");
 		
+		System.out.println(mb_pw);
+		System.out.println(mb_nick);
 		MemberDTO updateMember = new MemberDTO(mb_id,mb_pw,mb_nick,mb_email,mb_phone);
 		
 		InfoEditDAO dao = new InfoEditDAO();
@@ -35,7 +39,7 @@ public class Update extends HttpServlet {
 			response.sendRedirect("changeInfo.jsp");
 		}else {
 			System.out.println("수정실패");
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("index.jsp");
 		}
 		
 	}

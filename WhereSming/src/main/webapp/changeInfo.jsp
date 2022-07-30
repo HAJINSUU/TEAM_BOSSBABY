@@ -119,22 +119,22 @@ input {
 
 				<!-- 회원정보수정 -->
 				<div class="cen">
-					<form action="UpdateCon" method="post">
+					<form action="Update" method="post">
 						<label for="name">아이디</label>
-						<li class="inputli"><div onclick = "ckfunc()" name="id" class="box" title="아이디는 변경이 불가합니다" >${loginMember.mb_id}</div>
+						<li class="inputli"><div onclick = "ckfunc()" name="mb_id" class="box" title="아이디는 변경이 불가합니다" >${loginMember.mb_id}</div>
 							</li>
 
 						<label for="name">닉네임</label>
-						<li class="inputli"><input name="nickname" type="text"
+						<li class="inputli"><input name="mb_nick" type="text"
 							class="box" value="${loginMember.mb_nick}" placeholder=""></li>
 						<label for="name">비밀번호</label>
-						<li class="inputli"><input name="pw" type="password"
+						<li class="inputli"><input name="mb_pw" type="password"
 							class="box" value="${loginMember.mb_pw}"
 							placeholder="변경할 비밀번호를 입력하세요"></li> <label for="name">이메일</label>
-						<li class="inputli"><input name="email" type="text"
+						<li class="inputli"><input name="mb_email" type="text"
 							class="box" value="${loginMember.mb_email}" placeholder=""></li>
 						<label for="name">휴대전화번호</label>
-						<li class="inputli"><input name="tel" type="text" class="box"
+						<li class="inputli"><input name="mb_phone" type="text" class="box"
 							value="${loginMember.mb_phone}" placeholder=""></li>
 
 						<li class="inputli mg"><input type="submit" class="box siz"
