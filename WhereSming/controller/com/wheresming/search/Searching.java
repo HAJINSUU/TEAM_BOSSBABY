@@ -30,7 +30,7 @@ public class Searching extends HttpServlet {
 			System.out.println("검색 성공");
 			HttpSession session = request.getSession();
 			session.setAttribute("searchMovie",searchMovie);
-			response.sendRedirect("movie.jsp");
+			response.sendRedirect("testcase/driver.jinsu/movie.jsp");
 		}else {
 			System.out.println("검색실패");
 			response.sendRedirect("index.jsp");
