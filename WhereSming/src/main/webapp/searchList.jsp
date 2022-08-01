@@ -146,7 +146,7 @@ body::-webkit-scrollbar-track {
 						<c:set var="SearchingList" value="${SearchingDAO.selectAllList(searchMovie.mv_title) }"/>
 						<c:forEach items="${SearchingList }" var="m" varStatus="status">
 							
-						<div class="portfolio-item col-md-2 sizing">
+						<div class="portfolio-item col-md-2 sizing" style="background-size:cover">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
