@@ -566,7 +566,7 @@ body {
 										<button type="submit" class="pickbutton">
 											<i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성
 										</button>
-									</div>
+								</div>
 								</form>
 							
 
