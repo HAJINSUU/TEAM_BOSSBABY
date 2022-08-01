@@ -1,5 +1,11 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@page import="java.util.List"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ page import="com.wheresming.search.SearchDTO" %>
+<%@ page import="com.wheresming.search.SearchingDAO" %>
+<%@ page import="com.wheresming.movie.MovieDTO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,16 +126,21 @@
 					<div id="grid" class="flex">
 
 						<!-- 영화1개씩 -->
+						<jsp:useBean id="SearchingDAO" class="com.wheresming.search.SearchingDAO"/>
+						<c:set var="SearchingList" value="${SearchingDAO.selectAllList(searchMovie.mv_title) }"/>
+						<c:forEach items="${SearchingList }" var="m" varStatus="status">
+							
 						<div class="portfolio-item col-md-2 sizing">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
 									<img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										src="${m.mv_image }"
 										alt="image">
 								</div>
 							</div>
 						</div>
+						</c:forEach>
 		</section>
 		<!-- End Works Section -->
 

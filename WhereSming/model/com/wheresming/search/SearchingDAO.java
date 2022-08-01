@@ -1,7 +1,10 @@
 package com.wheresming.search;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import com.wheresming.database.SqlSessionManager;
+import com.wheresming.movie.MovieDTO;
 public class SearchingDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -20,4 +23,18 @@ public class SearchingDAO {
 		}
 		return searchMovie;
 	}	
+	
+	public List<MovieDTO> selectAllList(String mv_title){
+		List<MovieDTO> list = null;
+		try {
+			list = sqlSession.selectList("com.wheresming.search.SearchingDAO.selectAllList",mv_title);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return list;
+				
+	}
 }
