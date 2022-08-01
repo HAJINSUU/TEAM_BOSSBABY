@@ -559,14 +559,15 @@ body {
 											ㅤ찜스릴러
 										</div>
 
-
+									<form action="CreatePickList" method="get">
 										<div>
 											<input placeholder="폴더이름을 입력해주세요" name="folder">
 										</div>
 										<button type="submit" class="pickbutton">
 											<i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성
 										</button>
-									</div>
+										</div>
+									</form>
 
 
 								</td>
