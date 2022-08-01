@@ -28,6 +28,7 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
+
 .background {
 	background-color: #181818;
 	/* cover로 하면 배경화면 사이즈가 자동으로조절됨 */
@@ -41,14 +42,31 @@
 	left: 0;
 	right: 0;
 	z-index: -1;
-	filter: blur(4px);
+/* 	filter: blur(4px); */
 	min-height: 100%;
 }
+/* 월요일에추가  */
+/* 스크롤바 디자인 */
+body::-webkit-scrollbar {
+    width: 15px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 20%; /* 스크롤바의 길이 */
+    background: #FFBB00; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #181818;  /*스크롤바 뒷 배경 색상*/
+}
+
+
 
 .container2 {
 	/* 영화설명페이지 위치이동 */
 	margin-top: 230px;
-	margin-left: 280px;
+	margin-left: 500px;
 	background: transparent;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0);
@@ -78,7 +96,7 @@ body {
 .container3 {
 	color: #FFBB00;
 	font-size: 30px;
-	margin-left: 1420px;
+	margin-left: 1660px;
 	object-fit: cover;
 }
 
@@ -227,7 +245,7 @@ body {
 	color: #fff;
 	width: 1200px;
 	margin: -800px;
-	margin-left: 260px;
+	margin-left: 470px;
 	background: transparent;
 	/* 댓글 글자 크기 조절 */
 	font-size: 15px;
@@ -375,6 +393,20 @@ body {
 	border-radius: 10px;
 }
 
+#myDIV::-webkit-scrollbar {
+    width: 15px;  /* 스크롤바의 너비 */
+}
+
+#myDIV::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #FFBB00; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+#myDIV::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .2);  /*스크롤바 뒷 배경 색상*/
+}
+
 .pickbutton {
 	background-color: rgb(70, 68, 68);
 	position: relative;
@@ -486,6 +518,7 @@ body {
 										style="color: rgb(253, 85, 85)"></i></a>ㅤ찜하기
 								</td>
 							</c:when>
+							
 							<c:otherwise>
 								<td>ㅤ<a href="javascript:doDisplay();"><i
 										class="fa-solid fa-heart fa-2x"
