@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.wheresming.member.MemberDTO;
+import com.wheresming.movie.MovieDTO;
 import com.wheresming.search.SearchDTO;
 
 public class AddReview extends HttpServlet {
@@ -25,7 +26,7 @@ public class AddReview extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
-		SearchDTO searchMovie = (SearchDTO)session.getAttribute("searchMovie");
+		MovieDTO searchMovie = (MovieDTO)session.getAttribute("selectPoster");
 
 		int mv_seq = searchMovie.getMv_seq();
 		String cmt_content = request.getParameter("comment");
