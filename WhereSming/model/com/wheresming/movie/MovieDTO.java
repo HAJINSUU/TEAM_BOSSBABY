@@ -22,4 +22,9 @@ public class MovieDTO {
 	private String mv_tv;
 	private String mv_genre;
 	private String mv_image;
+	
+	public MovieDTO(int mv_seq) {
+		this.mv_seq = mv_seq;
+		
+	}
 }

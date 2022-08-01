@@ -9,8 +9,9 @@ public class SearchingDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();
 	
-	public SearchDTO selectSearch(SearchDTO vo) {
-		SearchDTO searchMovie = null;
+	public MovieDTO selectSearch(MovieDTO vo) {
+		
+		MovieDTO searchMovie = null;
 		
 		try {
 			searchMovie = sqlSession.selectOne("com.wheresming.search.SearchingDAO.select",vo);
@@ -22,7 +23,7 @@ public class SearchingDAO {
 			
 		}
 		return searchMovie;
-	}	
+	}		
 	
 	public List<MovieDTO> selectAllList(String mv_title){
 		List<MovieDTO> list = null;
@@ -37,4 +38,23 @@ public class SearchingDAO {
 		return list;
 				
 	}
+	
+	public MovieDTO selectPoster(MovieDTO vo) {
+		
+		MovieDTO selectPoster = null;
+		
+		try {
+			selectPoster = sqlSession.selectOne("com.wheresming.search.SearchingDAO.selectPoster",vo);
+			System.out.println(selectPoster);
+			System.out.println("SQL 성공");
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("SQL 실패");
+		}finally {
+			sqlSession.close();
+			
+		}
+		return selectPoster;
+	}	
 }

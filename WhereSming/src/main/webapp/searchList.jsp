@@ -6,6 +6,7 @@
 <%@ page import="com.wheresming.search.SearchDTO" %>
 <%@ page import="com.wheresming.search.SearchingDAO" %>
 <%@ page import="com.wheresming.movie.MovieDTO" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +43,11 @@
 <link href="assets/css/picklist/responsive.css" rel="stylesheet">
 
 <style>
+
+#body3 {
+	height: 3000px;
+	background-color: black;
+}
 
 body::-webkit-scrollbar {
     width: 15px;  /* 스크롤바의 너비 */
@@ -110,7 +116,7 @@ body::-webkit-scrollbar-track {
 </style>
 </head>
 
-<body>
+<body id="body3">
 	<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav 
@@ -123,11 +129,12 @@ body::-webkit-scrollbar-track {
 			<div class="col-lg-8 col-xl-7">
 
 				<div style="display: flex;">
-
+						<jsp:useBean id="SearchingDAO" class="com.wheresming.search.SearchingDAO"/>
+						<c:set var="SearchingList" value="${SearchingDAO.selectAllList(searchMovie.mv_title) }"/>
 				
 					<div class="text-center text-xl-start" id="nic"
 						style="margin-top: 2px; color: #fff">
-						<p id="like" style ="font-size: 16px">통합검색 결과 : ${selectCnt.cnt} 개</p>
+						<p id="like" style ="font-size: 16px">통합 검색 결과 : ${fn:length(SearchingList) } 개</p>
 
 						</div>
 					</div>
@@ -136,32 +143,39 @@ body::-webkit-scrollbar-track {
 			</div>
 		</div>
 		<!-- 영화리스트 -->
+	<form action="SearchMovie" method="get" id="movie">
+	<input id="mv_seq" name="mv_seq" type="hidden" >
 		<section>
 			<div class="container">
 				<div class="row">
 					<div id="grid" class="flex">
-
+						
 						<!-- 영화1개씩 -->
-						<jsp:useBean id="SearchingDAO" class="com.wheresming.search.SearchingDAO"/>
-						<c:set var="SearchingList" value="${SearchingDAO.selectAllList(searchMovie.mv_title) }"/>
+			
 						<c:forEach items="${SearchingList }" var="m" varStatus="status">
 							
-						<div class="portfolio-item col-md-2 sizing" style="background-size:cover">
+						<div class="portfolio-item col-md-2 sizing">
 							<div class="portfolio-bg">
-								<div class="portfolio">
+								<div class="portfolio" onclick="imgclick('${m.mv_seq}')" >
+								
 									<div class="tt-overlay"></div>
 									<img
 										src="${m.mv_image }"
 										alt="image">
+									
 								</div>
 							</div>
 						</div>
 						</c:forEach>
-		</section>
+						</div>
+					</div>
+				</div>
+			</section>
+	</form>
 		<!-- End Works Section -->
+			</section>
 
 
-	</section>
 
 	<!-- Scripts -->
 	<!-- Bootstrap core JavaScript -->
@@ -226,7 +240,7 @@ body::-webkit-scrollbar-track {
     });
     
     
-    
+    </script>
     <!-- Javascript files -->
 	<script src="./IAMX – Responsive Personal Portfolio vCard Template_files/jquery.js.다운로드"></script>
 	<script
@@ -258,6 +272,16 @@ body::-webkit-scrollbar-track {
 	<script
 		src="./IAMX – Responsive Personal Portfolio vCard Template_files/scripts.js.다운로드"></script>
 	<!-- Code injected by live-server -->
+	<script>
+	// 클릭 이벤트
+	function imgclick(mv_seq){
+		$("#mv_seq").val(mv_seq);
+		$("#movie").attr("action","SearchMovie");
+		$("#movie").submit();
+		//location.href="movie.jsp?mv_title="+mv_seq
+	
+	}
+	</script>
 	<script type="text/javascript">
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {

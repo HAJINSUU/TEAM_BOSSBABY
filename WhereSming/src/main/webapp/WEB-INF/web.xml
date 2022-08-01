@@ -196,6 +196,12 @@
   	<description></description>
   	<servlet-class>com.wheresming.member.Update</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SearchMovie</servlet-name>
+  	<display-name>SearchMovie</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.search.SearchMovie</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -323,5 +329,9 @@
   <servlet-mapping>
   	<servlet-name>Update</servlet-name>
   	<url-pattern>/Update</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchMovie</servlet-name>
+  	<url-pattern>/SearchMovie</url-pattern>
   </servlet-mapping>
 </web-app>

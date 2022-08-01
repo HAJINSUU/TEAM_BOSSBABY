@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.wheresming.movie.MovieDTO;
 public class Searching extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -15,16 +17,17 @@ public class Searching extends HttpServlet {
 		System.out.println(mv_title);
 		
 		// SearchDTO 객체 생성 (mb_title)
-		SearchDTO vo = new SearchDTO(mv_title);
+		MovieDTO vo = new MovieDTO(mv_title);
 		
 		// SearchDAO 객체 생성
 		SearchingDAO dao = new SearchingDAO();
 		
 		// dao.selectSearch() 메서드 호출
-		SearchDTO searchMovie = dao.selectSearch(vo);
+		MovieDTO searchMovie = dao.selectSearch(vo);
 		
 		
 		// 세션 저장 및 파라미터값 전송
+		
 		
 		if(searchMovie != null) {
 			System.out.println("검색 성공");
@@ -33,7 +36,7 @@ public class Searching extends HttpServlet {
 			response.sendRedirect("searchList.jsp");
 		}else {
 			System.out.println("검색실패");
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("searchListFail.jsp");
 		}
 	}
 }

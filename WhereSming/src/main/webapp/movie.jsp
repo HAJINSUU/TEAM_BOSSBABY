@@ -456,50 +456,50 @@ body {
 
 				<table border="0">
 					<tr>
-						<td rowspan="5"><img src="${searchMovie.mv_image }"
+						<td rowspan="5"><img src="${selectPoster.mv_image }"
 							id="imgPoster" /></td>
-						<td>ㅤ영화제목 : ${searchMovie.mv_title }</td>
+						<td>ㅤ영화제목 : ${selectPoster.mv_title }</td>
 					</tr>
 					<tr>
 						<!-- 장르별 출력 -->
 						<c:choose>
-							<c:when test="${searchMovie.mv_genre eq 'kid'}">
+							<c:when test="${selectPoster.mv_genre eq 'kid'}">
 								<td>ㅤ장르 : 어린이&가족</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ani'}">
+							<c:when test="${selectPoster.mv_genre eq 'ani'}">
 								<td>ㅤ장르 : 애니메이션</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ac'}">
+							<c:when test="${selectPoster.mv_genre eq 'ac'}">
 								<td>ㅤ장르 : 액션</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'co'}">
+							<c:when test="${selectPoster.mv_genre eq 'co'}">
 								<td>ㅤ장르 : 코미디</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ro'}">
+							<c:when test="${selectPoster.mv_genre eq 'ro'}">
 								<td>ㅤ장르 : 로맨스</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'th'}">
+							<c:when test="${selectPoster.mv_genre eq 'th'}">
 								<td>ㅤ장르 : 스릴러</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ho'}">
+							<c:when test="${selectPoster.mv_genre eq 'ho'}">
 								<td>ㅤ장르 : 호러</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'sf'}">
+							<c:when test="${selectPoster.mv_genre eq 'sf'}">
 								<td>ㅤ장르 : SF</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'fa'}">
+							<c:when test="${selectPoster.mv_genre eq 'fa'}">
 								<td>ㅤ장르 : 판타지</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'cri'}">
+							<c:when test="${selectPoster.mv_genre eq 'cri'}">
 								<td>ㅤ장르 : 범죄</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'dra'}">
+							<c:when test="${selectPoster.mv_genre eq 'dra'}">
 								<td>ㅤ장르 : 드라마</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'doc'}">
+							<c:when test="${selectPoster.mv_genre eq 'doc'}">
 								<td>ㅤ장르 : 다큐멘터리</td>
 							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'mus'}">
+							<c:when test="${selectPoster.mv_genre eq 'mus'}">
 								<td>ㅤ장르 : 음악&뮤지컬</td>
 							</c:when>
 							<c:otherwise>
@@ -569,28 +569,28 @@ body {
 						<td>ㅤ제공OTT <!-- 넷플왓챠티빙 -->
 							<div class=wrapper style="width: 350px;">
 								<c:choose>
-									<c:when test="${empty searchMovie }">
+									<c:when test="${empty selectPoster }">
 										<li class="picks"><a href="index.jsp">검색된 결과가 없습니다.</a></li>
 									</c:when>
 									<c:otherwise>
 										<!-- 넷플 코드 있을 때 -->
-										<c:if test="${not empty searchMovie.mv_nf }">
+										<c:if test="${not empty selectPoster.mv_nf }">
 											<a
-												href="https://www.netflix.com/kr/title/${searchMovie.mv_nf}">
+												href="https://www.netflix.com/kr/title/${selectPoster.mv_nf}">
 												<div class="box1"
 													style="background-image: url('data:image/jpeg;base64,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')"></div>
 											</a>
 										</c:if>
 										<!-- 왓챠 코드 있을 때 -->
-										<c:if test="${searchMovie.mv_wc != null }">
-											<a href="https://watcha.com${searchMovie.mv_wc}">
+										<c:if test="${selectPoster.mv_wc != null }">
+											<a href="https://watcha.com${selectPoster.mv_wc}">
 												<div class="box2"
 													style="background-image: url('https://play-lh.googleusercontent.com/vAkKvTtE8kdb0MWWxOVaqYVf0_suB-WMnfCR1MslBsGjhI49dAfF1IxcnhtpL3PnjVY')"></div>
 											</a>
 										</c:if>
 										<!-- 티빙 코드 있을 때 -->
-										<c:if test="${searchMovie.mv_tv != null }">
-											<a href="https://www.tving.com${searchMovie.mv_tv}">
+										<c:if test="${selectPoster.mv_tv != null }">
+											<a href="https://www.tving.com${selectPoster.mv_tv}">
 												<div class="box3"
 													style="background-image: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfMjIw%2FMDAxNjUwMjYxMDI0ODc0.2YppfkpxWVeiufpj309p7P8OTDH6utZEIrYS-AAUPaYg.ahQsY_JjgA4rS_Nt8lT15sEd1PKLj4QxrQGVLgGfLbMg.JPEG.qkrejrwk0810%2Ftving_log.jpg&amp;type=sc960_832')"></div>
 											</a>
