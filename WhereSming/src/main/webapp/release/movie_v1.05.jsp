@@ -528,25 +528,36 @@ body {
 										<h4 style="font-weight: 800;">
 											<i class="fa-solid fa-file-circle-plus"></i>PICK목록담기
 										</h4>
-											
-						
-						<!-- 폴더이름 라이크수 폴더생성일자 -->
-						
-						
-						<jsp:useBean id="PickListViewerDAO"
-							class="com.wheresming.pick.PickListViewerDAO" />
-						<c:set var="purple"
-							value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
-
-						<c:forEach items="${purple}" var="p"
-							varStatus="status">
-									<div>
-										<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
-										<i class="fa-regular fa-heart"></i>
-										</button>
-										<c:out value="${p.fd_name}" />
-									</div>
-						</c:forEach>
+										<div>
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											ㅤ찜공포
+										</div>
+										<div>
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											ㅤ찜코미디
+										</div>
+										<div>
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											ㅤ찜로맨스
+										</div>
+										<div>
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											ㅤ찜액션
+										</div>
+										<div>
+											<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											ㅤ찜스릴러
+										</div>
 
 								<form action="CreatePickList" method="get">
 									<div>
@@ -562,7 +573,6 @@ body {
 
 								</td>
 							</c:otherwise>
-							
 						</c:choose>
 					</tr>
 					<tr>
