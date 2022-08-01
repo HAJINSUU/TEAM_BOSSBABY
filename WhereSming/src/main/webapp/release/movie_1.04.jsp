@@ -446,7 +446,7 @@ body {
 	<div class="background"></div>
 
 	<div class="container2" style="height: 600px; width: 1000px;">
-		
+		<form action="">
 
 
 
@@ -559,15 +559,15 @@ body {
 											ㅤ찜스릴러
 										</div>
 
-								<form action="CreatePickList" method="get">
-									<div>
-										<input name="folder">
+									<form action="CreatePickList" method="get">
+										<div>
+											<input placeholder="폴더이름을 입력해주세요" name="folder">
+										</div>
 										<button type="submit" class="pickbutton">
-											<i class="fa-solid fa-file-circle-plus"></i>PICK
+											<i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성
 										</button>
-									</div>
-								</form>
-							
+										</div>
+									</form>
 
 
 								</td>
@@ -621,6 +621,7 @@ body {
 				</div>
 			</div>
 
+		</form>
 
 	</div>
 

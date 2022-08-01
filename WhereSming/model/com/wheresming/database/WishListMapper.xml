@@ -4,8 +4,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         
 <mapper namespace="com.wheresming.pick.PickDAO">
-	<insert id="createFolder">	
+	<insert id="createFolder" parameterType="com.wheresming.pick.PickListDTO">	
 	INSERT INTO t_wishlist (mv_seq, mb_nick, mb_id, open_yn, fd_name, fd_likes, fd_cdate) 
-	VALUES (NULL, #{nickname}, #{userID}, 'N', #{folderName}, 0, sysdate);
+	VALUES (NULL, #{mb_nick}, #{mb_id}, 'N', #{fd_name}, 0, sysdate)
 	</insert>
 </mapper>
