@@ -23,13 +23,10 @@ public class Login extends HttpServlet {
 				
 				String mb_id = request.getParameter("mb_id");
 				String mb_pw = request.getParameter("mb_pw");
-				System.out.println(mb_id+mb_pw);
 				// 2. Member 객체 생성(id,pw)
 				MemberDTO vo = new MemberDTO(mb_id, mb_pw);
-				System.out.println("DTO생성");
 				// 3. MemberDAO 객체 생성
 				LoginDAO dao = new LoginDAO();
-				System.out.println("DAO 생성");
 				
 				// 4. dao.selectMember() 메서드 호출
 				MemberDTO loginMember = dao.selectMember(vo);
@@ -38,6 +35,7 @@ public class Login extends HttpServlet {
 				
 				if(loginMember!=null) {  // 로그인 성공
 					System.out.println("로그인성공");
+					System.out.println("로그인한 사용자 : " + vo.getMb_id());
 					HttpSession session = request.getSession();
 					session.setAttribute("loginMember",loginMember);
 					response.sendRedirect("index.jsp");
