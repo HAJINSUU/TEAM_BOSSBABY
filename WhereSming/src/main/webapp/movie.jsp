@@ -66,7 +66,7 @@ body::-webkit-scrollbar-track {
 .container2 {
 	/* 영화설명페이지 위치이동 */
 	margin-top: 230px;
-	margin-left: 500px;
+	margin-left: 280px;
 	background: transparent;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0);
@@ -96,7 +96,7 @@ body {
 .container3 {
 	color: #FFBB00;
 	font-size: 30px;
-	margin-left: 1660px;
+	margin-left: 1420px;
 	object-fit: cover;
 }
 
@@ -245,7 +245,7 @@ body {
 	color: #fff;
 	width: 1200px;
 	margin: -800px;
-	margin-left: 470px;
+	margin-left: 260px;
 	background: transparent;
 	/* 댓글 글자 크기 조절 */
 	font-size: 15px;

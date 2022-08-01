@@ -39,7 +39,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 /* 메인영화동영상재생하는곳  */
 #body2 {
-	height: 3100px;
+	height: 3000px;
 	background-color: #181818;
 }
 /* 스크롤바 디자인 */
@@ -182,7 +182,7 @@ img {
 
 	<!-- 추천영화 div리스트 -->
 	<!-- wheresming실시간추천 구간 top으로위치조정가능 -->
-	<section class="services" style="top: 1070px";>
+	<section class="services" style="top: 850px";>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
