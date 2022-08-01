@@ -31,6 +31,23 @@
 <!-- 마이페이지css -->
 
 <style>
+
+
+body::-webkit-scrollbar {
+    width: 15px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 20%; /* 스크롤바의 길이 */
+    background: #FFBB00; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #181818;  /*스크롤바 뒷 배경 색상*/
+}
+
+
 .price {
 	position: relative;
 }

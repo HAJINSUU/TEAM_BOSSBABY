@@ -42,6 +42,22 @@
 <link href="assets/css/picklist/responsive.css" rel="stylesheet">
 
 <style>
+
+body::-webkit-scrollbar {
+    width: 15px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 20%; /* 스크롤바의 길이 */
+    background: #FFBB00; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #181818;  /*스크롤바 뒷 배경 색상*/
+}
+
+
 .container {
 	padding-bottom: 30px;
 }
@@ -130,7 +146,7 @@
 						<c:set var="SearchingList" value="${SearchingDAO.selectAllList(searchMovie.mv_title) }"/>
 						<c:forEach items="${SearchingList }" var="m" varStatus="status">
 							
-						<div class="portfolio-item col-md-2 sizing">
+						<div class="portfolio-item col-md-2 sizing" style="background-size:cover">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
