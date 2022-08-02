@@ -9,10 +9,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="selectAllList" parameterType="String" resultType="com.wheresming.movie.MovieDTO">
-		SELECT mv_image, mv_seq FROM T_MOVIE WHERE MV_TITLE LIKE '%'||#{mv_title}||'%' 
+		SELECT mv_image, mv_seq, mv_genre FROM T_MOVIE WHERE MV_TITLE LIKE '%'||#{mv_title}||'%' 
 	</select>
 	
 	<select id="selectPoster" parameterType="com.wheresming.movie.MovieDTO" resultType="com.wheresming.movie.MovieDTO">
 		SELECT * FROM T_MOVIE WHERE MV_SEQ=#{mv_seq}
+	</select>
+	
+	<select id="recommend" parameterType="String" resultType="com.wheresming.movie.MovieDTO">
+		SELECT mv_image, mv_seq, mv_genre FROM T_MOVIE WHERE MV_GENRE=#{mv_genre}
 	</select>
 </mapper>

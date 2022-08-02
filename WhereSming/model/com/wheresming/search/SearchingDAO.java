@@ -1,4 +1,5 @@
 package com.wheresming.search;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -57,4 +58,21 @@ public class SearchingDAO {
 		}
 		return selectPoster;
 	}	
+	
+	// 영화 상세페이지 추천 영화 보여주기
+	
+	public List<MovieDTO> recommend(String mv_genre){
+		List<MovieDTO> list = null;
+		try {
+			list = sqlSession.selectList("com.wheresming.search.SearchingDAO.recommend",mv_genre);
+			Collections.shuffle(list);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return list;
+				
+	}
 }
