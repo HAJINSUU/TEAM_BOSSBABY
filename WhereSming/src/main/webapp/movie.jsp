@@ -590,20 +590,26 @@ body {
 									class="info"> 찜하기</span>
 							</a>ㅤ</td>
 							
-							<tr><td>
-								<div class="star-rating space-x-4 mx-auto">
-									<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-									<label for="5-stars" class="star pr-4">★</label>
-									<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-									<label for="4-stars" class="star">★</label>
-									<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-									<label for="3-stars" class="star">★</label>
-									<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-									<label for="2-stars" class="star">★</label>
-									<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-									<label for="1-star" class="star">★</label>
-								</div>
-							</td></tr>
+								<tr><td>
+										<tr><td>
+											<div class="star-rating space-x-4 mx-auto">
+												<form action="MovieRating" method="get">
+													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+													<label for="5-stars" class="star pr-4">★</label>
+													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+													<label for="4-stars" class="star">★</label>
+													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+													<label for="3-stars" class="star">★</label>
+													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+													<label for="2-stars" class="star">★</label>
+													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+													<label for="1-star" class="star">★</label>
+													<button type="submit">평점추가</button>
+												</form>
+											</div>
+										</td></tr>
+									</td></tr>
+									
 						</c:when>
 
 						<c:otherwise>
@@ -611,8 +617,27 @@ body {
 									class="fa-solid fa-heart fa-1x"
 									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
 									class="info"> 찜하기</span>
-									<tr><td>평점매기기</td></tr>
-							</a>ㅤㅤ <!--  찜목록눌렀을때 나오는 div-->
+									</a>ㅤ
+									<tr><td>
+										<tr><td>
+											<div class="star-rating space-x-4 mx-auto">
+												<form action="MovieRating" method="get">
+													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+													<label for="5-stars" class="star pr-4">★</label>
+													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+													<label for="4-stars" class="star">★</label>
+													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+													<label for="3-stars" class="star">★</label>
+													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+													<label for="2-stars" class="star">★</label>
+													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+													<label for="1-star" class="star">★</label>
+													<button type="submit">평점추가</button>
+												</form>
+											</div>
+										</td></tr>
+									</td></tr>
+							ㅤ <!--  찜목록눌렀을때 나오는 div-->
 								<div id="myDIV" style="display: none;">
 
 									<h4 style="font-weight: 800;">

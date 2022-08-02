@@ -202,6 +202,12 @@
   	<description></description>
   	<servlet-class>com.wheresming.search.SearchMovie</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>MovieRating</servlet-name>
+  	<display-name>MovieRating</display-name>
+  	<description></description>
+  	<servlet-class>com.wheresming.movie.MovieRating</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -333,5 +339,9 @@
   <servlet-mapping>
   	<servlet-name>SearchMovie</servlet-name>
   	<url-pattern>/SearchMovie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MovieRating</servlet-name>
+  	<url-pattern>/MovieRating</url-pattern>
   </servlet-mapping>
 </web-app>

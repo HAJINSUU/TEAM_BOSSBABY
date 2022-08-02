@@ -26,6 +26,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<mapper resource="com/wheresming/database/SearchMapper.xml" />
 		<mapper resource="com/wheresming/database/WishListMapper.xml" />
 		<mapper resource="com/wheresming/database/MovieInfoMapper.xml" />
+		<mapper resource="com/wheresming/database/MovieRatingMapper.xml" />
 	</mappers>
 </configuration>
 
