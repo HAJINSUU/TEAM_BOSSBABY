@@ -14,4 +14,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	FROM T_ETC
 	WHERE MB_NICK = #{mb_nick} AND MV_SEQ = #{mv_seq}
 	</select>
+	<select id="selectRatingAVG" parameterType="int" resultType="double">
+	SELECT AVG(ETC_SCORE)
+	FROM T_ETC
+	WHERE MV_SEQ = #{mv_seq}
+	</select>
 </mapper>

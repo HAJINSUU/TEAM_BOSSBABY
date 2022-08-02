@@ -541,6 +541,11 @@ body {
 		<!-- 메타정보 -->
 		<div id="dvMeta">
 
+										    <jsp:useBean id="MovieRatingViewerDAO" 
+											class="com.wheresming.movie.MovieRatingViewerDAO" />
+											<c:set var="rating" 
+											value="${MovieRatingViewerDAO.selectRating(selectPoster.mv_seq)}"/>
+
 			<table border="0">
 				<tr>
 					<td rowspan="7"><img src="${selectPoster.mv_image }"
@@ -611,6 +616,12 @@ body {
 												</form>
 											</div>
 										</td></tr>
+										<tr>
+										<td>
+											<!-- 평점 불러오는 JSTL -->
+											wheresming 평점 : <c:out value="${rating}"/>
+										</td>
+										</tr>
 									
 						</c:when>
 
@@ -640,6 +651,12 @@ body {
 													<button type="submit">평점추가</button>
 												</form>
 											</div>
+										<tr>
+										<td>
+											<!-- 평점 불러오는 JSTL -->
+											wheresming 평점 : <c:out value="${rating}"/>
+										</td>
+										</tr>
 		
 										
 										

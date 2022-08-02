@@ -506,11 +506,6 @@ body {
 		<!-- 메타정보 -->
 		<div id="dvMeta">
 
-										    <jsp:useBean id="MovieRatingViewerDAO" 
-											class="com.wheresming.movie.MovieRatingViewerDAO" />
-											<c:set var="rating" 
-											value="${MovieRatingViewerDAO.selectRating(selectPoster.mv_seq)}"/>
-
 			<table border="0">
 				<tr>
 					<td rowspan="6"><img src="${selectPoster.mv_image }"
