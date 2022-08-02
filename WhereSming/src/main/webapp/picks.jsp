@@ -29,6 +29,10 @@
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
 <style>
+.background {
+	height: 3000px;
+	background-color: #181818;}
+	
 body::-webkit-scrollbar {
     width: 15px;  /* 스크롤바의 너비 */
 }
@@ -48,12 +52,13 @@ body::-webkit-scrollbar-track {
 </head>
 
 <body>
+
 <!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav -->
 	<%@include file="nav.jsp"%>
 
-	<section class="meetings-page" id="meetings">
+	<section class="meetings-page background" id="meetings">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">

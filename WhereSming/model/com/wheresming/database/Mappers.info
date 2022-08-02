@@ -46,3 +46,6 @@ add info.
 Mapper's Sequence number. 
 Mapper String.
 add info.
+
+@MovieInfoMapper
+영화정보(상영시간 및 줄거리)를 실시간 크롤링으로 가져옴
