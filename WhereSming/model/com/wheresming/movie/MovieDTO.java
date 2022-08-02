@@ -25,6 +25,12 @@ public class MovieDTO {
 	
 	public MovieDTO(int mv_seq) {
 		this.mv_seq = mv_seq;
-		
+	}
+	
+	public MovieDTO(String mv_nf, String mv_wc, String mv_tv, String mv_title) {
+		this.mv_nf = mv_nf;
+		this.mv_wc = mv_wc;
+		this.mv_tv = mv_tv;
+		this.mv_title = mv_title;
 	}
 }

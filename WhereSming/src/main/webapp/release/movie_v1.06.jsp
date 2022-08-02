@@ -813,7 +813,7 @@ body {
 						<jsp:useBean id="ReviewViewerDAO"
 							class="com.wheresming.review.ReviewViewerDAO" />
 						<c:set var="ReviewViewerDTOList"
-							value="${ReviewViewerDAO.selectAllReview(searchMovie.mv_seq)}" />
+							value="${ReviewViewerDAO.selectAllReview(selectPoster.mv_seq)}" />
 
 
 						<c:forEach items="${ReviewViewerDTOList}" var="m"

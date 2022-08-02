@@ -119,9 +119,9 @@ try {
 	e.printStackTrace();
 }
 
-Elements element = doc.select("div.tag_wrap.tag_detail");
+Elements element = doc.select("div.css-e339p2.e9icmb810");
 
-Iterator<Element> movietime = element.select("div.tag.tag-blank").iterator();
+Iterator<Element> movietime = element.select("div.tag_wrap.tag_detail").iterator();
 
 String movietimes = movietime.next().text();
 System.out.println(movietimes);
@@ -151,5 +151,30 @@ System.out.println(moviestorys);
 
 return moviestorys;
 }
+
+
+//영화시간검색 네이버통합 검색 --------------------------------------------------------
+public String movieInfoNaver(String title) {
+String url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=영화+" + title + " 정보";
+System.out.println(url);
+Document doc = null;
+
+try {
+	doc = Jsoup.connect(url).get();
+} catch (IOException e) {
+	System.out.println("영화시간 에러");
+	e.printStackTrace();
+}
+
+Elements element = doc.select("div.info_group:nth-child(5)");
+
+Iterator<Element> movietime = element.select("dd").iterator();
+
+String movietimes = movietime.next().text();
+System.out.println(movietimes);
+
+return movietimes;
+}
+
 	
 }

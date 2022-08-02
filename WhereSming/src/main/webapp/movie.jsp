@@ -490,12 +490,12 @@ body {
 		moviestory = rt.movieInfoNfs(result);
 	} else if (code.getMv_nf() == null && code.getMv_wc() != null) {
 		result = code.getMv_wc();
-		movietime = rt.movieInfoWct(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
 		moviestory = rt.movieInfoWcs(result);
 	} else if (code.getMv_wc() == null) {
 		result = code.getMv_tv();
-		movietime = rt.movieInfoTvt(result);
 		moviestory = rt.movieInfoTvs(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
 	}
 	%>
 
@@ -813,7 +813,7 @@ body {
 						<jsp:useBean id="ReviewViewerDAO"
 							class="com.wheresming.review.ReviewViewerDAO" />
 						<c:set var="ReviewViewerDTOList"
-							value="${ReviewViewerDAO.selectAllReview(selectPoster.mv_seq)}" />
+							value="${ReviewViewerDAO.selectAllReview(searchMovie.mv_seq)}" />
 
 
 						<c:forEach items="${ReviewViewerDTOList}" var="m"

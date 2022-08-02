@@ -5,6 +5,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.wheresming.movie.MovieInfoDAO">
 	<select id="select" parameterType="com.wheresming.movie.MovieDTO" resultType="com.wheresming.movie.MovieDTO">
-		SELECT mv_nf, mv_wc, mv_tv FROM T_MOVIE WHERE MV_SEQ=#{mv_seq}
+		SELECT mv_nf, mv_wc, mv_tv, mv_title FROM T_MOVIE WHERE MV_SEQ=#{mv_seq}
 	</select>
 </mapper>
