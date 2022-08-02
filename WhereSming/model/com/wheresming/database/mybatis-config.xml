@@ -5,24 +5,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <configuration>
 	<!-- 환경설정(계정, driver, url) -->
 	<environments default="development">
-        <environment id="development">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
-	                <property name="url" value="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe"/>
-	                <property name="username" value="campus_e_0707_4"/>
-	                <property name="password" value="smhrd4"/>
-            </dataSource>
-        </environment>
-    </environments>
-    
-    
-    <mappers>
-    	<mapper resource="com/wheresming/database/MemberMapper.xml"/>
-    	<mapper resource="com/wheresming/database/ReviewMapper.xml"/>
-    	<mapper resource="com/wheresming/database/top50Mapper.xml"/>
-    	<mapper resource="com/wheresming/database/SearchMapper.xml"/>
-    	<mapper resource="com/wheresming/database/WishListMapper.xml"/>
-    </mappers>
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver"
+					value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe" />
+				<property name="username" value="campus_e_0707_4" />
+				<property name="password" value="smhrd4" />
+			</dataSource>
+		</environment>
+	</environments>
+
+
+	<mappers>
+		<mapper resource="com/wheresming/database/MemberMapper.xml" />
+		<mapper resource="com/wheresming/database/ReviewMapper.xml" />
+		<mapper resource="com/wheresming/database/top50Mapper.xml" />
+		<mapper resource="com/wheresming/database/SearchMapper.xml" />
+		<mapper resource="com/wheresming/database/WishListMapper.xml" />
+		<mapper resource="com/wheresming/database/MovieInfoMapper.xml" />
+	</mappers>
 </configuration>
 

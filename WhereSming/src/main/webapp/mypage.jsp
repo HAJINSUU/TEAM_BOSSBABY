@@ -31,7 +31,9 @@
 <!-- 마이페이지css -->
 
 <style>
-
+.background {
+	height: 1500px;
+	background-color: #181818;}
 
 body::-webkit-scrollbar {
     width: 15px;  /* 스크롤바의 너비 */
@@ -66,7 +68,7 @@ body::-webkit-scrollbar-track {
 	<!-- 상단top nav -->
 	<%@include file="nav.jsp"%>
 
-	<section class="meetings-page" id="meetings">
+	<section class="meetings-page background" id="meetings">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
