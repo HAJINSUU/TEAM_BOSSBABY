@@ -471,6 +471,8 @@ body {
 	color: #fff;
 }
 
+
+/* 평점별 기능디자인 */
 .star-rating {
   display: flex;
   flex-direction: row-reverse;
@@ -502,6 +504,7 @@ body {
   -webkit-text-fill-color: #fff58c;
 }
 
+/* 평점별 기능디자인끝 */
 </style>
 </head>
 
@@ -618,7 +621,10 @@ body {
 									class="info"> 찜하기</span>
 									</a>ㅤ
 									<tr><td>
-										<tr><td>
+										
+										
+										
+										
 											<div class="star-rating space-x-4 mx-auto">
 												<form action="MovieRating" method="get">
 													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
@@ -634,7 +640,10 @@ body {
 													<button type="submit">평점추가</button>
 												</form>
 											</div>
-										</td></tr>
+		
+										
+										
+										
 							ㅤ <!--  찜목록눌렀을때 나오는 div-->
 								<div id="myDIV" style="display: none;">
 
@@ -645,7 +654,6 @@ body {
 
 									<!-- 폴더이름 라이크수 폴더생성일자 -->
 
-
 									<jsp:useBean id="PickListViewerDAO"
 										class="com.wheresming.pick.PickListViewerDAO" />
 									<c:set var="purple"
@@ -653,10 +661,14 @@ body {
 
 									<c:forEach items="${purple}" var="p" varStatus="status">
 										<div>
-											<button class="button3" type="button"
+										
+										<!-- 찜눌렀을때 DB에담는거 하는중 보라-->
+											<form action="AddPick" method="get">
+											<button class="button3" type="submit"
 												onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
+											</form>
 											<c:out value="${p.fd_name}" />
 										</div>
 									</c:forEach>
