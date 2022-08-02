@@ -1,3 +1,4 @@
+
 <%@page import="com.wheresming.movieinfo.movieInfoReturn"%>
 <%@page import="com.wheresming.movie.MovieDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -8,6 +9,7 @@
 <%@page import="com.wheresming.search.SearchingDAO"%>
 <%@page import="com.wheresming.member.MemberDTO"%>
 <%@page import="com.wheresming.member.LoginDAO"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 
 <!DOCTYPE html>
@@ -470,38 +472,6 @@ body {
 	font-size: 16px;
 	color: #fff;
 }
-
-.star-rating {
-  display: flex;
-  flex-direction: row-reverse;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  justify-content: space-around;
-  padding: 0 0.2em;
-  text-align: center;
-  width: 5em;
-}
- 
-.star-rating input {
-  display: none;
-}
- 
-.star-rating label {
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  cursor: pointer;
-}
- 
-.star-rating :checked ~ label {
-  -webkit-text-fill-color: gold;
-}
- 
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  -webkit-text-fill-color: #fff58c;
-}
-
 </style>
 </head>
 
@@ -522,12 +492,12 @@ body {
 		moviestory = rt.movieInfoNfs(result);
 	} else if (code.getMv_nf() == null && code.getMv_wc() != null) {
 		result = code.getMv_wc();
-		movietime = rt.movieInfoNaver(code.getMv_title());
+		movietime = rt.movieInfoWct(result);
 		moviestory = rt.movieInfoWcs(result);
 	} else if (code.getMv_wc() == null) {
 		result = code.getMv_tv();
+		movietime = rt.movieInfoTvt(result);
 		moviestory = rt.movieInfoTvs(result);
-		movietime = rt.movieInfoNaver(code.getMv_title());
 	}
 	%>
 
@@ -540,38 +510,38 @@ body {
 
 			<table border="0">
 				<tr>
-					<td rowspan="7"><img src="${selectPoster.mv_image }"
+					<td rowspan="6"><img src="${selectPoster.mv_image }"
 						id="imgPoster" /></td>
 					<!-- 영화정보 -->
-					<td><h2 class="mvTitlesize">${searchMovie.mv_title }</h2></td>
+					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2></td>
 				</tr>
 				<tr>
 					<td><span class="b"> <!-- 장르별 출력 --> <c:choose>
-								<c:when test="${searchMovie.mv_genre eq 'kid'}">어린이&가족	
+								<c:when test="${selectPoster.mv_genre eq 'kid'}">어린이&가족	
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ani'}">애니메이션
+								<c:when test="${selectPoster.mv_genre eq 'ani'}">애니메이션
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ac'}">액션
+								<c:when test="${selectPoster.mv_genre eq 'ac'}">액션
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'co'}">코미디
+								<c:when test="${selectPoster.mv_genre eq 'co'}">코미디
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ro'}">로맨스
+								<c:when test="${selectPoster.mv_genre eq 'ro'}">로맨스
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'th'}">스릴러
+								<c:when test="${selectPoster.mv_genre eq 'th'}">스릴러
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ho'}">호러
+								<c:when test="${selectPoster.mv_genre eq 'ho'}">호러
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'sf'}">SF
+								<c:when test="${selectPoster.mv_genre eq 'sf'}">SF
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'fa'}">판타지
+								<c:when test="${selectPoster.mv_genre eq 'fa'}">판타지
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'cri'}">범죄
+								<c:when test="${selectPoster.mv_genre eq 'cri'}">범죄
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'dra'}">드라마
+								<c:when test="${selectPoster.mv_genre eq 'dra'}">드라마
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'doc'}">다큐멘터리
+								<c:when test="${selectPoster.mv_genre eq 'doc'}">다큐멘터리
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'mus'}">음악&뮤지컬
+								<c:when test="${selectPoster.mv_genre eq 'mus'}">음악&뮤지컬
 						</c:when>
 								<c:otherwise>기타
 						</c:otherwise>
@@ -589,27 +559,6 @@ body {
 									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
 									class="info"> 찜하기</span>
 							</a>ㅤ</td>
-							
-								<tr><td>
-										<tr><td>
-											<div class="star-rating space-x-4 mx-auto">
-												<form action="MovieRating" method="get">
-													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-													<label for="5-stars" class="star pr-4">★</label>
-													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-													<label for="4-stars" class="star">★</label>
-													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-													<label for="3-stars" class="star">★</label>
-													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-													<label for="2-stars" class="star">★</label>
-													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-													<label for="1-star" class="star">★</label>
-													<button type="submit">평점추가</button>
-												</form>
-											</div>
-										</td></tr>
-									</td></tr>
-									
 						</c:when>
 
 						<c:otherwise>
@@ -617,27 +566,7 @@ body {
 									class="fa-solid fa-heart fa-1x"
 									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
 									class="info"> 찜하기</span>
-									</a>ㅤ
-									<tr><td>
-										<tr><td>
-											<div class="star-rating space-x-4 mx-auto">
-												<form action="MovieRating" method="get">
-													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-													<label for="5-stars" class="star pr-4">★</label>
-													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-													<label for="4-stars" class="star">★</label>
-													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-													<label for="3-stars" class="star">★</label>
-													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-													<label for="2-stars" class="star">★</label>
-													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-													<label for="1-star" class="star">★</label>
-													<button type="submit">평점추가</button>
-												</form>
-											</div>
-										</td></tr>
-									</td></tr>
-							ㅤ <!--  찜목록눌렀을때 나오는 div-->
+							</a>ㅤㅤ <!--  찜목록눌렀을때 나오는 div-->
 								<div id="myDIV" style="display: none;">
 
 									<h4 style="font-weight: 800;">
@@ -796,44 +725,30 @@ body {
 
 
 		<!-- 오른쪽영화추천 -->
+	<jsp:useBean id="SearchingDAO" class="com.wheresming.search.SearchingDAO"/>
+	<c:set var="RecommendList" value="${SearchingDAO.recommend(selectPoster.mv_genre) }"/>		
 		<div class="container3">
+		
 			<p class="moo">ㅤ관련영화추천</p>
+	
+	<form action="SearchMovie" method="get" id="movie">
+	<input id="mv_seq" name="mv_seq" type="hidden" >
+
+			<c:forEach items="${RecommendList}" var ="r" varStatus="status" begin="1" end="5">
+			
+			
 			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/78/17678-6044-46_cont');">
-					<div class="one"></div>
-					<div class="details"></div>
-				</div>
-			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/79/17679-6044-49_cont');">
+				<div class="items" onclick="imgclick('${r.mv_seq}')" >
+					<img src="${r.mv_image }"  >
 					<div class="two"></div>
 					<div class="details"></div>
 				</div>
 			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/76/17676-6044-46_cont');">
-					<div class="three"></div>
-					<div class="details"></div>
-				</div>
-			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/07/17707-6044-27_cont');">
-					<div class="four"></div>
-					<div class="details"></div>
-				</div>
-			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/18/17718-6044-43_cont');">
-					<div class="five"></div>
-					<div class="details"></div>
-				</div>
-			</div>
+
+		</c:forEach>
+	</form>
 		</div>
+		
 		<!-- 오른쪽영화추천 -->
 
 
@@ -913,14 +828,18 @@ body {
 				</div>
 			</div>
 		</section>
+		<!-- Bootstrap core JavaScript -->
+		<script src="vendor/jquery/jquery.min.js"></script>
 
+			<!-- 클릭 이벤트 -->
 		<script>
-		
-		ratingToPercent() {
-		      const score = +this.restaurant.averageScore * 20;
-		      return score + 1.5;
-		 }
-		
+			function imgclick(mv_seq){
+				$("#mv_seq").val(mv_seq);
+				$("#movie").attr("action","SearchMovie");
+				$("#movie").submit();
+			}
+		</script>
+		<script>
 			function doDisplay() {
 				var con = document.getElementById("myDIV");
 				if (con.style.display == 'none') {
@@ -941,6 +860,9 @@ body {
 				}
 			}
 		</script>
+		
+		
+
 		<!--찜목록 클릭색변경기능-->
 		<script type="text/javascript">
 			var button3 = document.getElementsByClassName('button3');
@@ -954,6 +876,8 @@ body {
 				})
 			}
 		</script>
+		
+
 
 
 
