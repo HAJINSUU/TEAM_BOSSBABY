@@ -31,29 +31,75 @@
 <style>
 .background {
 	height: 3000px;
-	background-color: #181818;}
-	
+	background-color: #181818;
+}
+
 body::-webkit-scrollbar {
-    width: 15px;  /* 스크롤바의 너비 */
+	width: 15px; /* 스크롤바의 너비 */
 }
 
 body::-webkit-scrollbar-thumb {
-    height: 20%; /* 스크롤바의 길이 */
-    background: #FFBB00; /* 스크롤바의 색상 */
-    border-radius: 10px;
+	height: 20%; /* 스크롤바의 길이 */
+	background: #FFBB00; /* 스크롤바의 색상 */
+	border-radius: 10px;
 }
 
 body::-webkit-scrollbar-track {
-    background: #181818;  /*스크롤바 뒷 배경 색상*/
+	background: #181818; /*스크롤바 뒷 배경 색상*/
 }
 
+/* 장르 드롭다운바 */
+.dropbtn {
+	padding: 16px;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	margin-top: 8px;
+	margin-left : -55px;
+	display: none;
+	position: absolute;
+	background-color: rgba(122, 123, 116, 0.72);
+	min-width: 150px;
+	border-radius: 5px;
+}
+
+.dropdown-content a {
+	color: #fff;
+	font-weight: 400;
+	font-size: 13px;
+	padding: 10px 16px;
+	text-decoration: none;
+	display: block;
+	border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+	color: #fff;
+	font-weight: 600;
+	background-color: #FFBB00;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #181818;
+}
 </style>
 
 </head>
 
 <body>
-
-<!-- 실시간 채팅  -->
+	<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav -->
 	<%@include file="nav.jsp"%>
@@ -70,7 +116,25 @@ body::-webkit-scrollbar-track {
 								<ul>
 									<li data-filter="*" class="active">인기</li>
 									<li data-filter="*">최신</li>
-									<li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li>
+									<!-- <li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li> -->
+									<li data-filter="*" class="dropdown dropbtn">장르 <i
+										class="fa-solid fa-chevron-down"></i>
+										<div class="dropdown-content">
+											<a href="#">어린이&가족</a> 
+											<a href="#">애니메이션</a> 
+											<a href="#">액션</a>
+											<a href="#">코미디</a> 
+											<a href="#">로맨스</a> 
+											<a href="#">스릴러</a> 
+											<a href="#">호러</a> 
+												<a href="#">SF</a> 
+												<a href="#">판타지</a> 
+												<a href="#">범죄</a> 
+												<a href="#">드라마</a> 
+												<a href="#">다큐멘터리</a> 
+												<a href="#">뮤지컬</a>
+										</div>
+									</li>
 
 								</ul>
 
@@ -92,8 +156,7 @@ body::-webkit-scrollbar-track {
 											</span>
 										</div>
 										<!-- 영화이미지 넣기 가져오기 -->
-										<a href="picksList.jsp"><img
-											class="image-thumbnail"
+										<a href="picksList.jsp"><img class="image-thumbnail"
 											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
 											alt=""></a>
 									</div>
