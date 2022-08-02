@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import javax.websocket.Session;
 
 import com.wheresming.member.MemberDTO;
+import com.wheresming.movie.MovieDTO;
 import com.wheresming.search.SearchDTO;
 import com.wheresming.search.Searching;
 
@@ -30,7 +31,7 @@ public class ReviewViewer extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		HttpSession session = request.getSession();
-		SearchDTO searchMovie = (SearchDTO)session.getAttribute("searchMovie");
+		MovieDTO searchMovie = (MovieDTO)session.getAttribute("selectPoster");
 		
 		ReviewViewerDAO dao = new ReviewViewerDAO();
 		
