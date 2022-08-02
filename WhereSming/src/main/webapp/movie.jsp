@@ -543,35 +543,35 @@ body {
 					<td rowspan="7"><img src="${selectPoster.mv_image }"
 						id="imgPoster" /></td>
 					<!-- 영화정보 -->
-					<td><h2 class="mvTitlesize">${searchMovie.mv_title }</h2></td>
+					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2></td>
 				</tr>
 				<tr>
 					<td><span class="b"> <!-- 장르별 출력 --> <c:choose>
-								<c:when test="${searchMovie.mv_genre eq 'kid'}">어린이&가족	
+								<c:when test="${selectPoster.mv_genre eq 'kid'}">어린이&가족	
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ani'}">애니메이션
+								<c:when test="${selectPoster.mv_genre eq 'ani'}">애니메이션
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ac'}">액션
+								<c:when test="${selectPoster.mv_genre eq 'ac'}">액션
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'co'}">코미디
+								<c:when test="${selectPoster.mv_genre eq 'co'}">코미디
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ro'}">로맨스
+								<c:when test="${selectPoster.mv_genre eq 'ro'}">로맨스
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'th'}">스릴러
+								<c:when test="${selectPoster.mv_genre eq 'th'}">스릴러
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'ho'}">호러
+								<c:when test="${selectPoster.mv_genre eq 'ho'}">호러
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'sf'}">SF
+								<c:when test="${selectPoster.mv_genre eq 'sf'}">SF
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'fa'}">판타지
+								<c:when test="${selectPoster.mv_genre eq 'fa'}">판타지
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'cri'}">범죄
+								<c:when test="${selectPoster.mv_genre eq 'cri'}">범죄
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'dra'}">드라마
+								<c:when test="${selectPoster.mv_genre eq 'dra'}">드라마
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'doc'}">다큐멘터리
+								<c:when test="${selectPoster.mv_genre eq 'doc'}">다큐멘터리
 						</c:when>
-								<c:when test="${searchMovie.mv_genre eq 'mus'}">음악&뮤지컬
+								<c:when test="${selectPoster.mv_genre eq 'mus'}">음악&뮤지컬
 						</c:when>
 								<c:otherwise>기타
 						</c:otherwise>
@@ -608,7 +608,6 @@ body {
 												</form>
 											</div>
 										</td></tr>
-									</td></tr>
 									
 						</c:when>
 
@@ -636,7 +635,6 @@ body {
 												</form>
 											</div>
 										</td></tr>
-									</td></tr>
 							ㅤ <!--  찜목록눌렀을때 나오는 div-->
 								<div id="myDIV" style="display: none;">
 
@@ -796,43 +794,28 @@ body {
 
 
 		<!-- 오른쪽영화추천 -->
+	<jsp:useBean id="SearchingDAO" class="com.wheresming.search.SearchingDAO"/>
+	<c:set var="RecommendList" value="${SearchingDAO.recommend(selectPoster.mv_genre) }"/>		
 		<div class="container3">
+		
 			<p class="moo">ㅤ관련영화추천</p>
+	
+	<form action="SearchMovie" method="get" id="movie">
+	<input id="mv_seq" name="mv_seq" type="hidden" >
+
+			<c:forEach items="${RecommendList}" var ="r" varStatus="status" begin="1" end="5">
+			
+			
 			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/78/17678-6044-46_cont');">
-					<div class="one"></div>
-					<div class="details"></div>
-				</div>
-			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/79/17679-6044-49_cont');">
+				<div class="items" onclick="imgclick('${r.mv_seq}')" >
+					<img src="${r.mv_image }"  >
 					<div class="two"></div>
 					<div class="details"></div>
 				</div>
 			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/76/17676-6044-46_cont');">
-					<div class="three"></div>
-					<div class="details"></div>
-				</div>
-			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/07/17707-6044-27_cont');">
-					<div class="four"></div>
-					<div class="details"></div>
-				</div>
-			</div>
-			<div class="bg-items">
-				<div class="items"
-					style="background-image: url('https://cdn-magazine.notefolio.net/files/18/17718-6044-43_cont');">
-					<div class="five"></div>
-					<div class="details"></div>
-				</div>
-			</div>
+
+		</c:forEach>
+	</form>
 		</div>
 		<!-- 오른쪽영화추천 -->
 
@@ -913,8 +896,19 @@ body {
 				</div>
 			</div>
 		</section>
+		
+		<!-- Bootstrap core JavaScript -->
+		<script src="vendor/jquery/jquery.min.js"></script>
 
+			<!-- 클릭 이벤트 -->
 		<script>
+			function imgclick(mv_seq){
+				$("#mv_seq").val(mv_seq);
+				$("#movie").attr("action","SearchMovie");
+				$("#movie").submit();
+			}
+
+		</script>
 		
 		ratingToPercent() {
 		      const score = +this.restaurant.averageScore * 20;
