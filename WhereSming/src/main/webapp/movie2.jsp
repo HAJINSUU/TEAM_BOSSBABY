@@ -517,16 +517,16 @@ body {
 
 	String result = code.getMv_nf();
 	if (result == code.getMv_nf() && code.getMv_nf() != null) {
-		movietime = rt.movieInfoNft1(result);
+		movietime = rt.movieInfoNft(result);
 		moviestory = rt.movieInfoNfs(result);
 	} else if (code.getMv_nf() == null && code.getMv_wc() != null) {
 		result = code.getMv_wc();
-		movietime = rt.movieInfoWct(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
 		moviestory = rt.movieInfoWcs(result);
 	} else if (code.getMv_wc() == null) {
 		result = code.getMv_tv();
-		movietime = rt.movieInfoNaver(code.getMv_title());
 		moviestory = rt.movieInfoTvs(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
 	}
 	%>
 
@@ -545,8 +545,7 @@ body {
 					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2></td>
 				</tr>
 				<tr>
-					<td><span class="b"> <!-- 장르별 출력 --> 
- 					<c:choose>
+					<td><span class="b"> <!-- 장르별 출력 --> <c:choose>
 								<c:when test="${selectPoster.mv_genre eq 'kid'}">어린이&가족	
 						</c:when>
 								<c:when test="${selectPoster.mv_genre eq 'ani'}">애니메이션
@@ -576,12 +575,9 @@ body {
 								<c:otherwise>기타
 						</c:otherwise>
 							</c:choose>
-					</span> 
-					<!-- 영화시간크롤링 --> 
-					<%-- <span class="b"> · <%=movietime%> · 평점 9.5점</span> --%>
-					<span class="b"> <%=movietime%></span>
-					
-					</td>
+					</span> <!-- 영화시간크롤링 --> <span class="b"> · <%=movietime%> · 평점
+							9.5점
+					</span></td>
 				</tr>
 
 				<tr>
