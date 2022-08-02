@@ -471,6 +471,8 @@ body {
 	color: #fff;
 }
 
+
+/* 평점별 기능디자인 */
 .star-rating {
 	display: flex;
 	flex-direction: row-reverse;
@@ -482,6 +484,7 @@ body {
 	width: 5em;
 }
 
+<<<<<<< HEAD
 .star-rating input {
 	display: none;
 }
@@ -501,6 +504,9 @@ body {
 .star-rating label:hover, .star-rating label:hover ~ label {
 	-webkit-text-fill-color: #fff58c;
 }
+=======
+/* 평점별 기능디자인끝 */
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
 </style>
 </head>
 
@@ -622,6 +628,7 @@ body {
 									class="fa-solid fa-heart fa-1x"
 									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
 									class="info"> 찜하기</span>
+<<<<<<< HEAD
 							</a>ㅤ
 							<tr>
 								<td>
@@ -644,6 +651,33 @@ body {
 									</div>
 								</td>
 							</tr>
+=======
+									</a>ㅤ
+									<tr><td>
+										
+										
+										
+										
+											<div class="star-rating space-x-4 mx-auto">
+												<form action="MovieRating" method="get">
+													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+													<label for="5-stars" class="star pr-4">★</label>
+													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+													<label for="4-stars" class="star">★</label>
+													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+													<label for="3-stars" class="star">★</label>
+													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+													<label for="2-stars" class="star">★</label>
+													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+													<label for="1-star" class="star">★</label>
+													<button type="submit">평점추가</button>
+												</form>
+											</div>
+		
+										
+										
+										
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
 							ㅤ <!--  찜목록눌렀을때 나오는 div-->
 							<div id="myDIV" style="display: none;">
 
@@ -654,17 +688,47 @@ body {
 
 								<!-- 폴더이름 라이크수 폴더생성일자 -->
 
+<<<<<<< HEAD
 
 								<jsp:useBean id="PickListViewerDAO"
 									class="com.wheresming.pick.PickListViewerDAO" />
 								<c:set var="purple"
 									value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
+=======
+									<jsp:useBean id="PickListViewerDAO"
+										class="com.wheresming.pick.PickListViewerDAO" />
+									<c:set var="purple"
+										value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
 
+<<<<<<< HEAD
 								<c:forEach items="${purple}" var="p" varStatus="status">
 									<div>
 										<button class="button3" type="button"
 											onClick="alert('pick폴더에 추가되었습니다.')">
 											<i class="fa-regular fa-heart"></i>
+=======
+									<c:forEach items="${purple}" var="p" varStatus="status">
+										<div>
+										
+										<!-- 찜눌렀을때 DB에담는거 하는중 보라-->
+											<form action="AddPick" method="get">
+											<button class="button3" type="submit"
+												onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											</form>
+											<c:out value="${p.fd_name}" />
+										</div>
+									</c:forEach>
+
+									<form action="CreatePickList" method="get">
+										<div>
+											<input name="folder">
+										</div>
+										<button type="submit" class="pickbutton">
+											<i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성
+>>>>>>> branch 'master' of https://github.com/HAJINSUU/TEAM_BOSSBABY.git
 										</button>
 										<c:out value="${p.fd_name}" />
 									</div>

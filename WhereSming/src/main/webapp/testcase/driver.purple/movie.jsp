@@ -1,4 +1,3 @@
-
 <%@page import="com.wheresming.movieinfo.movieInfoReturn"%>
 <%@page import="com.wheresming.movie.MovieDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -9,7 +8,6 @@
 <%@page import="com.wheresming.search.SearchingDAO"%>
 <%@page import="com.wheresming.member.MemberDTO"%>
 <%@page import="com.wheresming.member.LoginDAO"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 
 <!DOCTYPE html>
@@ -472,6 +470,41 @@ body {
 	font-size: 16px;
 	color: #fff;
 }
+
+
+/* 평점별 기능디자인 */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+ 
+.star-rating input {
+  display: none;
+}
+ 
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+ 
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+ 
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
+}
+
+/* 평점별 기능디자인끝 */
 </style>
 </head>
 
@@ -492,12 +525,12 @@ body {
 		moviestory = rt.movieInfoNfs(result);
 	} else if (code.getMv_nf() == null && code.getMv_wc() != null) {
 		result = code.getMv_wc();
-		movietime = rt.movieInfoWct(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
 		moviestory = rt.movieInfoWcs(result);
 	} else if (code.getMv_wc() == null) {
 		result = code.getMv_tv();
-		movietime = rt.movieInfoTvt(result);
 		moviestory = rt.movieInfoTvs(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
 	}
 	%>
 
@@ -510,7 +543,7 @@ body {
 
 			<table border="0">
 				<tr>
-					<td rowspan="6"><img src="${selectPoster.mv_image }"
+					<td rowspan="7"><img src="${selectPoster.mv_image }"
 						id="imgPoster" /></td>
 					<!-- 영화정보 -->
 					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2></td>
@@ -559,6 +592,26 @@ body {
 									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
 									class="info"> 찜하기</span>
 							</a>ㅤ</td>
+							
+								<tr><td>
+										<tr><td>
+											<div class="star-rating space-x-4 mx-auto">
+												<form action="MovieRating" method="get">
+													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+													<label for="5-stars" class="star pr-4">★</label>
+													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+													<label for="4-stars" class="star">★</label>
+													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+													<label for="3-stars" class="star">★</label>
+													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+													<label for="2-stars" class="star">★</label>
+													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+													<label for="1-star" class="star">★</label>
+													<button type="submit">평점추가</button>
+												</form>
+											</div>
+										</td></tr>
+									
 						</c:when>
 
 						<c:otherwise>
@@ -566,7 +619,32 @@ body {
 									class="fa-solid fa-heart fa-1x"
 									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
 									class="info"> 찜하기</span>
-							</a>ㅤㅤ <!--  찜목록눌렀을때 나오는 div-->
+									</a>ㅤ
+									<tr><td>
+										
+										
+										
+										
+											<div class="star-rating space-x-4 mx-auto">
+												<form action="MovieRating" method="get">
+													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+													<label for="5-stars" class="star pr-4">★</label>
+													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+													<label for="4-stars" class="star">★</label>
+													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+													<label for="3-stars" class="star">★</label>
+													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+													<label for="2-stars" class="star">★</label>
+													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+													<label for="1-star" class="star">★</label>
+													<button type="submit">평점추가</button>
+												</form>
+											</div>
+		
+										
+										
+										
+							ㅤ <!--  찜목록눌렀을때 나오는 div-->
 								<div id="myDIV" style="display: none;">
 
 									<h4 style="font-weight: 800;">
@@ -576,18 +654,21 @@ body {
 
 									<!-- 폴더이름 라이크수 폴더생성일자 -->
 
-
 									<jsp:useBean id="PickListViewerDAO"
 										class="com.wheresming.pick.PickListViewerDAO" />
 									<c:set var="purple"
 										value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
 
 									<c:forEach items="${purple}" var="p" varStatus="status">
-										<div>
-											<button class="button3" type="button"
+										
+										<!-- 찜눌렀을때 DB에담는거 하는중 보라 -->
+											<form action="AddPick" method="get">
+											<button class="button3" type="submit"
 												onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
 											</button>
+											</form>
+										<div>
 											<c:out value="${p.fd_name}" />
 										</div>
 									</c:forEach>
@@ -748,7 +829,6 @@ body {
 		</c:forEach>
 	</form>
 		</div>
-		
 		<!-- 오른쪽영화추천 -->
 
 
@@ -828,6 +908,7 @@ body {
 				</div>
 			</div>
 		</section>
+		
 		<!-- Bootstrap core JavaScript -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 
@@ -838,8 +919,14 @@ body {
 				$("#movie").attr("action","SearchMovie");
 				$("#movie").submit();
 			}
+
 		</script>
-		<script>
+		
+		ratingToPercent() {
+		      const score = +this.restaurant.averageScore * 20;
+		      return score + 1.5;
+		 }
+		
 			function doDisplay() {
 				var con = document.getElementById("myDIV");
 				if (con.style.display == 'none') {
@@ -860,9 +947,6 @@ body {
 				}
 			}
 		</script>
-		
-		
-
 		<!--찜목록 클릭색변경기능-->
 		<script type="text/javascript">
 			var button3 = document.getElementsByClassName('button3');
@@ -876,8 +960,6 @@ body {
 				})
 			}
 		</script>
-		
-
 
 
 
