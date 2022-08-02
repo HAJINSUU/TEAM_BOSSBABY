@@ -897,7 +897,7 @@ body {
 										alt="..." />
 								</div>
 								<div class="ms-3">
-									<div clasas="fw-bold">
+									<div class="fw-bold">
 										<c:out value="${m.mb_nick}" />
 										/
 										<c:out value="${m.cmt_score}" />
