@@ -33,30 +33,6 @@ public class movieInfoReturn {
 		return movietimes;
 	}
 	
-//		넷플릭스 영화 정보 전체 조회 -------------------------------------------------
-	
-	public String movieInfoNft1(String code) {
-		String url = "https://www.netflix.com/kr/title/" + code;
-		System.out.println(url);
-		Document doc = null;
-
-		try {
-			doc = Jsoup.connect(url).get();
-		} catch (IOException e) {
-			System.out.println("영화시간 에러");
-			e.printStackTrace();
-		}
-
-		Elements element = doc.select("div.title-info");
-
-		Iterator<Element> movietime = element.select("div.title-info-metadata-wrapper").iterator();
-
-		String movietimes = movietime.next().text();
-		System.out.println(movietimes);
-		
-		return movietimes;
-	}
-	
 //		넷플릭스 영화 줄거리 조회
 	public String movieInfoNfs(String code) {
 

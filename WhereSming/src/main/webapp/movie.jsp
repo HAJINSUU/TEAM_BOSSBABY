@@ -529,8 +529,8 @@ body {
 		moviestory = rt.movieInfoWcs(result);
 	} else if (code.getMv_wc() == null) {
 		result = code.getMv_tv();
+		movietime = rt.movieInfoTvt(result);
 		moviestory = rt.movieInfoTvs(result);
-		movietime = rt.movieInfoNaver(code.getMv_title());
 	}
 	%>
 
@@ -579,8 +579,8 @@ body {
 								<c:otherwise>기타
 						</c:otherwise>
 							</c:choose>
-					</span> <!-- 영화시간크롤링 --> <span class="b"> · <%=movietime%> · 평점
-							9.5점
+					</span> <!-- 영화시간크롤링 --> <span class="b"> <!-- ·  --><%=movietime%> 
+					<!-- · 평점 9.5점 -->
 					</span></td>
 				</tr>
 
