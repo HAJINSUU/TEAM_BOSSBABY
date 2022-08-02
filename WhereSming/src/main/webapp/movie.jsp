@@ -316,7 +316,9 @@ body {
 
 .form-control {
 	width: 65%;
+	height: 70px;
 	opacity: 0.8;
+	border-radius: 8px;
 }
 
 .ms-3 {
@@ -474,34 +476,47 @@ body {
 
 /* 평점별 기능디자인 */
 .star-rating {
-  display: flex;
-  flex-direction: row-reverse;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  justify-content: space-around;
-  padding: 0 0.2em;
-  text-align: center;
-  width: 5em;
+	display: flex;
+	flex-direction: row-reverse;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	justify-content: space-around;
+	padding: 0 0.2em;
+	text-align: center;
+	width: 5em;
 }
- 
+
 .star-rating input {
-  display: none;
+	display: none;
 }
- 
+
 .star-rating label {
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2.3px;
-  -webkit-text-stroke-color: #2b2a29;
-  cursor: pointer;
+	-webkit-text-fill-color: transparent;
+	/* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 2.3px;
+	-webkit-text-stroke-color: #2b2a29;
+	cursor: pointer;
 }
- 
+
 .star-rating :checked ~ label {
-  -webkit-text-fill-color: gold;
+	-webkit-text-fill-color: gold;
 }
- 
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  -webkit-text-fill-color: #fff58c;
+
+.star-rating label:hover, .star-rating label:hover ~ label {
+	-webkit-text-fill-color: #fff58c;
+}
+
+#star2 {
+	position:relative;
+	margin-bottom:-130px;
+	width: 600px;
+	margin-left: 50px;
+}
+
+#button4 {
+	border-radius: 8px;
+	font-size: 20px;
+	font-weight: 700;
 }
 
 /* 평점별 기능디자인끝 */
@@ -550,8 +565,25 @@ body {
 				<tr>
 					<td rowspan="7"><img src="${selectPoster.mv_image }"
 						id="imgPoster" /></td>
+						
+						
 					<!-- 영화정보 -->
-					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2></td>
+					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2>
+																<div class="star-rating space-x-4 mx-auto" style="width: 500px;">
+												<form action="MovieRating" method="get">
+													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+													<label for="5-stars" class="star pr-4">★</label>
+													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+													<label for="4-stars" class="star">★</label>
+													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+													<label for="3-stars" class="star">★</label>
+													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+													<label for="2-stars" class="star">★</label>
+													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+													<label for="1-star" class="star">★</label>
+													<button id="button4" type="submit">평점추가</button>
+												</form>
+											</div></td>
 				</tr>
 				<tr>
 					<td><span class="b"> <!-- 장르별 출력 --> <c:choose>
@@ -599,23 +631,9 @@ body {
 							</a>ㅤ</td>
 							
 								<tr><td>
-										<tr><td>
-											<div class="star-rating space-x-4 mx-auto">
-												<form action="MovieRating" method="get">
-													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-													<label for="5-stars" class="star pr-4">★</label>
-													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-													<label for="4-stars" class="star">★</label>
-													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-													<label for="3-stars" class="star">★</label>
-													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-													<label for="2-stars" class="star">★</label>
-													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-													<label for="1-star" class="star">★</label>
-													<button type="submit">평점추가</button>
-												</form>
-											</div>
-										</td></tr>
+										
+
+									
 										<tr>
 										<td>
 											<!-- 평점 불러오는 JSTL -->
@@ -633,24 +651,7 @@ body {
 									</a>ㅤ
 									<tr><td>
 										
-										
-										
-										
-											<div class="star-rating space-x-4 mx-auto">
-												<form action="MovieRating" method="get">
-													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-													<label for="5-stars" class="star pr-4">★</label>
-													<input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-													<label for="4-stars" class="star">★</label>
-													<input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-													<label for="3-stars" class="star">★</label>
-													<input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-													<label for="2-stars" class="star">★</label>
-													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-													<label for="1-star" class="star">★</label>
-													<button type="submit">평점추가</button>
-												</form>
-											</div>
+									
 										<tr>
 										<td>
 											<!-- 평점 불러오는 JSTL -->
