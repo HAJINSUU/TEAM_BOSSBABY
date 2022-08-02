@@ -230,7 +230,7 @@ a:hover {
 
 	<!-- ---------- -->
 	<!-- for form container -->
-<form action="../../Login" method="post">
+<form action="Login" method="post">
 	<div class="container">
 		<h2>Login</h2>
 

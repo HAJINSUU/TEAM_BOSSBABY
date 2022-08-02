@@ -1,3 +1,5 @@
+<%@page import="com.wheresming.movieinfo.movieInfoReturn"%>
+<%@page import="com.wheresming.movie.MovieDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
@@ -14,6 +16,8 @@
 
 <head>
 <meta charset="UTF-8">
+<title>Movieinfo</title>
+
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,8 +31,18 @@
 	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
+<!-- 스타일 링크추가 -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link href="assets/css/picklist/font-awesome.min.css" rel="stylesheet"
+	media="screen">
+<link href="assets/css/picklist/animate.css" rel="stylesheet">
+<link href="assets/css/picklist/magnific-popup.css" rel="stylesheet">
+<link href="assets/css/picklist/style.css" rel="stylesheet"
+	media="screen">
+<link href="assets/css/picklist/responsive.css" rel="stylesheet">
 
+<style>
 .background {
 	background-color: #181818;
 	/* cover로 하면 배경화면 사이즈가 자동으로조절됨 */
@@ -42,30 +56,28 @@
 	left: 0;
 	right: 0;
 	z-index: -1;
-/* 	filter: blur(4px); */
+	/* 	filter: blur(4px); */
 	min-height: 100%;
 }
 /* 월요일에추가  */
 /* 스크롤바 디자인 */
 body::-webkit-scrollbar {
-    width: 15px;  /* 스크롤바의 너비 */
+	width: 15px; /* 스크롤바의 너비 */
 }
 
 body::-webkit-scrollbar-thumb {
-    height: 20%; /* 스크롤바의 길이 */
-    background: #FFBB00; /* 스크롤바의 색상 */
-    border-radius: 10px;
+	height: 20%; /* 스크롤바의 길이 */
+	background: #FFBB00; /* 스크롤바의 색상 */
+	border-radius: 10px;
 }
 
 body::-webkit-scrollbar-track {
-    background: #181818;  /*스크롤바 뒷 배경 색상*/
+	background: #181818; /*스크롤바 뒷 배경 색상*/
 }
-
-
 
 .container2 {
 	/* 영화설명페이지 위치이동 */
-	margin-top: 230px;
+	margin-top: 200px;
 	margin-left: 280px;
 	background: transparent;
 	position: absolute;
@@ -77,15 +89,12 @@ body::-webkit-scrollbar-track {
 	height: 100%;
 }
 
-.dvBody {
-	
-}
-
 /* 메인 영화포스터사이즈조절 */
 #imgPoster {
-	width: 300px;
-	height: 400px;
+	width: 250px;
+	height: 375px;
 	border-radius: 20px;
+	margin-right: 25px;
 }
 
 /* 영화오른쪽추천페이지 */
@@ -244,7 +253,7 @@ body {
 .card-body {
 	color: #fff;
 	width: 1200px;
-	margin: -800px;
+	margin-top: -1000px;
 	margin-left: 260px;
 	background: transparent;
 	/* 댓글 글자 크기 조절 */
@@ -318,11 +327,14 @@ body {
 
 /* 관련영화추천 글씨 */
 .moo {
+	text-align: left;
+	margin-left: 23px;
 	display: block;
-	font-weight: 700;
-	font-size: 23px;
+	font-weight: 550;
+	font-size: 18px;
 	text-transform: uppercase;
-	color: rgb(255, 187, 0);
+	color: #fff;
+	/* color: rgb(255, 187, 0); */
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
@@ -331,6 +343,7 @@ body {
 	line-height: 40px;
 	border: transparent;
 	letter-spacing: 1px;
+	display: block;
 }
 
 /* 종이비행기 제출 버튼 가로위치조정 */
@@ -338,7 +351,8 @@ body {
 	position: relative;
 	left: 770px;
 	bottom: -60px;
-	color: white; background-color : rgba( 255, 255, 255, 0);
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
 	border: none;
 	background-color: rgba(255, 255, 255, 0);
 }
@@ -368,19 +382,21 @@ body {
 
 /* 박스3개 */
 .box1, .box2, .box3 {
+	z-index: -1;
 	position: relative;
 	display: inline-block;
-	width: 70px;
-	height: 70px;
+	width: 56px;
+	height: 56px;
 	vertical-align: middle;
 	background-size: cover;
+	margin-top: 5px;
+	margin-right: 3px;
 	border-radius: 15px;
-	margin-left: 8px;
-	margin-top: 3px;
 } /* 박스3개끝  */
 
 /* 찜눌렀을때 div디자인 */
 #myDIV {
+	z-index: 1;
 	background-color: rgba(255, 255, 255, 0.8);
 	height: 250px;
 	width: 300px;
@@ -391,20 +407,21 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 10px;
+	position: absolute;
 }
 
 #myDIV::-webkit-scrollbar {
-    width: 15px;  /* 스크롤바의 너비 */
+	width: 15px; /* 스크롤바의 너비 */
 }
 
 #myDIV::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #FFBB00; /* 스크롤바의 색상 */
-    border-radius: 10px;
+	height: 30%; /* 스크롤바의 길이 */
+	background: #FFBB00; /* 스크롤바의 색상 */
+	border-radius: 10px;
 }
 
 #myDIV::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, .2);  /*스크롤바 뒷 배경 색상*/
+	background: rgba(255, 255, 255, .2); /*스크롤바 뒷 배경 색상*/
 }
 
 .pickbutton {
@@ -436,200 +453,219 @@ body {
 .clicked {
 	color: rgb(253, 85, 85)
 }
+
+/* 글씨모양수정 */
+.mvTitlesize {
+	font-size: 35px;
+}
+
+.b {
+	font-weight: 400;
+	font-size: 14px;
+	color: #a3a3a3;
+}
+
+.info {
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+}
 </style>
 </head>
 
 
 <body>
+	<%
+	HttpSession session1 = request.getSession();
+	MovieDTO code = (MovieDTO) session1.getAttribute("code");
 
+	movieInfoReturn rt = new movieInfoReturn();
+
+	String movietime = "";
+	String moviestory = "";
+
+	String result = code.getMv_nf();
+	if (result == code.getMv_nf() && code.getMv_nf() != null) {
+		movietime = rt.movieInfoNft(result);
+		moviestory = rt.movieInfoNfs(result);
+	} else if (code.getMv_nf() == null && code.getMv_wc() != null) {
+		result = code.getMv_wc();
+		movietime = rt.movieInfoNaver(code.getMv_title());
+		moviestory = rt.movieInfoWcs(result);
+	} else if (code.getMv_wc() == null) {
+		result = code.getMv_tv();
+		moviestory = rt.movieInfoTvs(result);
+		movietime = rt.movieInfoNaver(code.getMv_title());
+	}
+	%>
 
 	<div class="background"></div>
-
 	<div class="container2" style="height: 600px; width: 1000px;">
-		
+
+		<!-- for form container -->
+		<!-- 메타정보 -->
+		<div id="dvMeta">
+
+			<table border="0">
+				<tr>
+					<td rowspan="6"><img src="${selectPoster.mv_image }"
+						id="imgPoster" /></td>
+					<!-- 영화정보 -->
+					<td><h2 class="mvTitlesize">${searchMovie.mv_title }</h2></td>
+				</tr>
+				<tr>
+					<td><span class="b"> <!-- 장르별 출력 --> <c:choose>
+								<c:when test="${searchMovie.mv_genre eq 'kid'}">어린이&가족	
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'ani'}">애니메이션
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'ac'}">액션
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'co'}">코미디
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'ro'}">로맨스
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'th'}">스릴러
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'ho'}">호러
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'sf'}">SF
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'fa'}">판타지
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'cri'}">범죄
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'dra'}">드라마
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'doc'}">다큐멘터리
+						</c:when>
+								<c:when test="${searchMovie.mv_genre eq 'mus'}">음악&뮤지컬
+						</c:when>
+								<c:otherwise>기타
+						</c:otherwise>
+							</c:choose>
+					</span> <!-- 영화시간크롤링 --> <span class="b"> · <%=movietime%> · 평점
+							9.5점
+					</span></td>
+				</tr>
+
+				<tr>
+					<c:choose>
+						<c:when test="${empty loginMember }">
+							<td><a href="login.jsp"> <i
+									class="fa-solid fa-heart fa-1x"
+									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
+									class="info"> 찜하기</span>
+							</a>ㅤ</td>
+						</c:when>
+
+						<c:otherwise>
+							<td><a href="javascript:doDisplay();"> <i
+									class="fa-solid fa-heart fa-1x"
+									style="font-weight: 600; color: rgb(253, 85, 85);"> </i> <span
+									class="info"> 찜하기</span>
+							</a>ㅤㅤ <!--  찜목록눌렀을때 나오는 div-->
+								<div id="myDIV" style="display: none;">
+
+									<h4 style="font-weight: 800;">
+										<i class="fa-solid fa-file-circle-plus"></i>PICK목록담기
+									</h4>
 
 
+									<!-- 폴더이름 라이크수 폴더생성일자 -->
 
-			<!-- for form container -->
-			<!-- 메타정보 -->
-			<div id="dvMeta">
 
-				<table border="0">
-					<tr>
-						<td rowspan="5"><img src="${searchMovie.mv_image }"
-							id="imgPoster" /></td>
-						<td>ㅤ영화제목 : ${searchMovie.mv_title }</td>
-					</tr>
-					<tr>
-						<!-- 장르별 출력 -->
-						<c:choose>
-							<c:when test="${searchMovie.mv_genre eq 'kid'}">
-								<td>ㅤ장르 : 어린이&가족</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ani'}">
-								<td>ㅤ장르 : 애니메이션</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ac'}">
-								<td>ㅤ장르 : 액션</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'co'}">
-								<td>ㅤ장르 : 코미디</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ro'}">
-								<td>ㅤ장르 : 로맨스</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'th'}">
-								<td>ㅤ장르 : 스릴러</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'ho'}">
-								<td>ㅤ장르 : 호러</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'sf'}">
-								<td>ㅤ장르 : SF</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'fa'}">
-								<td>ㅤ장르 : 판타지</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'cri'}">
-								<td>ㅤ장르 : 범죄</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'dra'}">
-								<td>ㅤ장르 : 드라마</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'doc'}">
-								<td>ㅤ장르 : 다큐멘터리</td>
-							</c:when>
-							<c:when test="${searchMovie.mv_genre eq 'mus'}">
-								<td>ㅤ장르 : 음악&뮤지컬</td>
-							</c:when>
-							<c:otherwise>
-								<td>ㅤ장르 : 기타</td>
-							</c:otherwise>
-						</c:choose>
-					</tr>
-					<tr>
-						<td>ㅤ평점 : 9.5점</td>
-					</tr>
-					<tr>
-						<c:choose>
-							<c:when test="${empty loginMember }">
-								<td>ㅤ<a href="login.jsp"><i
-										class="fa-solid fa-heart fa-2x"
-										style="color: rgb(253, 85, 85)"></i></a>ㅤ찜하기
-								</td>
-							</c:when>
-							
-							<c:otherwise>
-								<td>ㅤ<a href="javascript:doDisplay();"><i
-										class="fa-solid fa-heart fa-2x"
-										style="color: rgb(253, 85, 85)" float: right></i></a>ㅤ찜하기ㅤ <!--  찜목록눌렀을때 나오는 div-->
-									<div id="myDIV" style="display: none;">
+									<jsp:useBean id="PickListViewerDAO"
+										class="com.wheresming.pick.PickListViewerDAO" />
+									<c:set var="purple"
+										value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
 
-										<h4 style="font-weight: 800;">
-											<i class="fa-solid fa-file-circle-plus"></i>PICK목록담기
-										</h4>
-											
-						
-						<!-- 폴더이름 라이크수 폴더생성일자 -->
-						
-						
-						<jsp:useBean id="PickListViewerDAO"
-							class="com.wheresming.pick.PickListViewerDAO" />
-						<c:set var="purple"
-							value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
+									<c:forEach items="${purple}" var="p" varStatus="status">
+										<div>
+											<button class="button3" type="button"
+												onClick="alert('pick폴더에 추가되었습니다.')">
+												<i class="fa-regular fa-heart"></i>
+											</button>
+											<c:out value="${p.fd_name}" />
+										</div>
+									</c:forEach>
 
-						<c:forEach items="${purple}" var="p"
-							varStatus="status">
-									<div>
-										<button class="button3" type="button" onClick="alert('pick폴더에 추가되었습니다.')">
-										<i class="fa-regular fa-heart"></i>
-										</button>
-										<c:out value="${p.fd_name}" />
-									</div>
-						</c:forEach>
-
-								<form action="CreatePickList" method="get">
-									<div>
-										<input name="folder">
-									</div>
+									<form action="CreatePickList" method="get">
+										<div>
+											<input name="folder">
+										</div>
 										<button type="submit" class="pickbutton">
 											<i class="fa-solid fa-file-circle-plus"></i>PICK폴더생성
 										</button>
-								</div>
-								</form>
-							
+									</form>
+								</div></td>
+						</c:otherwise>
+					</c:choose>
+				</tr>
 
+				<tr>
+					<td><span class="info" style="font-weight: 600;">제공OTT</span>
+						<!-- 넷플왓챠티빙 -->
+						<div class="wrapper" style="width: 350px;">
+							<c:choose>
+								<c:when test="${empty selectPoster }">
+									<li class="picks"><a href="index.jsp">검색된 결과가 없습니다.</a></li>
+								</c:when>
+								<c:otherwise>
+									<!-- 넷플 코드 있을 때 -->
+									<c:if test="${not empty selectPoster.mv_nf }">
+										<a
+											href="https://www.netflix.com/kr/title/${selectPoster.mv_nf}">
+											<div class="box1"
+												style="background-image: url('data:image/jpeg;base64,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')"></div>
+										</a>
+									</c:if>
+									<!-- 왓챠 코드 있을 때 -->
+									<c:if test="${selectPoster.mv_wc != null }">
+										<a href="https://watcha.com${selectPoster.mv_wc}">
+											<div class="box2"
+												style="background-image: url('https://play-lh.googleusercontent.com/vAkKvTtE8kdb0MWWxOVaqYVf0_suB-WMnfCR1MslBsGjhI49dAfF1IxcnhtpL3PnjVY')"></div>
+										</a>
+									</c:if>
+									<!-- 티빙 코드 있을 때 -->
+									<c:if test="${selectPoster.mv_tv != null }">
+										<a href="https://www.tving.com${selectPoster.mv_tv}">
+											<div class="box3"
+												style="background-image: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfMjIw%2FMDAxNjUwMjYxMDI0ODc0.2YppfkpxWVeiufpj309p7P8OTDH6utZEIrYS-AAUPaYg.ahQsY_JjgA4rS_Nt8lT15sEd1PKLj4QxrQGVLgGfLbMg.JPEG.qkrejrwk0810%2Ftving_log.jpg&amp;type=sc960_832')"></div>
+										</a>
+									</c:if>
+								</c:otherwise>
+							</c:choose>
+						</div> <!-- 넷플왓챠티빙끝--></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="info">
+							<%=moviestory%>
+						</div>
+					</td>
+				</tr>
 
-								</td>
-							</c:otherwise>
-							
-						</c:choose>
-					</tr>
-					<tr>
-						<td>ㅤ제공OTT <!-- 넷플왓챠티빙 -->
-							<div class=wrapper style="width: 350px;">
-								<c:choose>
-									<c:when test="${empty searchMovie }">
-										<li class="picks"><a href="index.jsp">검색된 결과가 없습니다.</a></li>
-									</c:when>
-									<c:otherwise>
-										<!-- 넷플 코드 있을 때 -->
-										<c:if test="${not empty searchMovie.mv_nf }">
-											<a
-												href="https://www.netflix.com/kr/title/${searchMovie.mv_nf}">
-												<div class="box1"
-													style="background-image: url('data:image/jpeg;base64,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')"></div>
-											</a>
-										</c:if>
-										<!-- 왓챠 코드 있을 때 -->
-										<c:if test="${searchMovie.mv_wc != null }">
-											<a href="https://watcha.com${searchMovie.mv_wc}">
-												<div class="box2"
-													style="background-image: url('https://play-lh.googleusercontent.com/vAkKvTtE8kdb0MWWxOVaqYVf0_suB-WMnfCR1MslBsGjhI49dAfF1IxcnhtpL3PnjVY')"></div>
-											</a>
-										</c:if>
-										<!-- 티빙 코드 있을 때 -->
-										<c:if test="${searchMovie.mv_tv != null }">
-											<a href="https://www.tving.com${searchMovie.mv_tv}">
-												<div class="box3"
-													style="background-image: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfMjIw%2FMDAxNjUwMjYxMDI0ODc0.2YppfkpxWVeiufpj309p7P8OTDH6utZEIrYS-AAUPaYg.ahQsY_JjgA4rS_Nt8lT15sEd1PKLj4QxrQGVLgGfLbMg.JPEG.qkrejrwk0810%2Ftving_log.jpg&amp;type=sc960_832')"></div>
-											</a>
-										</c:if>
-									</c:otherwise>
-								</c:choose>
-							</div> <!-- 넷플왓챠티빙끝-->
-						</td>
-					</tr>
-				</table>
+			</table>
 
-				<!--본문-->
-				<div id="dvBody">
-					<br> 금지된 세계의 문이 열렸다! 이사 가던 날, 수상한 터널을 지나자 인간에게는 금지된 신들의 세계로 오게
-					된 치히로.. 신들의 음식을 먹은 치히로의 부모님은 돼지로 변해버린다. “걱정마, 내가 꼭 구해줄게…” 겁에 질린
-					치히로에게 다가온 정체불명의 소년 하쿠. 그의 따뜻한 말에 힘을 얻은 치히로는 인간 세계로 돌아가기 위해 사상 초유의
-					미션을 시작하는데…
-
-				</div>
-			</div>
-
-
+		</div>
 	</div>
-
 
 
 	<!-- 채팅 -->
 	<script>
-        (function (d, w, c) {
-            w.ChatraID = '3zJ5EQxB9BkR7jn2J';
-            var s = d.createElement('script');
-            w[c] = w[c] || function () {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            s.async = true;
-            s.src = 'https://call.chatra.io/chatra.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'Chatra');
-    </script>
+		(function(d, w, c) {
+			w.ChatraID = '3zJ5EQxB9BkR7jn2J';
+			var s = d.createElement('script');
+			w[c] = w[c] || function() {
+				(w[c].q = w[c].q || []).push(arguments);
+			};
+			s.async = true;
+			s.src = 'https://call.chatra.io/chatra.js';
+			if (d.head)
+				d.head.appendChild(s);
+		})(document, window, 'Chatra');
+	</script>
 	<!-- 채팅끝 -->
 
 	<!-- ***** 위에 로고메뉴바 ***** -->
@@ -806,38 +842,39 @@ body {
 		</section>
 
 		<script>
-            function doDisplay() {
-                var con = document.getElementById("myDIV");
-                if (con.style.display == 'none') {
-                    con.style.display = 'block';
-                } else {
-                    con.style.display = 'none';
-                }
-            }
-        </script>
+			function doDisplay() {
+				var con = document.getElementById("myDIV");
+				if (con.style.display == 'none') {
+					con.style.display = 'block';
+				} else {
+					con.style.display = 'none';
+				}
+			}
+		</script>
 		<script type="text/javascript">
-            var bDisplay = true; function doDisplay() {
-                var con = document.getElementById("myDIV");
-                if (con.style.display == 'none') {
-                    con.style.display = 'block';
-                } else {
-                    con.style.display = 'none';
-                }
-            } 
-        </script>
+			var bDisplay = true;
+			function doDisplay() {
+				var con = document.getElementById("myDIV");
+				if (con.style.display == 'none') {
+					con.style.display = 'block';
+				} else {
+					con.style.display = 'none';
+				}
+			}
+		</script>
 		<!--찜목록 클릭색변경기능-->
 		<script type="text/javascript">
-    var button3 = document.getElementsByClassName('button3');
+			var button3 = document.getElementsByClassName('button3');
 
-    for (var i = 0; i < button3.length; i++) {
-      button3[i].addEventListener('click', function(){
-        for (var j = 0; j < button3.length; j++) {
-          button3[j].style.color = "black";
-        }
-        this.style.color = "red";
-      })
-    }
-    </script>
+			for (var i = 0; i < button3.length; i++) {
+				button3[i].addEventListener('click', function() {
+					for (var j = 0; j < button3.length; j++) {
+						button3[j].style.color = "black";
+					}
+					this.style.color = "red";
+				})
+			}
+		</script>
 
 
 
