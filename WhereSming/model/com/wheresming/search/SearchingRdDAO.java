@@ -115,7 +115,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 				conn = DriverManager.getConnection(url, db_id, db_pw);
 
 				if (conn != null) {
-					System.out.println("DB 연결 성공");
+					//System.out.println("DB 연결 성공");
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -126,7 +126,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 
 		// SQL문 실행
 		String sql = "select mv_image from t_movie where mv_genre = ? and mv_image is not null";
-		System.out.println("SQL 실행완료");
+		//System.out.println("SQL 실행완료");
 
 		ArrayList<String> list = new ArrayList<String>();
 		/* String[] list = new String[10]; */
@@ -145,7 +145,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 				list.add(rs.getString("mv_image"));
 
 				// table의 내용 확인 (내용이 있을 때만 확인가능)
-				System.out.println(mv_image);
+				//System.out.println(mv_image);
 			}
 			// for(int i = 0; i < list.length; i++)
 			// { rs = psmt.executeQuery(); // mv_image
@@ -171,19 +171,17 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 				e.printStackTrace();
 			}
 		}
-		System.out.println(list.size());
+		//System.out.println(list.size());
 
 		return list;
 	}
 
-	
-	
 	public int selectGenreSeq(String mv_image) {
 		// 해당하는 시퀀스 찾기
 		// 동적로딩
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("드라이버 로딩 성공");
+			//System.out.println("드라이버 로딩 성공");
 			// 동적로딩 성공여부 체크 > 확인 후 주석처리
 
 			// DB 연결 >> DB의 주소를 알아내서 연결
@@ -195,7 +193,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 				conn = DriverManager.getConnection(url, db_id, db_pw);
 
 				if (conn != null) {
-					System.out.println("DB 연결 성공");
+					//System.out.println("DB 연결 성공");
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -206,7 +204,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 
 		// SQL문 실행
 		String sql = "select mv_seq from t_movie where mv_image = ?";
-		System.out.println("SQL 실행완료");
+		//System.out.println("SQL 실행완료");
 
 		int mv_seq = 0;
 
@@ -221,7 +219,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 				mv_seq = rs.getInt(1);
 
 				// table의 내용 확인 (내용이 있을 때만 확인가능)
-				System.out.println(mv_seq);
+				//System.out.println(mv_seq);
 			}
 
 		} catch (SQLException e) {
