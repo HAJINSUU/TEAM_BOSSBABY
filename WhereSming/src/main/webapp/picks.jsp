@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
 	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Pick</title>
+<title>Where?Sming</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -94,6 +94,7 @@ body::-webkit-scrollbar-track {
 .dropdown:hover .dropbtn {
 	background-color: #181818;
 }
+
 </style>
 
 </head>
@@ -121,19 +122,19 @@ body::-webkit-scrollbar-track {
 									<i class="fa-solid fa-chevron-down"></i>
 										<div class="dropdown-content">
 										<%String url = "http://localhost:8083/MavenSample/picksGenre.jsp#"; %>
-											<a href = "<%=url %>kid" id="kid" >어린이&가족</a> 
-											<a href = "<%=url %>ani" id="ani">애니메이션</a> 
-											<a href = "<%=url %>ac" id="ac">액션</a>
-											<a href = "<%=url %>co" id="co">코미디</a> 
-											<a href = "<%=url %>ro" id="ro">로맨스</a> 
-											<a href = "<%=url %>th" id="th">스릴러</a> 
-											<a href = "<%=url %>ho" id="ho">호러</a> 
-											<a href = "<%=url %>sf" id="sf">SF</a> 
-											<a href = "<%=url %>fa" id="fa">판타지</a> 
-											<a href = "<%=url %>cri" id="cri">범죄</a> 
-											<a href = "<%=url %>dra" id="dra">드라마</a> 
-											<a href = "<%=url %>doc" id="doc">다큐멘터리</a> 
-											<a href = "<%=url %>mus" id="mus">뮤지컬</a>
+											<a href = "<%=url %>kid">어린이&가족</a> 
+											<a href = "<%=url %>ani">애니메이션</a> 
+											<a href = "<%=url %>ac">액션</a>
+											<a href = "<%=url %>co">코미디</a> 
+											<a href = "<%=url %>ro">로맨스</a> 
+											<a href = "<%=url %>th">스릴러</a> 
+											<a href = "<%=url %>ho">호러</a> 
+											<a href = "<%=url %>sf">SF</a> 
+											<a href = "<%=url %>fa">판타지</a> 
+											<a href = "<%=url %>cri">범죄</a> 
+											<a href = "<%=url %>dra">드라마</a> 
+											<a href = "<%=url %>doc">다큐멘터리</a> 
+											<a href = "<%=url %>mus">뮤지컬</a>
 										</div>
 									</li>
 
@@ -174,33 +175,12 @@ body::-webkit-scrollbar-track {
 							</div>
 						</div>
 
-						<!-- page버튼 -->
-						<!-- <div class="col-lg-12">
-              <div class="pagination">
-                <ul>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                </ul>
-              </div>
-            </div> -->
-
 					</div>
+					
 				</div>
 			</div>
 		</div>
 
-
-		<!-- footer부분 -->
-		<!-- <div class="footer">
-      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-        <br>
-        Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-        <br>
-        Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-      </p>
-    </div> -->
 
 	</section>
 
