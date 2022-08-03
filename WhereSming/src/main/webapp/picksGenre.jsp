@@ -233,13 +233,19 @@ img {
 									<li data-filter="*" class="active dropdown dropbtn">장르 <i
 										class="fa-solid fa-chevron-down"></i>
 										<div class="dropdown-content">
-											<a href="#kid" id="#kid">어린이&가족</a> <a href="#ani" id="#ani">애니메이션</a>
-											<a href="#ac" id="#ac">액션</a> <a href="#co" id="#co">코미디</a>
-											<a href="#ro" id="#ro">로맨스</a> <a href="#th" id="#th">스릴러</a>
-											<a href="#ho" id="#ho">호러</a> <a href="#sf" id="#sf">SF</a> <a
-												href="#fa" id="#fa">판타지</a> <a href="#cri" id="#cri">범죄</a>
-											<a href="#dra" id="#dra">드라마</a> <a href="#doc" id="#doc">다큐멘터리</a>
-											<a href="#mus" id="#mus">뮤지컬</a>
+											<a href="#kid" id="kid">어린이&가족</a> 
+											<a href="#ani" id="ani">애니메이션</a>
+											<a href="#ac" id="ac">액션</a> 
+											<a href="#co" id="co">코미디</a>
+											<a href="#ro" id="ro">로맨스</a> 
+											<a href="#th" id="th">스릴러</a>
+											<a href="#ho" id="ho">호러</a> 
+											<a href="#sf" id="sf">SF</a> 
+											<a href="#fa" id="fa">판타지</a> 
+											<a href="#cri" id="cri">범죄</a>
+											<a href="#dra" id="dra">드라마</a> 
+											<a href="#doc" id="doc">다큐멘터리</a>
+											<a href="#mus" id="mus">뮤지컬</a>
 										</div>
 									</li>
 
