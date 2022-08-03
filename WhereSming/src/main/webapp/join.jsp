@@ -25,7 +25,7 @@ body {
 }
 
 .background {
-	background-image: url('./ana.jpeg');
+	background-image: url('https://pds.joins.com/news/component/htmlphoto_mmdata/201612/06/htm_20161206171151756537.jpg');
 	/* background-color: black; */
 	background-repeat: no-repeat;
 	background-size: cover;
