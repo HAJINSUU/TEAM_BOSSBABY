@@ -682,19 +682,26 @@ body {
 									<c:set var="purple"
 										value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
 
+								<form action="AddPick" id="addpick" method="get">
+								<input id=foldername name="foldername" type="hidden">
 									<c:forEach items="${purple}" var="p" varStatus="status">
-										<div>
-										
+
+
+
 										<!-- 찜눌렀을때 DB에담는거 하는중 보라-->
-											<form action="AddPick" method="get">
-											<button class="button3" type="submit"
-												onClick="alert('pick폴더에 추가되었습니다.')">
+
+										<div onclick="folderclick('${p.fd_name}')">
+											<button class="button3" type="button">
 												<i class="fa-regular fa-heart"></i>
+												<c:out value="${p.fd_name}" />
 											</button>
-											</form>
-											<c:out value="${p.fd_name}" />
 										</div>
+
+										<!--찜목록 보라끝  -->
+
+
 									</c:forEach>
+								</form>
 
 									<form action="CreatePickList" method="get">
 										<div>
@@ -979,7 +986,16 @@ body {
 				})
 			}
 		</script>
+	<!--보라  -->
+		<script>
+			function folderclick(fd_name){
+				$("#foldername").val(fd_name);
+				$("#addpick").attr("action","AddPick");
+				$("#addpick").submit();
+				alert('pick폴더에 추가되었습니다.')
+			}
 
+		</script>
 
 
 		<!-- ***** Header Area End ***** -->
