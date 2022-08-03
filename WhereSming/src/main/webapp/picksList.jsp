@@ -36,6 +36,10 @@
 <link href="assets/css/picklist/responsive.css" rel="stylesheet">
 
 <style>
+.background {
+	height: 3000px;
+	background-color: #181818;
+}
 
 body::-webkit-scrollbar {
     width: 15px;  /* 스크롤바의 너비 */
@@ -110,7 +114,7 @@ body::-webkit-scrollbar-track {
 	<%@include file="nav.jsp"%>
 
 	<!--배경-->
-	<section class="meetings-page" id="meetings">
+	<section class="meetings-page background" id="meetings">
 
 		<div class="container">
 			<div class="col-lg-8 col-xl-7">
