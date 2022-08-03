@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -136,13 +137,16 @@ body::-webkit-scrollbar-track {
 								alt="">
 						</div>
 					</div>
-
+					
+					<jsp:useBean id="PickListViewerDAO"
+										class="com.wheresming.pick.PickListViewerDAO" />
 					<div class="text-center text-xl-start" id="nic"
 						style="margin-top: 2px; color: #fff">
-						<h2 class="display-5 fw-bolder text-white mb-2"
-							style="width: 1200px;">공포테마 : 폴더이름 가져오기</h2>
-						<span class="b">Picker </span> 닉네임
-						<p id="like">👍 000 | 영화 · 00개</p>
+					<c:forEach items="${mypicksAllList }" var="n" varStatus="status" begin="1" end="1">	
+						<h2 class="display-5 fw-bolder text-white mb-2" style="width: 1200px;">${n.fd_name }</h2>
+						</c:forEach>
+						<span class="b">Picker </span> ${loginMember.mb_nick }
+						<p id="like">👍 000 | 영화 · ${fn:length(mypicksAllList)}개</p>
 
 						<!-- 담아두기버튼 -->
 						<div style="margin-top: 50px">
@@ -163,9 +167,11 @@ body::-webkit-scrollbar-track {
 			<div class="container">
 				<div class="row">
 					<div id="grid" class="flex">
-		<c:forEach items="${mypicksList }" var="f" varStatus="status">	
-
+		<c:forEach items="${mypicksAllList }" var="f" varStatus="status">	
+				
 						<!-- 영화1개씩 -->
+						
+						
 						<div class="portfolio-item col-md-2 sizing">
 							<div class="portfolio-bg">
 								<div class="portfolio">
