@@ -167,16 +167,19 @@ body::-webkit-scrollbar-track {
 		
 	
 		<!-- 영화리스트 -->
+		<!-- 리스트 수정  -->
 		<section>
 			<div class="container">
 				<div class="row">
+		<form action="SearchMovie" method="get" id="movie">
+		<input id="mv_seq" name="mv_seq" type="hidden" >
 					<div id="grid" class="flex">
-					
-		<c:forEach items="${mypicksAllList }" var="f" varStatus="status">	
+			<c:forEach items="${mypicksAllList }" var="f" varStatus="status">	
 				
 						<!-- 영화1개씩 -->
 						
-						<div class="portfolio-item col-md-2 sizing">
+						
+						<div class="portfolio-item col-md-2 sizing" onclick="imgclick('${f.mv_seq}')">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
@@ -186,8 +189,9 @@ body::-webkit-scrollbar-track {
 								</div>
 							</div>
 						</div>
-	</c:forEach>
+			</c:forEach>
 					</div>
+		</form>
 				</div>
 			</div>
 		</section>
@@ -331,6 +335,14 @@ body::-webkit-scrollbar-track {
     
     
   </script>
+   <script>
+			function imgclick(mv_seq){
+				$("#mv_seq").val(mv_seq);
+				$("#movie").attr("action","SearchMovie");
+				$("#movie").submit();
+			}
+
+	</script>
 </body>
 
 </html>
