@@ -117,22 +117,22 @@ body::-webkit-scrollbar-track {
 									<li data-filter="*" class="active">인기</li>
 									<li data-filter="*">최신</li>
 									<!-- <li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li> -->
-									<li data-filter="*" class="dropdown dropbtn">장르 <i
-										class="fa-solid fa-chevron-down"></i>
+									<li data-filter="*" class="dropdown dropbtn"><a href="#main">장르</a>  
+									<i class="fa-solid fa-chevron-down"></i>
 										<div class="dropdown-content">
-											<a href="#">어린이&가족</a> 
-											<a href="#">애니메이션</a> 
-											<a href="#">액션</a>
-											<a href="#">코미디</a> 
-											<a href="#">로맨스</a> 
-											<a href="#">스릴러</a> 
-											<a href="#">호러</a> 
-												<a href="#">SF</a> 
-												<a href="#">판타지</a> 
-												<a href="#">범죄</a> 
-												<a href="#">드라마</a> 
-												<a href="#">다큐멘터리</a> 
-												<a href="#">뮤지컬</a>
+											<a href="#kid">어린이&가족</a> 
+											<a href="#ani">애니메이션</a> 
+											<a href="#ac">액션</a>
+											<a href="#co">코미디</a> 
+											<a href="#ro">로맨스</a> 
+											<a href="#th">스릴러</a> 
+											<a href="#ho">호러</a> 
+												<a href="#sf">SF</a> 
+												<a href="#fa">판타지</a> 
+												<a href="#cri">범죄</a> 
+												<a href="#dra">드라마</a> 
+												<a href="#doc">다큐멘터리</a> 
+												<a href="#mus">뮤지컬</a>
 										</div>
 									</li>
 
