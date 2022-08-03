@@ -103,7 +103,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 		// 동적로딩
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("드라이버 로딩 성공");
+			//System.out.println("드라이버 로딩 성공");
 			// 동적로딩 성공여부 체크 > 확인 후 주석처리
 
 			// DB 연결 >> DB의 주소를 알아내서 연결
