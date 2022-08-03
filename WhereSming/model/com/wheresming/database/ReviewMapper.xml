@@ -8,10 +8,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	INSERT INTO t_comment (mv_seq, cmt_content, cmt_date, mb_nick, mb_id, cmt_likes, cmt_score) 
 	VALUES (#{mv_seq}, #{cmt_content}, SYSDATE, #{mb_nick}, #{mb_id}, #{cmt_likes}, #{cmt_score})
 	</insert>
-	<select id="selectList" parameterType="int" resultType="com.wheresming.review.ReviewDTO">
-	SELECT CMT_SCORE, CMT_CONTENT, MB_NICK, CMT_LIKES
+	<select id="selectList" parameterType="int" resultType="com.wheresming.review.ReviewViewerDTO">
+	SELECT MV_SEQ, CMT_CONTENT, MB_NICK, CMT_DATE, CMT_LIKES
 	FROM T_COMMENT
 	WHERE MV_SEQ = #{mv_seq}
+	ORDER BY CMT_DATE ASC
 	</select>
 	<select id="selectCount" parameterType="int">
 	SELECT COUNT(*)
