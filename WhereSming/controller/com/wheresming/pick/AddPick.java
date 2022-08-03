@@ -29,6 +29,8 @@ public class AddPick extends HttpServlet {
 		String mb_id= loginMember.getMb_id();
 		String fd_name= foldername.getFd_name(); 
 
+		System.out.println(mb_nick+mb_id+fd_name);
+		
 		AddPickDTO vo = new AddPickDTO(mv_seq, mb_nick,mb_id,fd_name);
 		AddPickDAO dao = new AddPickDAO();
 
