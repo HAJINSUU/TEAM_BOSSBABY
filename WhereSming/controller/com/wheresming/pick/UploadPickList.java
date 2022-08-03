@@ -24,7 +24,8 @@ public class UploadPickList extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
-		PickListViewerDTO pickList = (PickListViewerDTO)session.getAttribute("mypicksList");
+		PickListViewerDTO pickList = (PickListViewerDTO)session.getAttribute("mypicksAllList");
+		
 		
 		String mb_id = loginMember.getMb_id();
 		String fd_name = pickList.getFd_name();
