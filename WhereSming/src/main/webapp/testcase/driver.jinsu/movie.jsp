@@ -475,9 +475,14 @@ body {
 
 
 /* 평점별 기능디자인 */
+#cntstar{
+	display: flex;
+	flex-direction: row;
+}
+
 .star-rating {
 	display: flex;
-	flex-direction: row-reverse;
+
 	font-size: 2.25rem;
 	line-height: 2.5rem;
 	justify-content: space-around;
@@ -569,7 +574,7 @@ body {
 						
 					<!-- 영화정보 -->
 					<td><h2 class="mvTitlesize">${selectPoster.mv_title }</h2>
-											<div class="star-rating space-x-4 mx-auto" style="width: 500px;" id="cntstar">
+																<div class="star-rating space-x-4 mx-auto" style="width: 500px;">
 												<form action="MovieRating" method="get">
 													<input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
 													<label for="5-stars" class="star pr-4">★</label>
@@ -911,13 +916,13 @@ body {
 								</div>
 								<div class="ms-3">
 									<div clasas="fw-bold">
-										<c:out value="${m.mb_nick}" />
+										<c:out value="${m.cmt_content}" />
 										/
-										<c:out value="${m.cmt_score}" />
+										<c:out value="${m.mb_nick}" />
 									</div>
-									<c:out value="${m.cmt_content}" />
-									/
 									<c:out value="${m.cmt_likes}" />
+									/
+									<c:out value="${m.cmt_date}" />
 								</div>
 							</div>
 						</c:forEach>

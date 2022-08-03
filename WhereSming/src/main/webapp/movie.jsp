@@ -892,10 +892,6 @@ body {
 								<img class="rounded-circle" src="https://ifh.cc/g/YBbktb.jpg"
 									alt="..." />
 							</div>
-							<div class="ms-3">
-								<div class="fw-bold">하진숴이이</div>
-								가오나시 어서오고
-							</div>
 						</div>
 
 
@@ -904,7 +900,7 @@ body {
 						<jsp:useBean id="ReviewViewerDAO"
 							class="com.wheresming.review.ReviewViewerDAO" />
 						<c:set var="ReviewViewerDTOList"
-							value="${ReviewViewerDAO.selectAllReview(searchMovie.mv_seq)}" />
+							value="${ReviewViewerDAO.selectAllReview(selectPoster.mv_seq)}" />
 
 
 						<c:forEach items="${ReviewViewerDTOList}" var="m"
@@ -916,13 +912,13 @@ body {
 								</div>
 								<div class="ms-3">
 									<div clasas="fw-bold">
-										<c:out value="${m.mb_nick}" />
+										<c:out value="내용 : ${m.cmt_content}" />
 										/
-										<c:out value="${m.cmt_score}" />
+										<c:out value="닉네임 : ${m.mb_nick}" />
 									</div>
-									<c:out value="${m.cmt_content}" />
+									<c:out value="좋아요 수 : ${m.cmt_likes}" />
 									/
-									<c:out value="${m.cmt_likes}" />
+									<c:out value="작성일 : ${m.cmt_date}" />
 								</div>
 							</div>
 						</c:forEach>
