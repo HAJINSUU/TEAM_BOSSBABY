@@ -22,14 +22,14 @@ public class AddPick extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
 		MovieDTO movieseq = (MovieDTO)session.getAttribute("selectPoster");
-		PickListDTO foldername = (PickListDTO)session.getAttribute("PickListAttribute");
-		
+		String foldername = request.getParameter("foldername");
+		System.out.println("도착");
 		int mv_seq= movieseq.getMv_seq();
 		String mb_nick= loginMember.getMb_nick();
 		String mb_id= loginMember.getMb_id();
-		String fd_name= foldername.getFd_name(); 
+		String fd_name= foldername;
 
-		System.out.println(mb_nick+mb_id+fd_name);
+		System.out.println(mb_nick+mb_id+fd_name+mv_seq);
 		
 		AddPickDTO vo = new AddPickDTO(mv_seq, mb_nick,mb_id,fd_name);
 		AddPickDAO dao = new AddPickDAO();
@@ -43,7 +43,7 @@ public class AddPick extends HttpServlet {
 			System.out.println("폴더네임 : " + fd_name);
 			
 			session.setAttribute("mypicksList", vo);
-			response.sendRedirect("mypickList.jsp");
+			response.sendRedirect("mypage.jsp");
 			
 		} else {
 			System.out.println("찜실패");
