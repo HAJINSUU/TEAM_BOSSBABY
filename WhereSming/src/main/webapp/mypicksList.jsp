@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -151,11 +152,15 @@ body::-webkit-scrollbar-track {
 				<hr width="1320px" style="color: #fff">
 			</div>
 		</div>
+		
+		
+	
 		<!-- 영화리스트 -->
 		<section>
 			<div class="container">
 				<div class="row">
 					<div id="grid" class="flex">
+		<c:forEach items="${mypicksList }" var="f" varStatus="status">	
 
 						<!-- 영화1개씩 -->
 						<div class="portfolio-item col-md-2 sizing">
@@ -168,6 +173,10 @@ body::-webkit-scrollbar-track {
 								</div>
 							</div>
 						</div>
+	</c:forEach>
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- End Works Section -->
 

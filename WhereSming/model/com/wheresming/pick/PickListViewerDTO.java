@@ -27,10 +27,16 @@ public class PickListViewerDTO {
 		this.fd_likes = fd_likes;
 	}
 
-	public PickListViewerDTO(String fd_name) {
+	public PickListViewerDTO(BigDecimal mv_seq, String mb_nick, String open_yn, String fd_name, BigDecimal fd_likes) {
 		super();
+		this.mv_seq = mv_seq;
+		this.mb_nick = mb_nick;
+		this.open_yn = open_yn;
 		this.fd_name = fd_name;
+		this.fd_likes = fd_likes;
 	}
+
+
 	
 
 	

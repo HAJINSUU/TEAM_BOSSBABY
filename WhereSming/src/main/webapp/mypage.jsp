@@ -98,6 +98,8 @@ body::-webkit-scrollbar-track {
 								<c:set var="purple"
 									value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
 
+
+								<!--보라작업중  -->
 								<form action="MyPickListViewer" method="get" id="addpick">
 								<input id="foldername" name="foldername" type="hidden">
 									<c:forEach items="${purple}" var="p" varStatus="status">
@@ -116,7 +118,7 @@ body::-webkit-scrollbar-track {
 													src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
 													alt="" onclick="folderclick('${p.fd_name}')"></a>
 											</div>
-
+								 <!-- 보라작업중끝 -->
 
 											<div class="down-content">
 												<a href="mypicksList.jsp">
@@ -234,7 +236,6 @@ body::-webkit-scrollbar-track {
 				$("#foldername").val(fd_name);
 				$("#addpick").attr("action","MyPickListViewer");
 				$("#addpick").submit();
-				alert('폴더이동.')
 			}
 
 		</script>

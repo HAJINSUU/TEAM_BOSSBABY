@@ -169,7 +169,7 @@ img {
 
 
 <body id="body2">
-	<%@include file="nav.jsp"%>
+	<%-- <%@include file="nav.jsp"%> --%>
 	<!-- 채팅 -->
 	<script>
 		(function(d, w, c) {

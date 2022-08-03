@@ -15,31 +15,32 @@ public class MyPickListViewer extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		HttpSession session = request.getSession();
 		String foldername = request.getParameter("foldername");
 		System.out.println("폴더이름도착");
+		
 		
 		String fd_name= foldername;
 		
 		System.out.println(fd_name);
-		
-		PickListViewerDTO vo = new PickListViewerDTO(fd_name);
+				
 		PickListViewerDAO dao = new PickListViewerDAO();
 		
-		List<PickListViewerDTO>  result = dao.PickListViewer(fd_name);
-		System.out.println(result.size());
+		List<PickListViewerDTO>  mypicksList = dao.PickListViewer(fd_name);
+		
 		System.out.println("시작");
 
-		if (result != null) {
+		if (mypicksList != null) {
 
 			System.out.println("폴더네임 : " + fd_name);
+			HttpSession session = request.getSession();
 			
-			session.setAttribute("mypicksList", vo);
+			session.setAttribute("mypicksList", mypicksList);
 			response.sendRedirect("mypicksList.jsp");
 			
 		} else {
 			System.out.println("폴더폴더");
 			response.sendRedirect("mypage.jsp");
+
 		}
 
 	}
