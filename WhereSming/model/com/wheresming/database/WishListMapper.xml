@@ -20,4 +20,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	VALUES (#{mv_seq}, #{mb_nick}, #{mb_id}, 'N', #{fd_name}, 0, sysdate)
 	</insert>
 	
+	
 </mapper>

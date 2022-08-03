@@ -33,22 +33,22 @@
 <style>
 .background {
 	height: 1500px;
-	background-color: #181818;
-}
+	background-color: #181818;}
 
 body::-webkit-scrollbar {
-	width: 15px; /* 스크롤바의 너비 */
+    width: 15px;  /* 스크롤바의 너비 */
 }
 
 body::-webkit-scrollbar-thumb {
-	height: 20%; /* 스크롤바의 길이 */
-	background: #FFBB00; /* 스크롤바의 색상 */
-	border-radius: 10px;
+    height: 20%; /* 스크롤바의 길이 */
+    background: #FFBB00; /* 스크롤바의 색상 */
+    border-radius: 10px;
 }
 
 body::-webkit-scrollbar-track {
-	background: #181818; /*스크롤바 뒷 배경 색상*/
+    background: #181818;  /*스크롤바 뒷 배경 색상*/
 }
+
 
 .price {
 	position: relative;
@@ -64,9 +64,9 @@ body::-webkit-scrollbar-track {
 
 <body>
 	<!-- 실시간 채팅  -->
-	<%@include file="chat.jsp"%>
+<%-- 	<%@include file="chat.jsp"%> --%>
 	<!-- 상단top nav -->
-	<%@include file="nav.jsp"%>
+<%-- 	<%@include file="nav.jsp"%> --%>
 
 	<section class="meetings-page background" id="meetings">
 		<div class="container">
@@ -78,8 +78,8 @@ body::-webkit-scrollbar-track {
 						<div class="col-lg-12">
 							<div class="filters">
 								<ul>
-									<a href="mypage.jsp" style="color: #fff"><li class="active">MY
-											PICK!</li></a>
+									<a href="mypage.jsp"
+										style="color: #fff"><li class="active">MY PICK!</li></a>
 									<a href="changeInfo.jsp" style="color: #fff"><li>회원정보수정</li></a>
 								</ul>
 
@@ -93,42 +93,27 @@ body::-webkit-scrollbar-track {
 
 								<!-- start 폴더 1개 생성 -->
 								<!-- all 뒤에 soon = 인기 img = 최신 att = 장르 버튼으로 활성화 -->
-								<jsp:useBean id="PickListViewerDAO"
-									class="com.wheresming.pick.PickListViewerDAO" />
-								<c:set var="purple"
-									value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
-
-								<form action="AddPick" method="get">
-									<c:forEach items="${purple}" var="p" varStatus="status">
-										<div
-											class="col-lg-4 templatemo-item-col meeting-item all soon">
-
-											<div class="image-box thumb">
-												<div class="price">
-													<span> <a href="#"><img id="resizing"
-															src="./assets/images/heart-solid.png" alt="heart"></a>
-													</span>
-												</div>
-												<!-- 영화이미지 넣기 가져오기 -->
-												<a href="mypicksList.jsp"><img class="image-thumbnail"
-													src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-													alt=""></a>
-											</div>
-
-
-											<div class="down-content">
-												<a href="mypicksList.jsp">
-													<p id="fb">
-														<c:out value="${p.fd_name}" />
-													</p>
-													<p id="like">영화 · 00개</p>
-												</a>
-											</div>
+								<div class="col-lg-4 templatemo-item-col meeting-item all soon">
+									<div class="image-box thumb">
+										<div class="price">
+											<span> <a href="#"><img id="resizing"
+													src="./assets/images/heart-solid.png" alt="heart"></a>
+											</span>
 										</div>
-									</c:forEach>
-								</form>
+										<!-- 영화이미지 넣기 가져오기 -->
+										<a href="mypicksList.jsp"><img class="image-thumbnail"
+											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+											alt=""></a>
+									</div>
+									<div class="down-content">
+										<a href="mypicksList.jsp">
+											<p id="fb">폴더이름 가져오기</p>
+											<p id="like">영화 · 00개</p>
+										</a>
+									</div>
+								</div>
 
-								<!-- 보라작업시작끝 -->
+
 							</div>
 						</div>
 
