@@ -142,7 +142,9 @@ body::-webkit-scrollbar-track {
 
 						<!-- 담아두기버튼 -->
 						<div style="margin-top: 50px">
-							<a class="btn btn-outline-light btn-lg px-4" href="#">공유하기</a> 
+						<from action="UploadPickList" method="get">
+							<button type="submit">공유하기</button>
+						</from> 
 							<a class="btn btn-outline-light btn-lg px-4" href="#">PICK 수정하기</a>
 
 						</div>

@@ -1,6 +1,9 @@
 package com.wheresming.review;
 
+import java.math.BigDecimal;
 import java.util.List;
+
+import javax.xml.crypto.Data;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,7 +21,9 @@ public class ReviewViewerDAO {
 		List<ReviewViewerDTO> list = null;
 
 		try {
+			
 			list = sqlSession.selectList("com.wheresming.review.ReviewDAO.selectList", mv_seq);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -28,11 +33,11 @@ public class ReviewViewerDAO {
 		return list;
 
 	}
-	
+
 	public int countReturn(int mv_seq) {
-		
+
 		int result = 0;
-		
+
 		try {
 			result = sqlSession.selectOne("com.wheresming.review.ReviewDAO", mv_seq);
 		} catch (Exception e) {
@@ -40,9 +45,9 @@ public class ReviewViewerDAO {
 		} finally {
 			sqlSession.close();
 		}
-		
+
 		return result;
-		
+
 	}
 
 }
