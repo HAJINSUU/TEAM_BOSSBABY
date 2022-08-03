@@ -681,13 +681,14 @@ body {
 										<div>
 										
 										<!-- 찜눌렀을때 DB에담는거 하는중 보라-->
-											<form action="AddPick" method="get">
+										
+											
 											<button class="button3" type="submit"
 												onClick="alert('pick폴더에 추가되었습니다.')">
 												<i class="fa-regular fa-heart"></i>
-											</button>
-											</form>
 											<c:out value="${p.fd_name}" />
+											</button>
+										
 										</div>
 									</c:forEach>
 
