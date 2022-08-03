@@ -129,8 +129,7 @@ body::-webkit-scrollbar-track {
 			<div class="col-lg-8 col-xl-7">
 
 				<div style="display: flex;">
-						<jsp:useBean id="SearchingDAO" class="com.wheresming.search.SearchingDAO"/>
-						<c:set var="SearchingList" value="${SearchingDAO.selectAllList(searchMovie.mv_title) }"/>
+						
 				
 					<div class="text-center text-xl-start" id="nic"
 						style="margin-top: 2px; color: #fff">

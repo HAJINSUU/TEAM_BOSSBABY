@@ -1,5 +1,7 @@
 package com.wheresming.search;
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +25,8 @@ public class Searching extends HttpServlet {
 		SearchingDAO dao = new SearchingDAO();
 		
 		// dao.selectSearch() 메서드 호출
-		MovieDTO searchMovie = dao.selectSearch(vo);
+		List<MovieDTO> searchMovie = dao.selectAllList(mv_title);
+		
 		
 		
 		// 세션 저장 및 파라미터값 전송
@@ -32,7 +35,7 @@ public class Searching extends HttpServlet {
 		if(searchMovie != null) {
 			System.out.println("검색 성공");
 			HttpSession session = request.getSession();
-			session.setAttribute("searchMovie",searchMovie);
+			session.setAttribute("SearchingList",searchMovie);
 			response.sendRedirect("searchList.jsp");
 		}else {
 			System.out.println("검색실패");

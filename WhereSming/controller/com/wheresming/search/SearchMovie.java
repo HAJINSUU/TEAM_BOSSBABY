@@ -33,7 +33,7 @@ public class SearchMovie extends HttpServlet {
 		System.out.println("selectPoster : " + selectPoster);
 
 		System.out.println(mv_seq);
-
+		
 		MovieInfoDAO dao1 = new MovieInfoDAO();
 		System.out.println("DAO 생성");
 
