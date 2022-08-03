@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Random"%>
+<%@page import="com.wheresming.search.SearchingRdDAO"%>
+<%@page import="com.wheresming.search.SearchingDAO"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="java.util.List"%>
 
 <!DOCTYPE html>
 <html>
@@ -197,7 +205,7 @@ img {
 				<div class="col-lg-12">
 					<a class="texts">ㅤWhere?Sming 실시간검색순위</a>
 					<div class="slider">
-					
+
 						<div class="portfolio-item col-md-7 sizing">
 							<div class="portfolio-bg">
 								<div class="portfolio">
@@ -306,337 +314,45 @@ img {
 
 			<!-- 추천영화 div리스트 -->
 			<!-- div class="container" 옆에 스타일로 패팅탑주면 위치조절가능함 -->
-
-			<div class="container" style="padding-top: 200px;">
-				<div class="row">
-
-					<div class="col-lg-12">
-
-						<a class="texts">ㅤ넷플릭스 실시간순위</a>
-						<div class="slider">
-							<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">1</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">2</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">3</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">4</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">5</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">6</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">7</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">8</div>
-								</div>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- 추천영화 div리스트끝 -->
-
-			<!-- 추천영화 div리스트 -->
-			<!-- div class="container" 옆에 스타일로 패팅탑주면 위치조절가능함 -->
-			<div class="container" style="padding-top: 200px;">
+			<div class="container" style="padding-top: 80px;">
 				<div class="row">
 					<div class="col-lg-12">
-						<a class="texts">ㅤ왓챠 실시간순위</a>
+
+						<!-- <a> <p class="re"></p> -->
+						<p class="inline">어린이&가족</p>
+						<!-- </a> -->
+
 						<div class="slider">
+							<%
+							Random rd = new Random();
+							SearchingRdDAO dao = new SearchingRdDAO();
+							/* dao.select(); */
 
+							ArrayList<String> list = new ArrayList<String>();
+							list = dao.selectGenre("kid");
+
+							int mv_seq = 0;
+
+							for (int i = 0; i < 10; i++) {
+								int num = rd.nextInt(158);
+								mv_seq = dao.selectGenreSeq(list.get(num));
+							%>
 							<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">1</div>
+
+								<div class="portfolio-bg">
+									<div class="portfolio">
+										<a href="picks.jsp#kid" target="_blank">
+											<div class="tt-overlay"></div>
+										</a> <img src="<%=list.get(num)%>" alt="image">
+									</div>
 								</div>
 							</div>
-						</div>
+							<%
+							}
+							%>
 
 
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">2</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">3</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">4</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">5</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">6</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">7</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">8</div>
-								</div>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- 추천영화 div리스트끝 -->
-
-			<!-- 추천영화 div리스트 -->
-			<!-- div class="container" 옆에 스타일로 패팅탑주면 위치조절가능함 -->
-			<div class="container" style="padding-top: 200px;">
-				<div class="row">
-					<div class="col-lg-12">
-						<a class="texts">ㅤ티빙 실시간순위</a>
-						<div class="slider">
-
-							<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">1</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">2</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">3</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">4</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">5</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">6</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-										alt="image">
-									<div class="top-left">7</div>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="portfolio-item col-md-7 sizing">
-							<div class="portfolio-bg">
-								<div class="portfolio">
-									<a href="http://www.naver.com" target="_blank"><div
-											class="tt-overlay"></div></a> <img
-										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-										alt="image">
-									<div class="top-left">8</div>
-								</div>
-							</div>
-						</div>
-
+							<!-- div class="slider" 끝 -->
 						</div>
 
 					</div>

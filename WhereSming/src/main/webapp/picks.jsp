@@ -117,7 +117,7 @@ body::-webkit-scrollbar-track {
 									<li data-filter="*" class="active">인기</li>
 									<li data-filter="*">최신</li>
 									<!-- <li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li> -->
-									<li data-filter="*" class="dropdown dropbtn"><a href="#main">장르</a>  
+									<li data-filter="*" class="dropdown dropbtn">장르
 									<i class="fa-solid fa-chevron-down"></i>
 										<div class="dropdown-content">
 											<a href="#kid">어린이&가족</a> 
