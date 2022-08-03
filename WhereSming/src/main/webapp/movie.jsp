@@ -586,7 +586,7 @@ body {
 													<label for="2-stars" class="star">★</label>
 													<input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
 													<label for="1-star" class="star">★</label>
-													<button id="button4" type="submit">평점추가s</button>
+													<button id="button4" type="submit">평점추가</button>
 												</form>
 											</div></td>
 				</tr>
