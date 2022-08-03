@@ -161,21 +161,6 @@ img {
 	left: 16px;
 	color: white;
 }
-
-.re {
-	font-weight: 550;
-	color: #fff;
-	margin-left: 15px;
-	font-size: 25px;
-	display: inline;
-}
-
-.inline {
-	font-weight: 550;
-	font-size: 23px;
-	color: #fff;
-	display: inline;
-}
 /* 새슬라이더끝 */
 </style>
 
@@ -218,7 +203,7 @@ img {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<a class="inline">ㅤWhere?Sming 실시간검색순위</a>
+					<a class="texts">ㅤWhere?Sming 실시간검색순위</a>
 					<div class="slider">
 
 						<div class="portfolio-item col-md-7 sizing">
