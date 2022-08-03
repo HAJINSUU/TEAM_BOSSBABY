@@ -539,97 +539,103 @@ img {
 						<div class="slider">
 
 							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<div class="tt-overlay"></div>
-										<a href="http://www.naver.com" target="_blank"></a><img
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt="image">
-										<div class="top-left">1</div>
-									</div>
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+									<div class="top-left">1</div>
 								</div>
 							</div>
+						</div>
 
 
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-											alt="image">
-									</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
+										alt="image">
+									<div class="top-left">2</div>
 								</div>
 							</div>
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt="image">
-									</div>
+						</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+									<div class="top-left">3</div>
 								</div>
 							</div>
+						</div>
 
 
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-											alt="image">
-									</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
+										alt="image">
+									<div class="top-left">4</div>
 								</div>
 							</div>
+						</div>
 
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt="image">
-									</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+									<div class="top-left">5</div>
 								</div>
 							</div>
+						</div>
 
 
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-											alt="image">
-									</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
+										alt="image">
+									<div class="top-left">6</div>
 								</div>
 							</div>
+						</div>
 
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt="image">
-									</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+										alt="image">
+									<div class="top-left">7</div>
 								</div>
 							</div>
+						</div>
 
 
-							<div class="portfolio-item col-md-7 sizing">
-								<div class="portfolio-bg">
-									<div class="portfolio">
-										<a href="http://www.naver.com" target="_blank"><div
-												class="tt-overlay"></div></a> <img
-											src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
-											alt="image">
-									</div>
+						<div class="portfolio-item col-md-7 sizing">
+							<div class="portfolio-bg">
+								<div class="portfolio">
+									<a href="http://www.naver.com" target="_blank"><div
+											class="tt-overlay"></div></a> <img
+										src="https://upload.wikimedia.org/wikipedia/ko/b/bc/%EC%84%BC%EA%B3%BC_%EC%B9%98%ED%9E%88%EB%A1%9C%EC%9D%98_%ED%96%89%EB%B0%A9%EB%B6%88%EB%AA%85_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20160225082510"
+										alt="image">
+									<div class="top-left">8</div>
 								</div>
 							</div>
-
+						</div>
 
 						</div>
 
