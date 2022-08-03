@@ -17,7 +17,7 @@
 	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Pick</title>
+<title>Where?Sming</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +29,8 @@
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 .background {
 	height: 3000px;
 	background-color: #181818;
@@ -63,7 +65,7 @@ body::-webkit-scrollbar-track {
 
 .dropdown-content {
 	margin-top: 8px;
-	margin-left : -55px;
+	margin-left: -55px;
 	display: none;
 	position: absolute;
 	background-color: rgba(122, 123, 116, 0.72);
@@ -94,6 +96,115 @@ body::-webkit-scrollbar-track {
 .dropdown:hover .dropbtn {
 	background-color: #181818;
 }
+
+/* 장르별 추천리스트 */
+.container {
+	width: 1320px;
+	margin-left: 370px;
+	padding-bottom: 30px;
+}
+
+.flex {
+	width: 1320px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+.sizing {
+	border-radius: 8px;
+	padding: 5px;
+}
+
+.portfolio-bg {
+	border-radius: 10px;
+}
+
+.portfolio {
+	border-radius: 8px;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-trandsition: all 0.3s ease-in-out;
+}
+
+.portfolio:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-trandsition: scale(1.1);
+}
+
+.b {
+	font-weight: 500;
+	font-size: 15px;
+	color: #FFBB00;
+}
+
+#nic {
+	font-size: 14px;
+}
+
+/* 새슬라이더 */
+img {
+	width: 130%;
+	height: 130%;
+	border-radius: 8px;
+}
+
+.slider {
+	width: 100%;
+}
+
+.slider .slick-slide {
+	margin: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: #444444;
+}
+
+.texts {
+	color: #FFBB00;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.top-left {
+	position: absolute;
+	font-size: 50px;
+	font-weight: 300;
+	top: 18px;
+	left: 16px;
+	color: white;
+}
+
+.re {
+	font-weight: 550;
+	color: #fff;
+	margin-left: 15px;
+	font-size: 25px;
+	display: inline;
+}
+
+.inline {
+	font-weight: 550;
+	font-size: 23px;
+	color: #fff;
+	display: inline;
+}
+
+.inline:hover {
+	font-weight: 550;
+	font-size: 23px;
+	color: #fff;
+	display: inline;
+}
 </style>
 
 </head>
@@ -114,26 +225,21 @@ body::-webkit-scrollbar-track {
 						<div class="col-lg-12">
 							<div class="filters">
 								<ul>
-									<li data-filter="*" class="active">인기</li>
-									<li data-filter="*">최신</li>
+									<li data-filter="*"
+										onclick="location.href='http://localhost:8083/MavenSample/picks.jsp';">인기</li>
+									<li data-filter="*"
+										onclick="location.href='http://localhost:8083/MavenSample/picks.jsp';">최신</li>
 									<!-- <li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li> -->
-									<li data-filter="*" class="dropdown dropbtn" onclick="location.href='http://localhost:8083/MavenSample/picksGenre.jsp';">장르
-									<i class="fa-solid fa-chevron-down"></i>
+									<li data-filter="*" class="active dropdown dropbtn">장르 <i
+										class="fa-solid fa-chevron-down"></i>
 										<div class="dropdown-content">
-										<%String url = "http://localhost:8083/MavenSample/picksGenre.jsp#"; %>
-											<a href = "<%=url %>kid" id="#kid" >어린이&가족</a> 
-											<a href = "<%=url %>ani" id="#ani">애니메이션</a> 
-											<a href = "<%=url %>ac" id="#ac">액션</a>
-											<a href = "<%=url %>co" id="#co">코미디</a> 
-											<a href = "<%=url %>ro" id="#ro">로맨스</a> 
-											<a href = "<%=url %>th" id="#th">스릴러</a> 
-											<a href = "<%=url %>ho" id="#ho">호러</a> 
-											<a href = "<%=url %>sf" id="#sf">SF</a> 
-											<a href = "<%=url %>fa" id="#fa">판타지</a> 
-											<a href = "<%=url %>cri" id="#cri">범죄</a> 
-											<a href = "<%=url %>dra" id="#dra">드라마</a> 
-											<a href = "<%=url %>doc" id="#doc">다큐멘터리</a> 
-											<a href = "<%=url %>mus" id="#mus">뮤지컬</a>
+											<a href="#kid" id="#kid">어린이&가족</a> <a href="#ani" id="#ani">애니메이션</a>
+											<a href="#ac" id="#ac">액션</a> <a href="#co" id="#co">코미디</a>
+											<a href="#ro" id="#ro">로맨스</a> <a href="#th" id="#th">스릴러</a>
+											<a href="#ho" id="#ho">호러</a> <a href="#sf" id="#sf">SF</a> <a
+												href="#fa" id="#fa">판타지</a> <a href="#cri" id="#cri">범죄</a>
+											<a href="#dra" id="#dra">드라마</a> <a href="#doc" id="#doc">다큐멘터리</a>
+											<a href="#mus" id="#mus">뮤지컬</a>
 										</div>
 									</li>
 
@@ -144,65 +250,51 @@ body::-webkit-scrollbar-track {
 						<!-- end 인기최신장르 버튼 -->
 
 						<!-- start 폴더생성 -->
-						<div class="col-lg-12">
-							<div class="row grid">
+						<section>
 
-								<!-- start 폴더 1개 생성 -->
-								<!-- all 뒤에 soon = 인기 img = 최신 att = 장르 버튼으로 활성화 -->
-								<div class="col-lg-4 templatemo-item-col meeting-item all soon">
-									<div class="image-box thumb">
-										<div class="price">
-											<span> <img id="resizing"
-												src="./assets/images/thumb_up.png" alt="thumb_up">
-											</span>
+							<!-- 장르1 -->
+							<div class="container" style="padding-top: 80px;">
+								<div class="row">
+									<div class="col-lg-12">
+
+										<jsp:useBean id="SearchingDAO"
+											class="com.wheresming.search.SearchingDAO" />
+										<c:set var="RecommendList"
+											value="${SearchingDAO.recommend(selectPoster.mv_genre) }" />
+
+										<a href="#kid" class="inline">ㅤ어린이&가족</a>
+										<div class="slider">
+
+											<%-- <form action="SearchMovie" method="get" id="movie">
+												<input id="mv_seq" name="mv_seq" type="hidden">
+												<c:forEach items="${RecommendList}" var="r"
+													varStatus="status" begin="1" end="10">
+
+													<div class="portfolio-item col-md-7 sizing">
+														<div class="portfolio-bg">
+															<div class="portfolio" onclick="imgclick('${r.mv_seq}')">
+																<a href="http://www.naver.com" target="_blank">
+																	<div class="tt-overlay"></div>
+																</a> <img src="${r.mv_image }" alt="image">
+															</div>
+														</div>
+													</div>
+
+												</c:forEach>
+											</form> --%>
 										</div>
-										<!-- 영화이미지 넣기 가져오기 -->
-										<a href="picksList.jsp"><img class="image-thumbnail"
-											src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-											alt=""></a>
+										<!-- Slider 끝 -->
 									</div>
-									<div class="down-content">
-										<span id="b">Picker </span> 닉네임 <a href="meeting-details.html">
-											<p id="fb">폴더이름 가져오기</p>
-											<p id="like">👍 000 | 영화 · 00개</p>
-										</a>
-									</div>
+									<!-- 추천영화 div리스트끝 -->
 								</div>
-
-
-
 							</div>
-						</div>
 
-						<!-- page버튼 -->
-						<!-- <div class="col-lg-12">
-              <div class="pagination">
-                <ul>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                </ul>
-              </div>
-            </div> -->
-
+							
+							
+							
 					</div>
 				</div>
-			</div>
-		</div>
-
-
-		<!-- footer부분 -->
-		<!-- <div class="footer">
-      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved.
-        <br>
-        Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-        <br>
-        Distibuted By: <a href="https://themewagon.com" target="_blank" title="Build Better UI, Faster">ThemeWagon</a>
-      </p>
-    </div> -->
-
-	</section>
+			</div></section>
 
 
 	<!-- Scripts -->
