@@ -28,5 +28,23 @@ public class PickListViewerDAO {
 
 	}
 	
+	// 	
+	public List<PickListViewerDTO> PickListViewer(String fd_name) {
+
+		List<PickListViewerDTO> list = null;
+		System.out.println("DAO도착확인");
+
+		try {
+			System.out.println("try확인");
+			list = sqlSession.selectList("com.wheresming.pick.PickDAO.folderViewList", fd_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+
+		return list;
+
+	}
 	
 }

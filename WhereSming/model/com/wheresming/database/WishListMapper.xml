@@ -20,5 +20,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	VALUES (#{mv_seq}, #{mb_nick}, #{mb_id}, 'N', #{fd_name}, 0, sysdate)
 	</insert>
 	
+	<select id="folderViewList" parameterType="String" resultType="com.wheresming.pick.PickListViewerDTO">
+	SELECT MV_SEQ, MB_NICK, OPEN_YN, FD_NAME, FD_LIKES
+	FROM T_WISHLIST
+	WHERE FD_NAME=#{fd_name} AND MV_SEQ IS NOT NULL
+	</select>
+	
 	
 </mapper>

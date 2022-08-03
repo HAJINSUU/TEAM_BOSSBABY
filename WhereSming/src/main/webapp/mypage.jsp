@@ -98,10 +98,11 @@ body::-webkit-scrollbar-track {
 								<c:set var="purple"
 									value="${PickListViewerDAO.selectAllPickList(loginMember.mb_id)}" />
 
-								<form action="AddPick" method="get">
+								<form action="MyPickListViewer" method="get" id="addpick">
+								<input id="foldername" name="foldername" type="hidden">
 									<c:forEach items="${purple}" var="p" varStatus="status">
 										<div
-											class="col-lg-4 templatemo-item-col meeting-item all soon">
+											class="col-lg-3 templatemo-item-col meeting-item all soon">
 
 											<div class="image-box thumb">
 												<div class="price">
@@ -110,9 +111,10 @@ body::-webkit-scrollbar-track {
 													</span>
 												</div>
 												<!-- 영화이미지 넣기 가져오기 -->
-												<a href="mypicksList.jsp"><img class="image-thumbnail"
+												<!-- <a href="mypicksList.jsp"> -->
+												<img class="image-thumbnail"
 													src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
-													alt=""></a>
+													alt="" onclick="folderclick('${p.fd_name}')"></a>
 											</div>
 
 
@@ -225,6 +227,17 @@ body::-webkit-scrollbar-track {
       checkSection();
     });
   </script>
+  
+  	<!--보라  -->
+		<script>
+			function folderclick(fd_name){
+				$("#foldername").val(fd_name);
+				$("#addpick").attr("action","MyPickListViewer");
+				$("#addpick").submit();
+				alert('폴더이동.')
+			}
+
+		</script>
 </body>
 
 </html>

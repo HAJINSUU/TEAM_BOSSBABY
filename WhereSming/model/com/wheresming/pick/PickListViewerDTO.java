@@ -1,7 +1,6 @@
 package com.wheresming.pick;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,5 +26,12 @@ public class PickListViewerDTO {
 		this.fd_name = fd_name;
 		this.fd_likes = fd_likes;
 	}
+
+	public PickListViewerDTO(String fd_name) {
+		super();
+		this.fd_name = fd_name;
+	}
+	
+
 	
 }
