@@ -44,7 +44,7 @@
 <style>
 
 #body {
-	height: 3000px;
+	height: 100%;
 	background-color: #181818;
 }
 body::-webkit-scrollbar {

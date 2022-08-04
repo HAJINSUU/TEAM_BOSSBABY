@@ -44,7 +44,7 @@
 
 <style>
 #body {
-	height: 10000px;
+	height: 100%
 	background-color: #181818;
 }
 
