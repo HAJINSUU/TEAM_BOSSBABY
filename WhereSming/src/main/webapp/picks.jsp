@@ -107,7 +107,7 @@ body::-webkit-scrollbar-track {
 
 	<!-- 인기순 픽 리스트 불러오는 JSTL -->
 	<jsp:useBean id="UploadPickListDAO" class="com.wheresming.pick.UploadPickListDAO" />
-	<c:set var="selectPick" value="${UploadPickListDAO.pickListLikes()}" />
+	<c:set var="selectPickI" value="${UploadPickListDAO.pickListImage()}" />
 
 	<section class="meetings-page background" id="meetings">
 		<div class="container">
@@ -156,7 +156,8 @@ body::-webkit-scrollbar-track {
 								<!-- all 뒤에 soon = 인기 img = 최신 att = 장르 버튼으로 활성화 -->
 
 								<!-- 인기순 뿌려주는 JSTL -->	
-								<c:forEach items="${selectPick}" var="s" varStatus="status">
+							
+								<c:forEach items="${selectPickI}" var="s" varStatus="status">
 									<div class="col-lg-3 templatemo-item-col meeting-item all soon">
 										<div class="image-box thumb">
 											<div class="price">
@@ -166,7 +167,7 @@ body::-webkit-scrollbar-track {
 											</div>
 											<!-- 영화이미지 넣기 가져오기 -->
 											<a href="picksList.jsp"><img class="image-thumbnail"
-												src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
+												src="${ s.mv_image}"
 												alt=""></a>
 										</div>
 										<div class="down-content">
