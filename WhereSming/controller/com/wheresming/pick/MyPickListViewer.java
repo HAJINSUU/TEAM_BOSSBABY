@@ -26,15 +26,20 @@ public class MyPickListViewer extends HttpServlet {
 		PickListViewerDAO dao = new PickListViewerDAO();
 		
 		List<PickListViewerDTO>  mypicksAllList = dao.PickListViewer(fd_name);
+		List<JoinDTO>  mypicksImgList = dao.mypicksImgList(fd_name);
 		
 		System.out.println("시작");
-
-		if (mypicksAllList != null) {
+		//System.out.println(mypicksAllList.size());
+		//System.out.println(mypicksImgList.size());
+		if (mypicksAllList != null && mypicksImgList != null) {
 
 			System.out.println("폴더네임 : " + fd_name);
 			HttpSession session = request.getSession();
 			
 			session.setAttribute("mypicksAllList", mypicksAllList);
+			
+			session.setAttribute("mypicksImgList", mypicksImgList);
+			
 			response.sendRedirect("mypicksList.jsp");
 			
 		} else {
