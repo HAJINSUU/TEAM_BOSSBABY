@@ -234,8 +234,8 @@ img {
 					<div class="slider">
 							<%
 							SearchingRdDAO dao = new SearchingRdDAO();
-							String[] list = new String[10];
-							list = dao.selectGenre("kid");
+							String[] list0 = new String[10];
+							list0 = dao.selectGenre("kid");
 
 							for (int i = 0; i < 10; i++) {
 							%>
@@ -246,7 +246,7 @@ img {
 									<div class="portfolio">
 										<a href="picksGenre.jsp#kid" target="_blank">
 											<div class="tt-overlay"></div>
-										</a> <img src="<%=list[i]%>" alt="image">
+										</a> <img src="<%=list0[i]%>" alt="image">
 									</div>
 								</div>
 							</div>
@@ -267,7 +267,6 @@ img {
 						<a class="inline"> 어린이&가족</a>
 						<div class="slider">
 							<%
-							SearchingRdDAO dao = new SearchingRdDAO();
 							String[] list = new String[10];
 							list = dao.selectGenre("kid");
 
