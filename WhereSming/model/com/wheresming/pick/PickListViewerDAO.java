@@ -39,12 +39,28 @@ public class PickListViewerDAO {
 			list = sqlSession.selectList("com.wheresming.pick.PickDAO.folderViewList", fd_name);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			sqlSession.close();
 		}
 
 		return list;
 
 	}
 	
+	public List<JoinDTO> mypicksImgList(String fd_name){
+		
+		List<JoinDTO> list = null;
+		System.out.println("도착");
+		
+
+		try {
+			System.out.println("try확인");
+			list = sqlSession.selectList("com.wheresming.pick.PickDAO.mypicksImageList", fd_name);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+
+		return list;
+	}
 }

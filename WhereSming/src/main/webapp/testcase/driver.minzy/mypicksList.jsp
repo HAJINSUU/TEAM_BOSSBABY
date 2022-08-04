@@ -132,11 +132,9 @@ body::-webkit-scrollbar-track {
 								</span>
 							</div>
 							<!-- 영화이미지 넣기 가져오기 -->
-							<c:forEach items="${mypicksImgList }" var="i" varStatus="status" begin="0" end="0">	
 							<img class="image-thumbnail"
-								src="${i.mv_image } "
+								src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
 								alt="">
-							</c:forEach>
 						</div>
 					</div>
 					
@@ -176,23 +174,18 @@ body::-webkit-scrollbar-track {
 		<form action="SearchMovie" method="get" id="movie">
 		<input id="mv_seq" name="mv_seq" type="hidden" >
 					<div id="grid" class="flex">
-				
-			
-		
-		
 			<c:forEach items="${mypicksAllList }" var="f" varStatus="status">	
 				
 						<!-- 영화1개씩 -->
+						
 						
 						<div class="portfolio-item col-md-2 sizing" onclick="imgclick('${f.mv_seq}')">
 							<div class="portfolio-bg">
 								<div class="portfolio">
 									<div class="tt-overlay"></div>
-									
-									<img 
-										src="${mypicksImgList[status.index].mv_image } "
+									<img
+										src="https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20201109_244%2F1604902097561c22tz_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2"
 										alt="image">
-									
 								</div>
 							</div>
 						</div>

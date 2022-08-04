@@ -26,5 +26,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE FD_NAME=#{fd_name} AND MV_SEQ IS NOT NULL
 	</select>
 	
+	<select id="mypicksImageList" parameterType="String" resultType="com.wheresming.pick.JoinDTO">
+		SELECT MV_IMAGE
+		  FROM T_MOVIE M
+		     , T_WISHLIST W 
+		 WHERE W.MV_SEQ = M.MV_SEQ
+		   AND FD_NAME = #{fd_name}
+	</select>
+	
 	
 </mapper>
