@@ -44,7 +44,7 @@
 
 <style>
 #body {
-	height: 3000px;
+	height: 10000px;
 	background-color: #181818;
 }
 
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-track {
 </style>
 </head>
 
-<body>
+<body id="body">
 	<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav 
