@@ -43,12 +43,11 @@
 <link href="assets/css/picklist/responsive.css" rel="stylesheet">
 
 <style>
-
-#body3 {
+#body {
 	height: 3000px;
 	background-color: #181818;
-	
 }
+
 
 body::-webkit-scrollbar {
     width: 15px;  /* 스크롤바의 너비 */
@@ -117,7 +116,7 @@ body::-webkit-scrollbar-track {
 </style>
 </head>
 
-<body id="body3">
+<body>
 	<!-- 실시간 채팅  -->
 	<%@include file="chat.jsp"%>
 	<!-- 상단top nav 
