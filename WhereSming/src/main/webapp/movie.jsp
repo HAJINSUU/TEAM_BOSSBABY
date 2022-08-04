@@ -105,6 +105,7 @@ body {
 .container3 {
 	color: #FFBB00;
 	font-size: 30px;
+	margin-top: 75px;
 	margin-left: 1420px;
 	object-fit: cover;
 }
@@ -893,14 +894,7 @@ body {
 					<div class="ms-3">
 						<div class="fw-bold"></div>
 						▷인기댓글
-						<!-- Child comment 1-->
-						<div class="d-flex mt-4">
-							<div class="flex-shrink-0">
-								<img class="rounded-circle" src="https://ifh.cc/g/YBbktb.jpg"
-									alt="..." />
-							</div>
-						</div>
-
+	
 
 
 						<!--댓글시작  -->
@@ -919,13 +913,12 @@ body {
 								</div>
 								<div class="ms-3">
 									<div clasas="fw-bold">
-										<c:out value="내용 : ${m.cmt_content}" />
-										/
 										<c:out value="닉네임 : ${m.mb_nick}" />
+										<c:out value="ㅤ  ${m.cmt_content}" />
 									</div>
 									<c:out value="좋아요 수 : ${m.cmt_likes}" />
-									/
-									<c:out value="작성일 : ${m.cmt_date}" />
+									
+									<c:out value="ㅤ  작성일 : ${m.cmt_date}" />
 								</div>
 							</div>
 						</c:forEach>
