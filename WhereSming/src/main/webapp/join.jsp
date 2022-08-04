@@ -15,6 +15,11 @@
 	height: 300px;
 }
 
+.join_title{
+font-size: 17px;
+font-weight:500;
+}
+
 body {
 	text-align: center;
 	padding: 0;
@@ -25,7 +30,8 @@ body {
 }
 
 .background {
-	background-image: url('https://pds.joins.com/news/component/htmlphoto_mmdata/201612/06/htm_20161206171151756537.jpg');
+	background-image:
+		url('https://t1.daumcdn.net/cfile/blog/99C582435E26458A21');
 	/* background-color: black; */
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -37,7 +43,7 @@ body {
 	left: 0;
 	right: 0;
 	z-index: -1;
-	filter: blur(5px);
+	filter: blur(6px);
 	min-height: 800px;
 }
 
@@ -105,7 +111,7 @@ button[type="submit"] {
 	border: none;
 	color: white;
 	text-decoration: none;
-	margin-left:15px;
+	margin-left: 15px;
 }
 
 button[type="submit"]:hover {
@@ -279,6 +285,7 @@ select {
 	margin: 30px 0 91px;
 	text-decoration: none;
 	margin-right: 20px;
+	color: #181818;
 }
 
 #btnJoin {
@@ -322,13 +329,27 @@ select {
 }
 
 100
+
+
 %
 {
 -webkit-transform
+
+
 :
-rotate(
+
+
+rotate
+(
+
+
 360deg
-);
+
+
+)
+;
+
+
 }
 }
 @
@@ -337,13 +358,27 @@ keyframes spin { 0% {
 }
 
 100
+
+
 %
 {
 transform
+
+
 :
-rotate(
+
+
+rotate
+(
+
+
 360deg
-);
+
+
+)
+;
+
+
 }
 }
 button {
@@ -374,6 +409,7 @@ button:before, button:after {
 	background: #ceba0a;
 	transition: 400ms ease all;
 }
+
 /* button:after{
   right:inherit;
   top:inherit;
@@ -390,98 +426,99 @@ button:before, button:after {
 
 
 	<form action="Signin" method="post">
-				<a href="index.jsp" class="logo"> Where?Sming </a>
-				<div class="background"></div>
-		
-				<!-- for form container -->
-				<div class="container"></div>
-		</body>
-		
-		<h2 class="ac_text"></h2>
-		<!-- wrapper -->
-		<div id="wrapper">
-		
-			<!-- content-->
-			<div id="content">
-		
-				<!-- ID -->
-				<div>
-					<h3 class="join_title">
-						<label for="id">아이디</label>
-					</h3>
-					<span class="box int_id"> <input type="text" id="id"
-						class="int" maxlength="20" name="id">
-					</span> <span class="error_next_box"></span>
-				</div>
-		
-				<!-- PW1 -->
-				<div>
-					<h3 class="join_title">
-						<label for="pswd1">비밀번호</label>
-					</h3>
-					<span class="box int_pass"> <input type="password" id="pswd1"
-						class="int" maxlength="20" name="pw"> <span id="alertTxt">사용불가</span>
-					</span> <span class="error_next_box"></span>
-				</div>
-		
-				<!-- PW2 -->
-				<div>
-					<h3 class="join_title">
-						<label for="pswd2">비밀번호 재확인</label>
-					</h3>
-					<span class="box int_pass_check"> <input type="password"
-						id="pswd2" class="int" maxlength="20">
-					</span> <span class="error_next_box"></span>
-				</div>
-		
-				<!-- NAME -->
-				<div>
-					<h3 class="join_title">
-						<label for="name">닉네임</label>
-					</h3>
-					<span class="box int_name"> <input type="text" id="name"
-						class="int" maxlength="20" name="nickname">
-					</span> <span class="error_next_box"></span>
-				</div>
-		
-		
-				<!-- EMAIL -->
-				<div>
-					<h3 class="join_title" style="margin-left: 20px;">
-						<label for="email">이메일<span class="optional"></span></label>
-					</h3>
-					<span class="box int_email"> <input type="text" id="email"
-						class="int" maxlength="100" name="email" placeholder="양식 : where@sming.com">
-					</span> <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>
-				</div>
-		
-				<!-- MOBILE -->
-				<div>
-					<h3 class="join_title" style="margin-left: 5px;">
-						<label for="phoneNo">휴대전화번호</label>
-					</h3>
-					<span class="box int_mobile"> <input type="tel" id="mobile"
-						class="int" maxlength="16" name="tel" placeholder="-는 제외하고 작성해주세요">
-					</span> <span class="error_next_box"></span>
-				</div>
-		
-		
-				<!-- JOIN BTN-->
-				<div class="btn_area">
-					<button type="submit" id="btnJoin" value="Signin">
-						<span>가입하기</span></a>
-					</button>
-				</div>
-</form>
-		
-		
-		
-		
-			</div>
-			<!-- content-->
-		
+		<a href="index.jsp" class="logo"> Where?Sming </a>
+		<div class="background"></div>
+
+		<!-- for form container -->
+		<div class="container"></div>
+</body>
+
+<h2 class="ac_text"></h2>
+<!-- wrapper -->
+<div id="wrapper">
+
+	<!-- content-->
+	<div id="content">
+
+		<!-- ID -->
+		<div>
+			<h3 class="join_title">
+				<label for="id">아이디</label>
+			</h3>
+			<span class="box int_id"> <input type="text" id="id"
+				class="int" maxlength="20" name="id">
+			</span> <span class="error_next_box"></span>
 		</div>
-		<!-- wrapper -->
-		<script src="main.js"></script>
+
+		<!-- PW1 -->
+		<div>
+			<h3 class="join_title">
+				<label for="pswd1">비밀번호</label>
+			</h3>
+			<span class="box int_pass"> <input type="password" id="pswd1"
+				class="int" maxlength="20" name="pw"> <span id="alertTxt">사용불가</span>
+			</span> <span class="error_next_box"></span>
+		</div>
+
+		<!-- PW2 -->
+		<div>
+			<h3 class="join_title">
+				<label for="pswd2">비밀번호 재확인</label>
+			</h3>
+			<span class="box int_pass_check"> <input type="password"
+				id="pswd2" class="int" maxlength="20">
+			</span> <span class="error_next_box"></span>
+		</div>
+
+		<!-- NAME -->
+		<div>
+			<h3 class="join_title">
+				<label for="name">닉네임</label>
+			</h3>
+			<span class="box int_name"> <input type="text" id="name"
+				class="int" maxlength="20" name="nickname">
+			</span> <span class="error_next_box"></span>
+		</div>
+
+
+		<!-- EMAIL -->
+		<div>
+			<h3 class="join_title" style="margin-left: 20px;">
+				<label for="email">이메일<span class="optional"></span></label>
+			</h3>
+			<span class="box int_email"> <input type="text" id="email"
+				class="int" maxlength="100" name="email"
+				placeholder="양식 : where@sming.com">
+			</span> <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>
+		</div>
+
+		<!-- MOBILE -->
+		<div>
+			<h3 class="join_title" style="margin-left: 5px;">
+				<label for="phoneNo">휴대전화번호</label>
+			</h3>
+			<span class="box int_mobile"> <input type="tel" id="mobile"
+				class="int" maxlength="16" name="tel" placeholder="-는 제외하고 작성해주세요">
+			</span> <span class="error_next_box"></span>
+		</div>
+
+
+		<!-- JOIN BTN-->
+		<div class="btn_area">
+			<button type="submit" id="btnJoin" value="Signin">
+				<span id="joinment">가입하기</span></a>
+			</button>
+		</div>
+		</form>
+
+
+
+
+	</div>
+	<!-- content-->
+
+</div>
+<!-- wrapper -->
+<script src="main.js"></script>
 </body>
 </html>
