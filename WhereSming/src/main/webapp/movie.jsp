@@ -16,7 +16,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Movieinfo</title>
+<title>Where?Sming</title>
 
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

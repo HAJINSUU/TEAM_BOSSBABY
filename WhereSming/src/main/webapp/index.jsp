@@ -249,7 +249,7 @@ img {
 							<div class="portfolio-item col-md-7 sizing">
 								<div class="portfolio-bg">
 									<div class="portfolio">
-										<a href="picksGenre.jsp#kid" target="_blank">
+										<a href="picksGenre.jsp" target="_blank">
 											<div class="tt-overlay"></div>
 										</a> <img src="<%=list0[i]%>" alt="image">
 									</div>
