@@ -156,12 +156,13 @@ body::-webkit-scrollbar-track {
 							
 						<div class="portfolio-item col-md-2 sizing">
 							<div class="portfolio-bg">
-								<div class="portfolio" onclick="imgclick('${m.mv_seq}')" >
+								<div class="portfolio" onclick="imgclick('${m.mv_seq}')" style="cursor:pointer;" >
 								
 									<div class="tt-overlay"></div>
 									<img
 										src="${m.mv_image }"
 										alt="image">
+									
 									
 								</div>
 							</div>
