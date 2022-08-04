@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Random;
 
 import com.wheresming.movie.MovieDTO;
 
@@ -98,7 +99,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 		System.out.println("DAO 실행완료");
 	}
 
-	public ArrayList<String> selectGenre(String mv_genre) {
+	public String[] selectGenre(String mv_genre) {
 		// 해당하는 장르 찾기
 		// 동적로딩
 		try {
@@ -128,8 +129,7 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 		String sql = "select mv_image from t_movie where mv_genre = ? and mv_image is not null";
 		//System.out.println("SQL 실행완료");
 
-		ArrayList<String> list = new ArrayList<String>();
-		/* String[] list = new String[10]; */
+		ArrayList<String> arrayList = new ArrayList<String>();
 		try {
 			psmt = conn.prepareStatement(sql); // mv_image의 값을 반환
 			// ? 는 반드시 excute전에 설정이 되어 있어야함
@@ -142,12 +142,12 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 			while (rs.next()) {
 				// rs.next() = boolean 타입으로 참과 거짓을 받음 >> 값이 있을 때만 결과 가져오기
 				String mv_image = rs.getString(1);
-				list.add(rs.getString("mv_image"));
+				arrayList.add(rs.getString("mv_image"));
 
 				// table의 내용 확인 (내용이 있을 때만 확인가능)
 				//System.out.println(mv_image);
 			}
-			// for(int i = 0; i < list.length; i++)
+			// for(int i = 0; i < arrayList.length; i++)
 			// { rs = psmt.executeQuery(); // mv_image
 			// if (rs.next()) { // 데이터가 있을 때만 실행 // rs.next > 선택되는 행을 내려가면서 체크 list[i] =
 			// rs.getString("mv_image"); // list[i] = rs.getString(1); } }
@@ -173,7 +173,16 @@ public class SearchingRdDAO {// member 테이블의 리스트 내용 출력하�
 		}
 		//System.out.println(list.size());
 
-		return list;
+		
+		String[] list = new String[10];
+		Random rd = new Random();
+		
+		for (int i = 0; i < 10; i++) {
+			int num = rd.nextInt(arrayList.size());
+			list[i] = arrayList.get(num);
+		}
+		
+			return list;
 	}
 
 	public int selectGenreSeq(String mv_image) {

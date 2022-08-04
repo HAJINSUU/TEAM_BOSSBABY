@@ -293,24 +293,18 @@ img {
 											<a class="inline" id="kid"> 어린이&가족</a>
 											<div class="slider">
 												<%
-							Random rd = new Random();
 							SearchingRdDAO dao = new SearchingRdDAO();
-							ArrayList<String> list = new ArrayList<String>();
+												String[] list = new String[10];
 							list = dao.selectGenre("kid");
-							int mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(158);
-								mv_seq = dao.selectGenreSeq(list.get(num));
 							%>
-
-
 												<div class="portfolio-item col-md-7 sizing">
 													<div class="portfolio-bg">
 														<div class="portfolio">
 															<a href="picksGenre.jsp#kid" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list.get(num)%>" alt="image">
+															</a> <img src="<%=list[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -331,13 +325,10 @@ img {
 											<a class="inline" id="ani"> 애니메이션</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list1 = new ArrayList<String>();
+												String[] list1 = new String[10];
 							list1 = dao.selectGenre("ani");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(2647);
-								mv_seq = dao.selectGenreSeq(list1.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -345,7 +336,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list1.get(num)%>" alt="image">
+															</a> <img src="<%=list1[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -366,13 +357,10 @@ img {
 											<a class="inline" id="ac"> 액션</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list2 = new ArrayList<String>();
+												String[] list2 = new String[10];
 							list2 = dao.selectGenre("ac");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(3882);
-								mv_seq = dao.selectGenreSeq(list2.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -380,7 +368,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list2.get(num)%>" alt="image">
+															</a> <img src="<%=list2[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -401,13 +389,10 @@ img {
 											<a class="inline" id="co"> 코미디</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list3 = new ArrayList<String>();
+												String[] list3 = new String[10];
 							list3 = dao.selectGenre("co");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(1948);
-								mv_seq = dao.selectGenreSeq(list3.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -415,7 +400,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list3.get(num)%>" alt="image">
+															</a> <img src="<%=list3[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -436,13 +421,10 @@ img {
 											<a class="inline" id="ro"> 로맨스</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list4 = new ArrayList<String>();
+												String[] list4 = new String[10];
 							list4 = dao.selectGenre("ro");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(948);
-								mv_seq = dao.selectGenreSeq(list4.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -450,7 +432,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list4.get(num)%>" alt="image">
+															</a> <img src="<%=list4[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -471,13 +453,10 @@ img {
 											<a class="inline" id="th"> 스릴러</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list5 = new ArrayList<String>();
+												String[] list5 = new String[10];
 							list5 = dao.selectGenre("th");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(1482);
-								mv_seq = dao.selectGenreSeq(list5.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -485,7 +464,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list5.get(num)%>" alt="image">
+															</a> <img src="<%=list5[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -506,13 +485,10 @@ img {
 											<a class="inline" id="ho"> 호러</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list6 = new ArrayList<String>();
+												String[] list6 = new String[10];
 							list6 = dao.selectGenre("ho");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(1214);
-								mv_seq = dao.selectGenreSeq(list6.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -520,7 +496,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list6.get(num)%>" alt="image">
+															</a> <img src="<%=list6[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -541,13 +517,10 @@ img {
 											<a class="inline" id="sf"> SF</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list7 = new ArrayList<String>();
+												String[] list7 = new String[10];
 							list7 = dao.selectGenre("sf");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(527);
-								mv_seq = dao.selectGenreSeq(list7.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -555,7 +528,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list7.get(num)%>" alt="image">
+															</a> <img src="<%=list7[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -576,13 +549,10 @@ img {
 											<a class="inline" id="fa"> 판타지</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list8 = new ArrayList<String>();
+												String[] list8 = new String[10];
 							list8 = dao.selectGenre("fa");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(389);
-								mv_seq = dao.selectGenreSeq(list8.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -590,7 +560,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list8.get(num)%>" alt="image">
+															</a> <img src="<%=list8[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -611,13 +581,10 @@ img {
 											<a class="inline" id="cri"> 범죄</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list9 = new ArrayList<String>();
+												String[] list9 = new String[10];
 							list9 = dao.selectGenre("cri");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(366);
-								mv_seq = dao.selectGenreSeq(list9.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -625,7 +592,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list9.get(num)%>" alt="image">
+															</a> <img src="<%=list9[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -646,13 +613,10 @@ img {
 											<a class="inline" id="dra"> 드라마</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list10= new ArrayList<String>();
+												String[] list10 = new String[10];
 							list10 = dao.selectGenre("dra");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(3949);
-								mv_seq = dao.selectGenreSeq(list10.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -660,7 +624,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list10.get(num)%>" alt="image">
+															</a> <img src="<%=list10[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -681,13 +645,10 @@ img {
 											<a class="inline" id="doc"> 다큐멘터리</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list11 = new ArrayList<String>();
+												String[] list11 = new String[10];
 							list11 = dao.selectGenre("doc");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(852);
-								mv_seq = dao.selectGenreSeq(list11.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -695,7 +656,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list11.get(num)%>" alt="image">
+															</a> <img src="<%=list11[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
@@ -716,13 +677,10 @@ img {
 											<a class="inline" id="mus"> 뮤지컬</a>
 											<div class="slider">
 												<%
-							ArrayList<String> list12 = new ArrayList<String>();
+												String[] list12 = new String[10];
 							list12 = dao.selectGenre("mus");
-							mv_seq = 0;
 
 							for (int i = 0; i < 10; i++) {
-								int num = rd.nextInt(78);
-								mv_seq = dao.selectGenreSeq(list12.get(num));
 							%>
 
 												<div class="portfolio-item col-md-7 sizing">
@@ -730,7 +688,7 @@ img {
 														<div class="portfolio">
 															<a href="picksGenre.jsp#ani" target="_blank">
 																<div class="tt-overlay"></div>
-															</a> <img src="<%=list12.get(num)%>" alt="image">
+															</a> <img src="<%=list12[i]%>" alt="image">
 														</div>
 													</div>
 												</div>
