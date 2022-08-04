@@ -127,7 +127,7 @@ body::-webkit-scrollbar-track {
 													<p id="fb">
 														<c:out value="${p.fd_name}" />
 													</p>
-													<p id="like">영화 · 00개</p>
+													<p id="like"></p>
 												</a>
 											</div>
 										</div>
