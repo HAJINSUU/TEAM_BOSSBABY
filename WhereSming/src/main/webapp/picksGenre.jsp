@@ -256,7 +256,7 @@ img {
 									<li data-filter="*"
 										onclick="location.href='picks.jsp';">인기</li>
 									<li data-filter="*"
-										onclick="location.href='picks.jsp';">최신</li>
+										onclick="location.href='picksNEW.jsp';">최신</li>
 									<!-- <li data-filter="*">장르 <i class="fa-solid fa-chevron-down"></i></li> -->
 									<li data-filter="*" class="active dropdown dropbtn">장르 <i
 										class="fa-solid fa-chevron-down"></i>
