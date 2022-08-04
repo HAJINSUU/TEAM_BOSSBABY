@@ -5,8 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         
 <mapper namespace="com.wheresming.pick.UploadDAO">
 	<update id="folderUpload" parameterType="com.wheresming.pick.UploadPickListDTO">
-	UPDATE T_WISHLIST 
-	SET OPEN_YN = 'Y' 
+	UPDATE T_WISHLIST
+	SET OPEN_YN = 'Y'
 	WHERE MB_ID = #{mb_id} AND FD_NAME = #{fd_name}
 	</update>
 	<select id="folderLikes" resultType="com.wheresming.pick.UploadPickListDTO">
@@ -15,11 +15,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE OPEN_YN = 'Y'
 	ORDER BY FD_LIKES DESC
 	</select>
-	
 	<select id="folderNew" resultType="com.wheresming.pick.UploadPickListDTO">
 	SELECT W.MB_NICK, W.FD_NAME, W.FD_LIKES, M.MV_IMAGE
 	FROM T_WISHLIST W, T_MOVIE M
 	WHERE OPEN_YN = 'Y'
+	AND W.MV_SEQ = M.MV_SEQ
 	ORDER BY FD_CDATE DESC
 	</select>
 	
