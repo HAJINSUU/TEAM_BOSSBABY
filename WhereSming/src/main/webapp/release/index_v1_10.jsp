@@ -192,8 +192,8 @@ img {
 
 <body id="body2">
 	<!-- 실시간 채팅  -->
-	<%@include file="chat.jsp"%>
-	<%@include file="nav.jsp"%>
+<%-- 	<%@include file="chat.jsp"%>
+	<%@include file="nav.jsp"%> --%>
 	<!-- 채팅 -->
 <!-- 	<script>
 		(function(d, w, c) {
