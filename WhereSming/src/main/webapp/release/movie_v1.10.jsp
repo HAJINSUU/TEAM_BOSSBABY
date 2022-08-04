@@ -105,7 +105,7 @@ body {
 .container3 {
 	color: #FFBB00;
 	font-size: 30px;
-	margin-top: 75px;
+	margin-top: 178px;
 	margin-left: 1420px;
 	object-fit: cover;
 }
@@ -820,58 +820,12 @@ body {
 	<!-- ***** 위에 로고메뉴바 ***** -->
 	<header class="header-area header-sticky" style="height: 200px;">
 
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="main-nav">
-
-						<!-- ***** Logo Start ***** -->
-						<a href="index.jsp" class="logo"> Where?Sming </a>
-						<!-- ***** Logo End ***** -->
-						<!-- ***** Menu Start ***** -->
-						<ul class="nav">
-
-							<!-- 검색창시작 -->
-							<li class="search" style="height: 40px">
-								<div class="search-box">
-									<form action="Searching" method="get">
-										<input class="search-txt" type="text"
-											placeholder="검색어를 입력해 주세요" name="mv_title">
-										<button class="search-btn" onclick="location.href='movie.jsp'"
-											type="submit" value="Searching">
-											<i class="fas fa-search"></i>
-										</button>
-									</form>
-								</div>
-							</li>
-							<!-- 검색창끝 -->
-
-							<c:choose>
-								<c:when test="${empty loginMember }">
-									<li class="picks"><a href="picks.jsp">pick!</a></li>
-									<li class="login"><a href="login.jsp">로그인</a></li>
-								</c:when>
-								<c:otherwise>
-									<!-- 단순 if문 조건 1개일때 -->
-									<c:if test="${loginMember.mb_type eq 'A'}">
-										<li class="mypage"><a href="index.jsp">전체회원정보</a></li>
-									</c:if>
-									<li class="mypage"><a href="picks.jsp">PICK!</a></li>
-									<li class="mypage"><a href="mypage.jsp">MYPAGE</a></li>
-									<li class="logout"><a href="Logout">LOGOUT</a></li>
-								</c:otherwise>
-							</c:choose>
-						</ul>
-						<a class='menu-trigger'> <span>Menu</span>
-						</a>
-						<!-- ***** Menu End ***** -->
-					</nav>
-				</div>
-			</div>
-		</div>
+<%-- 	<%@include file="nav.jsp"%> --%>
 
 
 		<!-- 오른쪽영화추천 -->
+		
+		
 		<jsp:useBean id="SearchingDAO"
 			class="com.wheresming.search.SearchingDAO" />
 		<c:set var="RecommendList"
