@@ -93,14 +93,14 @@ figure, header, nav, section, article, aside, footer, figcaption {
   line-height: -200px;
 }
 
-
+/* 검색창 마우스오버하면 움직이는 현상 이거 주석처리로 제거
 .search-box:hover > form .search-txt {
   width: 200px;
 }
 .search-box:hover > form .search-btn {
   background: #ffffff;
   
-}
+} */
 
 /* 검색창CSS끝 */
 .clearfix:after {
