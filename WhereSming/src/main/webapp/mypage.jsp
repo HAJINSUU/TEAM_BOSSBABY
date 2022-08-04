@@ -118,7 +118,7 @@ body::-webkit-scrollbar-track {
 												<!-- <a href="mypicksList.jsp"> -->
 												<img class="image-thumbnail"
 													src="https://image.tving.com/upload/cms/caim/CAIM2100/M000260433.png/dims/resize/400"
-													alt="" onclick="folderclick('${p.fd_name}')"></a>
+													alt="" onclick="folderclick('${p.fd_name}')" style="cursor:pointer;"></a>
 											</div>
 								 <!-- 보라작업중끝 -->
 
