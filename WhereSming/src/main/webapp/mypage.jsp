@@ -117,7 +117,7 @@ body::-webkit-scrollbar-track {
 												<!-- 영화이미지 넣기 가져오기 -->
 												<!-- <a href="mypicksList.jsp"> -->
 												<img class="image-thumbnail"
-													src="https://image.tving.com/upload/cms/caim/CAIM2100/M000367123.PNG/dims/resize/400"
+													src="https://image.tving.com/upload/cms/caim/CAIM2100/M000260433.png/dims/resize/400"
 													alt="" onclick="folderclick('${p.fd_name}')"></a>
 											</div>
 								 <!-- 보라작업중끝 -->
