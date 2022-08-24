@@ -223,8 +223,7 @@ img {
 
 	<!-- 추천영화 div리스트 -->
 	<!-- wheresming실시간추천 구간 top으로위치조정가능 -->
-	<!-- 추천영화 div리스트 -->
-	<!-- wheresming실시간추천 구간 top으로위치조정가능 -->
+
 
 	<section class="services" style="top: 850px;">
 		<div class="container">
